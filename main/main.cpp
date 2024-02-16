@@ -135,6 +135,7 @@
 #endif
 
 #include "modules/modules_enabled.gen.h" // For mono.
+#include "servers/update_loop_server.h"
 
 #if defined(MODULE_MONO_ENABLED) && defined(TOOLS_ENABLED)
 #include "modules/mono/editor/bindings_generator.h"
@@ -152,6 +153,7 @@
 // Singletons
 
 // Initialized in setup()
+static UpdateLoopServer *updateLoopServer = nullptr;
 static Engine *engine = nullptr;
 static ProjectSettings *globals = nullptr;
 static Input *input = nullptr;
@@ -768,6 +770,8 @@ Error Main::test_setup() {
 	initialize_modules(MODULE_INITIALIZATION_LEVEL_SERVERS);
 	GDExtensionManager::get_singleton()->initialize_extensions(GDExtension::INITIALIZATION_LEVEL_SERVERS);
 
+	updateLoopServer = memnew(UpdateLoopServer);
+
 	translation_server->setup(); //register translations, load them, etc.
 	if (!locale.is_empty()) {
 		translation_server->set_locale(locale);
@@ -986,7 +990,6 @@ Error Main::setup(const char *execpath, int argc, char *argv[], bool p_second_ph
 	OS::get_singleton()->benchmark_begin_measure("Startup", "Main::Setup");
 
 	engine = memnew(Engine);
-
 	MAIN_PRINT("Main: Initialize CORE");
 
 	register_core_types();
@@ -1064,6 +1067,8 @@ Error Main::setup(const char *execpath, int argc, char *argv[], bool p_second_ph
 	if (!packed_data) {
 		packed_data = memnew(PackedData);
 	}
+
+	updateLoopServer = memnew(UpdateLoopServer);
 
 #ifdef MINIZIP_ENABLED
 
@@ -4686,6 +4691,8 @@ bool Main::iteration() {
 	XRServer::get_singleton()->_process();
 #endif // XR_DISABLED
 
+	UpdateLoopServer::get_singleton()->PrePhysicsUpdate(process_step, process_step * time_scale);
+
 	for (int iters = 0; iters < advance.physics_steps; ++iters) {
 		if (Input::get_singleton()->is_agile_input_event_flushing()) {
 			Input::get_singleton()->flush_buffered_events();
@@ -4737,6 +4744,8 @@ bool Main::iteration() {
 		navigation_process_ticks = MAX(navigation_process_ticks, OS::get_singleton()->get_ticks_usec() - navigation_begin); // keep the largest one for reference
 		navigation_process_max = MAX(OS::get_singleton()->get_ticks_usec() - navigation_begin, navigation_process_max);
 
+		UpdateLoopServer::get_singleton()->PhysicsUpdate(physics_step, physics_step * time_scale);
+
 		message_queue->flush();
 #endif // !defined(NAVIGATION_2D_DISABLED) || !defined(NAVIGATION_3D_DISABLED)
 
@@ -4759,6 +4768,7 @@ bool Main::iteration() {
 
 		Engine::get_singleton()->_in_physics = false;
 	}
+	UpdateLoopServer::get_singleton()->PostPhysicsUpdate(process_step, process_step * time_scale);
 
 	if (Input::get_singleton()->is_agile_input_event_flushing()) {
 		Input::get_singleton()->flush_buffered_events();
@@ -4769,7 +4779,11 @@ bool Main::iteration() {
 	if (OS::get_singleton()->get_main_loop()->process(process_step * time_scale)) {
 		exit = true;
 	}
+	UpdateLoopServer::get_singleton()->Update(process_step, process_step * time_scale);
+
 	message_queue->flush();
+
+	UpdateLoopServer::get_singleton()->PreRenderUpdate(process_step, process_step * time_scale);
 
 #ifndef NAVIGATION_2D_DISABLED
 	NavigationServer2D::get_singleton()->process(process_step * time_scale);
@@ -4810,6 +4824,8 @@ bool Main::iteration() {
 	}
 
 	AudioServer::get_singleton()->update();
+
+	UpdateLoopServer::get_singleton()->PostUpdate(process_step, process_step * time_scale);
 
 	if (EngineDebugger::is_active()) {
 		EngineDebugger::get_singleton()->iteration(frame_time, process_ticks, physics_process_ticks, physics_step);
