@@ -1064,7 +1064,6 @@ Error Main::setup(const char *execpath, int argc, char *argv[], bool p_second_ph
 	OS::get_singleton()->benchmark_begin_measure("Startup", "Main::Setup");
 
 	engine = memnew(Engine);
-
 	MAIN_PRINT("Main: Initialize CORE");
 
 	register_core_types();
@@ -5029,6 +5028,8 @@ bool Main::iteration() {
 		navigation_process_ticks = MAX(navigation_process_ticks, OS::get_singleton()->get_ticks_usec() - navigation_begin); // keep the largest one for reference
 		navigation_process_max = MAX(OS::get_singleton()->get_ticks_usec() - navigation_begin, navigation_process_max);
 
+		UpdateLoopServer::get_singleton()->PhysicsUpdate(physics_step, physics_step * time_scale);
+
 		message_queue->flush();
 #endif // !defined(NAVIGATION_2D_DISABLED) || !defined(NAVIGATION_3D_DISABLED)
 
@@ -5054,6 +5055,7 @@ bool Main::iteration() {
 
 		Engine::get_singleton()->_in_physics = false;
 	}
+	UpdateLoopServer::get_singleton()->PostPhysicsUpdate(process_step, process_step * time_scale);
 
 	if (Input::get_singleton()->is_agile_input_event_flushing()) {
 		Input::get_singleton()->flush_buffered_events();
@@ -5070,6 +5072,8 @@ bool Main::iteration() {
 	update_server->Emit_PostProcessUpdate(process_step, scaled_step);
 
 	message_queue->flush();
+
+	UpdateLoopServer::get_singleton()->PreRenderUpdate(process_step, process_step * time_scale);
 
 #ifndef NAVIGATION_2D_DISABLED
 	GodotProfileZoneGrouped(_profile_zone, "process 2D navigation");

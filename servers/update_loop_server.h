@@ -1,4 +1,4 @@
-﻿#ifndef UPDATE_LOOP_SERVER_H
+#ifndef UPDATE_LOOP_SERVER_H
 #define UPDATE_LOOP_SERVER_H
 
 #include "core/object/class_db.h"

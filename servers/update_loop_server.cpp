@@ -1,4 +1,4 @@
-﻿
+
 #include "update_loop_server.h"
 
 #include "core/config/engine.h"
