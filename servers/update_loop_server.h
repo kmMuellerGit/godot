@@ -18,7 +18,7 @@ class UpdateServer : public Object {
 
 protected:
 	/// \brief Adds itself to UpdateLoopServer singleton.
-    void _notification(int p_what);
+    //void _notification(int p_what);
 
 public:
 	UpdateServer();
@@ -44,14 +44,14 @@ public:
 	void AddToUpdate(UpdateServer* server);
 	void RemoveFromUpdate(UpdateServer* server);
 	void Update(double realTime, double gameTime);
-	void OnUpdate(double realTime, double gameTime);
+	//void OnUpdate(double realTime, double gameTime);
 	void PrePhysicsUpdate(double realTime, double gameTime);
 	void PhysicsUpdate(double realTime, double gameTime);
 	void PostPhysicsUpdate(double realTime, double gameTime);
 	void PreRenderUpdate(double realTime, double gameTime);
 	void PostUpdate(double realTime, double gameTime);
 
-	static UpdateLoopServer *get_singleton();
+	static UpdateLoopServer *get_singleton() ;//{ return singleton;}
 
 	UpdateLoopServer();
 	~UpdateLoopServer();
