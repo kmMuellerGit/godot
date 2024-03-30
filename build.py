@@ -73,7 +73,7 @@ def parser_init():
 def main():
     os_type = platform.system()
     num_threads =  max(multiprocessing.cpu_count() - 2, 1)
-
+    print(f"Numthreads={num_threads}")
     # Get user input
     args = parser_init()
     

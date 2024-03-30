@@ -18,10 +18,12 @@ class UpdateServer : public Object {
 
 protected:
 	/// \brief Adds itself to UpdateLoopServer singleton.
+    void _notification(int p_what);
 
 public:
 	UpdateServer();
 	~UpdateServer();
+    //void _process();
 	/// \brief Called after game logic has processed.
 	/// \param realTime Real clock on wall time which has passed since last update.
 	/// \param gameTime Real time * game speed
