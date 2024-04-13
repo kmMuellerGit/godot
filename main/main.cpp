@@ -902,6 +902,11 @@ void Main::test_cleanup() {
 		memdelete(physics_server_3d_manager);
 	}
 #endif // PHYSICS_3D_DISABLED
+
+	if (updateLoopServer) {
+		memdelete(updateLoopServer);
+	}
+
 #ifndef PHYSICS_2D_DISABLED
 	if (physics_server_2d_manager) {
 		memdelete(physics_server_2d_manager);
