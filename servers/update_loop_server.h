@@ -12,9 +12,11 @@
 #include <functional>
 #include <vector>
 
+#include "scene/main/node.h"
+
 /// \brief When inherited and constructor called, automatically begins OnUpdate.
-class UpdateServer : public Object {
-	GDCLASS(UpdateServer, Object);
+class UpdateServer : public Node {
+	GDCLASS(UpdateServer, Node);
 
 protected:
 	/// \brief Adds itself to UpdateLoopServer singleton.
@@ -36,8 +38,8 @@ public:
 };
 
 /// \brief Object in main loop which calls parent objects.
-class UpdateLoopServer : public Object {
-	GDCLASS(UpdateLoopServer, Object);
+class UpdateLoopServer : public Node {
+	GDCLASS(UpdateLoopServer, Node);
 
 public:
 	/// \brief Adds server to list of servers to call 'OnUpdate' on.

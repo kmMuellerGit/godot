@@ -21,17 +21,27 @@ UpdateServer::~UpdateServer() {
 
 void UpdateLoopServer::AddToUpdate(UpdateServer* server) {
 	//If already added, reset.
-
+	if (server==nullptr){return;}
 	if (std::find(updateList.begin(), updateList.end(), server)==updateList.end()) {
 		updateList.emplace_back(server);
+		if (server->get_name() == "") {
+			server->set_name("TempName" + itos( OS::get_singleton()->get_ticks_usec()));
+		}
+		print_line("UpdateLoopServer [", this->get_name(), "]  ADDING new child [", server->get_name(), "]  with type [", server->get_class(), "]");
+		this->add_child(server);
 	}
 
 }
 
 void UpdateLoopServer::RemoveFromUpdate(UpdateServer* server) {
+	if (server==nullptr){return;}
 	auto foundIndex = std::find(updateList.begin(), updateList.end(),server);
 	if (foundIndex != updateList.end()) {
 		updateList.erase(foundIndex);
+		print_line("UpdateLoopServer [", this->get_name(), "]  REMOVING new child [", server->get_name(), "]  with type [", server->get_class(), "]");
+		if (server->get_parent() == this) {
+			this->remove_child(server);
+		}
 	}
 
 }
@@ -147,6 +157,7 @@ void UpdateLoopServer::PostUpdate(double realTime, double gameTime) {
 
 UpdateLoopServer::UpdateLoopServer() {
 	singleton = this;
+	this->set_name("UpdateLoopServer_set_from_constructor");
 };
 
 UpdateLoopServer::~UpdateLoopServer() {
