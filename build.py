@@ -12,9 +12,9 @@ custom_modules_path=os.path.abspath("../cyborg_survivors_game/engine_custom_modu
 custom_game_path= os.path.abspath("../cyborg_survivors_game/game" )
 
 build_options={
-    'debug':"dev_build=yes compiledb=yes verbose=yes werror=no tests=yes warnings=no lto=none",
+    'debug':"dev_build=yes compiledb=yes verbose=yes werror=no tests=yes warnings=no lto=none  use_llvm=yes linker=mold",
     #'debug':"dev_mode=yes dev_build=yes",
-    'production':"production=yes lto=full tests=yes"
+    'production':"production=yes lto=thin use_llvm=yes linker=mold"
 }
 
 template_options={
