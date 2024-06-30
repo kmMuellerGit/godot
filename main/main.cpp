@@ -5058,7 +5058,9 @@ bool Main::iteration() {
 
 	message_queue->flush();
 
-	UpdateLoopServer::get_singleton()->PreRenderUpdate(process_step, process_step * time_scale);
+	if (UpdateLoopServer::get_singleton()) {
+		UpdateLoopServer::get_singleton()->PreRenderUpdate(process_step, process_step * time_scale);
+	}
 
 #ifndef NAVIGATION_2D_DISABLED
 	GodotProfileZoneGrouped(_profile_zone, "process 2D navigation");
