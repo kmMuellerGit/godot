@@ -29,12 +29,12 @@ public:
 	/// \brief Called after game logic has processed.
 	/// \param realTime Real clock on wall time which has passed since last update.
 	/// \param gameTime Real time * game speed
-	virtual void OnUpdate(double realTime, double gameTime){}
-	virtual void PrePhysicsUpdate(double realTime, double gameTime){}
-	virtual void PhysicsUpdate(double realTime, double gameTime){}
-	virtual void PostPhysicsUpdate(double realTime, double gameTime){}
-	virtual void PreRenderUpdate(double realTime, double gameTime){}
-	virtual void PostUpdate(double realTime, double gameTime){}
+	virtual void OnUpdate(double realTime, double gameTime){};
+	virtual void PrePhysicsUpdate(double realTime, double gameTime){};
+	virtual void PhysicsUpdate(double realTime, double gameTime){};
+	virtual void PostPhysicsUpdate(double realTime, double gameTime){};
+	virtual void PreRenderUpdate(double realTime, double gameTime){};
+	virtual void PostUpdate(double realTime, double gameTime){};
 };
 
 /// \brief Object in main loop which calls parent objects.
