@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""
+TODO
+- Simplify commands for basic presets.
+- Improve stderr output when building as it currently hides it.  Make it clear if it fails.
+    - Print out directory structure on completion
+- Separate options like llvm and linker to functions.  Replace executable paths with path builder functions for llvm.
 
+"""
 
 import argparse
 import platform
@@ -14,7 +21,8 @@ custom_game_path= os.path.abspath("../cyborg_survivors_game/game" )
 build_options={
     'debug':"dev_build=yes compiledb=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold",
     #'debug':"dev_mode=yes dev_build=yes",
-    'production':"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes compiledb=yes"
+    'production':"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes compiledb=yes",
+    'release_production':"production=yes lto=full use_llvm=yes linker=mold debug_symbols=no compiledb=no"
 }
 
 template_options={
@@ -45,7 +53,7 @@ def parser_init():
         help="What to build."
     )
 
-    valid_mode_options = ["debug", "production"]
+    valid_mode_options = ["debug", "production", "release_production"]
     parser.add_argument(
         "--mode",
         dest="mode",
@@ -83,7 +91,7 @@ def main():
     if "debug" in args.mode:
         if os_type == "Windows": extra_debug_options += "vsproj=yes"
     print("Building binary..")
-    command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} compiledb=yes custom_modules={custom_modules_path} 2>&1 | tee build.transcript"
+    command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} compiledb=yes custom_modules={custom_modules_path} "
     try:
         run_command_in_new_terminal(command)
     except subprocess.CalledProcessError as e:
@@ -97,7 +105,7 @@ def main():
         if "debug" in args.mode:
             if os_type == "Windows": extra_debug_options += "vsproj=yes"
         print("Building templates..")
-        command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} {template_options[args.mode]} custom_modules={custom_modules_path} 2>&1 | tee build_template.transcript"
+        command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} {template_options[args.mode]} custom_modules={custom_modules_path} "
         try:
             run_command_in_new_terminal(command)
         except subprocess.CalledProcessError as e:
@@ -110,7 +118,7 @@ def main():
         
         try:
             # Run the command and capture output
-            execute_bin = f"./bin/godot.{args.os}.editor{'.dev' if 'debug' in args.mode else ''}.{arch}{'.exe' if 'windows' in args.os else ''}"
+            execute_bin = f"./bin/godot.{args.os}.editor{'.dev' if 'debug' in args.mode else ''}.{arch}.llvm{'.exe' if 'windows' in args.os else ''}"
             execute_bin = os.path.abspath(execute_bin)
             release_type = '--export-release' if 'production' in args.mode else '--export-debug'
 
@@ -123,7 +131,7 @@ def main():
             os.makedirs(build_dir, exist_ok=True)
             build_dir = os.path.join(build_dir, "game")
             
-            command = f"{execute_bin} --path {custom_game_path} {release_type} {godot_export} {build_dir} --verbose --debug --display-driver 'headless' 2>&1 | tee build_package.transcript"
+            command = f"{execute_bin} --path {custom_game_path} {release_type} {godot_export} {build_dir} --verbose --debug --display-driver 'headless' "
             print("Packaging game..")
             result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             print(f"Game saved to [ {build_dir} ]")
