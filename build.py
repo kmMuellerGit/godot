@@ -133,7 +133,7 @@ def main():
             
             command = f"{execute_bin} --path {custom_game_path} {release_type} {godot_export} {build_dir} --verbose --debug --display-driver 'headless' "
             print("Packaging game..")
-            result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            run_command_in_new_terminal(command)
             print(f"Game saved to [ {build_dir} ]")
         except subprocess.CalledProcessError as e:
             # Handle errors, if any
