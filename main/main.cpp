@@ -937,7 +937,7 @@ int Main::test_entrypoint(int argc, char *argv[], bool &tests_need_run) {
 			tests_need_run = false;
 			return EXIT_SUCCESS;
 		}
-		if ((strncmp(argv[x], "--test", 6) == 0) && (strlen(argv[x]) == 6) ||
+		if (((strncmp(argv[x], "--test", 6) == 0) && (strlen(argv[x]) == 6) )||
 		   ((strncmp(argv[x], "-tc=",   4) == 0) && (strlen(argv[x]) >  4))) {
 			tests_need_run = true;
 #ifdef TESTS_ENABLED
