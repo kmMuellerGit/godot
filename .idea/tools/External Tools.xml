@@ -1,0 +1,16 @@
+<toolSet name="External Tools">
+  <tool name="build Debug" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="$USER_HOME$/godot/cyborg_survivors/godot/build.py" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/godot/cyborg_survivors/godot" />
+    </exec>
+  </tool>
+  <tool name="build Release" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="true" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="$USER_HOME$/godot/cyborg_survivors/godot/build.py" />
+      <option name="PARAMETERS" value="--mode production" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/godot/cyborg_survivors/godot" />
+    </exec>
+  </tool>
+</toolSet>

@@ -157,8 +157,7 @@ cppcheck-cppcheck-build-dir/
 # Gprof
 gmon.out
 
-# Jetbrains IDEs
-.idea/
+# Jetbrains IDEs=
 .fleet/
 
 # Kate
