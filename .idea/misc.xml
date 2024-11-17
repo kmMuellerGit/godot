@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/audio_play_server" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/custom_engine_components" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/EntityAvoidanceForceServer" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/TerrainForceServer" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/third_party" />
+      <file path="$PROJECT_DIR$" />
+    </sourceRoots>
+  </component>
+  <component name="CompDBSettings">
+    <option name="linkedExternalProjectsSettings">
+      <CompDBProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+          </set>
+        </option>
+      </CompDBProjectSettings>
+    </option>
+  </component>
+  <component name="CompDBWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+</project>
