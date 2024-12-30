@@ -390,3 +390,4 @@ $RECYCLE.BIN/
 *.lnk
 *.generated.props
 /build.transcript
+/.idea/modules.xml
