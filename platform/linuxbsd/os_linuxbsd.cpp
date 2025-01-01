@@ -80,6 +80,8 @@
 #include <cstdio>
 #include <cstdlib>
 
+#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
+
 #if __has_include(<mntent.h>)
 #include <mntent.h>
 #endif
@@ -982,6 +984,8 @@ void OS_LinuxBSD::run() {
 	//uint64_t frame=0;
 
 	while (true) {
+		FrameMark;
+		ZoneScoped;
 		DisplayServer::get_singleton()->process_events(); // get rid of pending events
 #ifdef SDL_ENABLED
 		if (joypad_sdl) {

@@ -19,10 +19,10 @@ custom_modules_path=os.path.abspath("../cyborg_survivors_game/engine_custom_modu
 custom_game_path= os.path.abspath("../cyborg_survivors_game/game" )
 
 build_options={
-    'debug':"dev_build=yes compiledb=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold",
+    'debug':"dev_build=yes compiledb=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold tracy_enable=yes CCFLAGS=\"-fno-omit-frame-pointer -fno-inline -ggdb3\"",
     #'debug':"dev_mode=yes dev_build=yes",
-    'production':"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes compiledb=yes",
-    'release_production':"production=yes lto=full use_llvm=yes linker=mold debug_symbols=no compiledb=no"
+    'production':"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes compiledb=yes tracy_enable=yes CCFLAGS=\"-fno-omit-frame-pointer -fno-inline -ggdb3\"",
+    'release_production':"production=yes lto=full use_llvm=yes linker=mold debug_symbols=no compiledb=no tracy_enable=no "
 }
 
 template_options={
