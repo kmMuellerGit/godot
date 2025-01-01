@@ -48,6 +48,10 @@ void UpdateLoopServer::RemoveFromUpdate(UpdateServer* server) {
 
 void UpdateLoopServer::Update(double realTime, double gameTime) {
 	std::vector<UpdateServer*> removeList = {};
+	SceneTree *scene_tree = SceneTree::get_singleton();
+	if (scene_tree == nullptr || scene_tree->is_suspended()) {
+		return; // Do no work while disabled.
+	}
 	for (auto e : this->updateList) {
 		if (e == nullptr)
 		{
@@ -72,6 +76,10 @@ UpdateLoopServer *UpdateLoopServer::get_singleton() {
 
 void UpdateLoopServer::PrePhysicsUpdate(double realTime, double gameTime) {
 	std::vector<UpdateServer*> removeList = {};
+	SceneTree *scene_tree = SceneTree::get_singleton();
+	if (scene_tree == nullptr || scene_tree->is_suspended()) {
+		return; // Do no work while disabled.
+	}
 	for (auto e : this->updateList) {
 		if (e == nullptr)
 		{
@@ -89,6 +97,10 @@ void UpdateLoopServer::PrePhysicsUpdate(double realTime, double gameTime) {
 
 void UpdateLoopServer::PhysicsUpdate(double realTime, double gameTime) {
 	std::vector<UpdateServer*> removeList = {};
+	SceneTree *scene_tree = SceneTree::get_singleton();
+	if (scene_tree == nullptr || scene_tree->is_suspended()) {
+		return; // Do no work while disabled.
+	}
 	for (auto e : this->updateList) {
 		if (e == nullptr)
 		{
@@ -106,6 +118,10 @@ void UpdateLoopServer::PhysicsUpdate(double realTime, double gameTime) {
 
 void UpdateLoopServer::PostPhysicsUpdate(double realTime, double gameTime) {
 	std::vector<UpdateServer*> removeList = {};
+	SceneTree *scene_tree = SceneTree::get_singleton();
+	if (scene_tree == nullptr || scene_tree->is_suspended()) {
+		return; // Do no work while disabled.
+	}
 	for (auto e : this->updateList) {
 		if (e == nullptr)
 		{
@@ -123,6 +139,10 @@ void UpdateLoopServer::PostPhysicsUpdate(double realTime, double gameTime) {
 
 void UpdateLoopServer::PreRenderUpdate(double realTime, double gameTime) {
 	std::vector<UpdateServer*> removeList = {};
+	SceneTree *scene_tree = SceneTree::get_singleton();
+	if (scene_tree == nullptr || scene_tree->is_suspended()) {
+		return; // Do no work while disabled.
+	}
 	for (auto e : this->updateList) {
 		if (e == nullptr)
 		{
@@ -140,6 +160,10 @@ void UpdateLoopServer::PreRenderUpdate(double realTime, double gameTime) {
 
 void UpdateLoopServer::PostUpdate(double realTime, double gameTime) {
 	std::vector<UpdateServer*> removeList = {};
+	SceneTree *scene_tree = SceneTree::get_singleton();
+	if (scene_tree == nullptr || scene_tree->is_suspended()) {
+		return; // Do no work while disabled.
+	}
 	for (auto e : this->updateList) {
 		if (e == nullptr)
 		{
