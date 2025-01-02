@@ -15,5 +15,19 @@
         </build>
       </configuration>
     </target>
+    <target id="4c56a2ff-62f3-413e-8d0a-c69f2da34fe9" name="Build.py Debug TRACY" defaultType="TOOL">
+      <configuration id="a4638084-49b9-4551-ad00-9546b46b4b0f" name="Build.py Debug TRACY">
+        <build type="TOOL">
+          <tool actionId="Tool_External Tools_build Debug TRACY" />
+        </build>
+      </configuration>
+    </target>
+    <target id="f4fdbe70-3561-4b37-8afe-6d79855cba6c" name="Build.py mode_release TRACY" defaultType="TOOL">
+      <configuration id="0bf18c65-4a82-4bfe-a226-15565fb7f7d3" name="Build.py mode_release TRACY">
+        <build type="TOOL">
+          <tool actionId="Tool_External Tools_build Release TRACY" />
+        </build>
+      </configuration>
+    </target>
   </component>
 </project>

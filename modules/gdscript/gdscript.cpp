@@ -59,6 +59,7 @@
 #include "editor/file_system/editor_paths.h"
 #endif
 
+#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
 ///////////////////////////
 
 GDScriptNativeClass::GDScriptNativeClass(const StringName &p_name) {
@@ -2047,6 +2048,9 @@ void GDScriptInstance::_call_implicit_ready_recursively(GDScript *p_script) {
 }
 
 Variant GDScriptInstance::callp(const StringName &p_method, const Variant **p_args, int p_argcount, Callable::CallError &r_error) {
+	ZoneScoped;
+	CharString c = String(p_method).utf8();
+	ZoneName(c.ptr(), c.size());
 	GDScript *sptr = script.ptr();
 	if (unlikely(p_method == SceneStringName(_ready))) {
 		// Call implicit ready first, including for the super classes recursively.

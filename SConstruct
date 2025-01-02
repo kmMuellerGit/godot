@@ -1145,6 +1145,14 @@ if env["ninja"]:
 if env["threads"]:
     env.Append(CPPDEFINES=["THREADS_ENABLED"])
 
+
+if "tracy_enable" in env and env["tracy_enable"] == "yes":
+    env.Append(CPPDEFINES=["TRACY_ENABLE"])
+
+if "tracy_on_demand" in env and env["tracy_on_demand"]:
+    env.Append(CPPDEFINES=["TRACY_ON_DEMAND"])
+
+
 # Ensure build objects are put in their own folder if `redirect_build_objects` is enabled.
 env.Prepend(LIBEMITTER=[methods.redirect_emitter])
 env.Prepend(SHLIBEMITTER=[methods.redirect_emitter])

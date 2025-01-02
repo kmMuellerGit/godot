@@ -39,6 +39,9 @@
 #include "core/templates/a_hash_map.h"
 #include "core/templates/local_vector.h"
 
+
+#include "modules/godot_tracy/profiler.h"
+#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
 typedef void (*VariantFunc)(Variant &r_ret, Variant &p_self, const Variant **p_args);
 typedef void (*VariantConstructFunc)(Variant &r_ret, const Variant **p_args);
 
@@ -1427,8 +1430,13 @@ void Variant::callp(const StringName &p_method, const Variant **p_args, int p_ar
 			r_error.error = Callable::CallError::CALL_ERROR_INVALID_METHOD;
 			return;
 		}
+		{
 
-		imf->call(this, p_args, p_argcount, r_ret, imf->default_arguments, r_error);
+			ZoneScoped;
+			CharString c = Profiler::stringify_method(p_method, p_args, p_argcount);
+			ZoneName(c.ptr(), c.size());
+			imf->call(this, p_args, p_argcount, r_ret, imf->default_arguments, r_error);
+		}
 	}
 }
 

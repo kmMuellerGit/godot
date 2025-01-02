@@ -39,6 +39,8 @@
 #include "core/string/print_string.h"
 #include "core/string/translation_server.h"
 #include "core/variant/typed_array.h"
+#include "modules/godot_tracy/profiler.h"
+#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
 
 #ifdef DEBUG_ENABLED
 
@@ -903,6 +905,9 @@ Variant Object::callp(const StringName &p_method, const Variant **p_args, int p_
 	MethodBind *method = ClassDB::get_method(get_class_name(), p_method);
 
 	if (method) {
+		ZoneScoped;
+		CharString c = Profiler::stringify_method(p_method, p_args, p_argcount);
+		ZoneName(c.ptr(), c.size());
 		ret = method->call(this, p_args, p_argcount, r_error);
 	} else {
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_METHOD;

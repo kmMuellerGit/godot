@@ -17,12 +17,11 @@ from datetime import datetime
 
 custom_modules_path=os.path.abspath("../cyborg_survivors_game/engine_custom_modules" )
 custom_game_path= os.path.abspath("../cyborg_survivors_game/game" )
-
+tracy_build_add='tracy_enable=yes CCFLAGS=\"-fno-omit-frame-pointer -fno-inline -ggdb3\"'
 build_options={
-    'debug':"dev_build=yes compiledb=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold tracy_enable=yes CCFLAGS=\"-fno-omit-frame-pointer -fno-inline -ggdb3\"",
-    #'debug':"dev_mode=yes dev_build=yes",
-    'production':"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes compiledb=yes tracy_enable=yes CCFLAGS=\"-fno-omit-frame-pointer -fno-inline -ggdb3\"",
-    'release_production':"production=yes lto=full use_llvm=yes linker=mold debug_symbols=no compiledb=no tracy_enable=no "
+    'debug':"dev_build=yes compiledb=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold ",
+    'production':"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes compiledb=yes ",
+    'release_production':"production=yes lto=full use_llvm=yes linker=mold debug_symbols=no compiledb=no "
 }
 
 template_options={
@@ -62,6 +61,13 @@ def parser_init():
         help="What build settings to use."
     )
 
+    parser.add_argument(
+        "--tracy",
+        dest="tracy",
+        action="store_true",
+        help="Build with tracy integration."
+    )
+
     parser.add_argument("--release_dir",dest="release_dir", required=False, help="Output release dir.  Required when using 'release'.")
     args = parser.parse_args()
 
@@ -91,7 +97,7 @@ def main():
     if "debug" in args.mode:
         if os_type == "Windows": extra_debug_options += "vsproj=yes"
     print("Building binary..")
-    command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} compiledb=yes custom_modules={custom_modules_path} "
+    command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} { tracy_build_add if args.tracy else ''} compiledb=yes custom_modules={custom_modules_path} "
     try:
         run_command_in_new_terminal(command)
     except subprocess.CalledProcessError as e:
@@ -105,7 +111,7 @@ def main():
         if "debug" in args.mode:
             if os_type == "Windows": extra_debug_options += "vsproj=yes"
         print("Building templates..")
-        command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} {template_options[args.mode]} custom_modules={custom_modules_path} "
+        command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} { tracy_build_add if args.tracy else ''} {template_options[args.mode]} custom_modules={custom_modules_path} "
         try:
             run_command_in_new_terminal(command)
         except subprocess.CalledProcessError as e:
