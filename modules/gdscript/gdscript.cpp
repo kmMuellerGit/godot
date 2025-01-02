@@ -62,7 +62,6 @@
 #include "editor/file_system/editor_paths.h"
 #endif
 
-#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
 ///////////////////////////
 
 GDScriptNativeClass::GDScriptNativeClass(const StringName &p_name) {
