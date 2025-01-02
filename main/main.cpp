@@ -5229,8 +5229,6 @@ void Main::cleanup(bool p_force) {
 	}
 #endif
 
-	GDExtensionManager::get_singleton()->shutdown();
-
 	for (int i = 0; i < TextServerManager::get_singleton()->get_interface_count(); i++) {
 		TextServerManager::get_singleton()->get_interface(i)->cleanup();
 	}

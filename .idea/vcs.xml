@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../cyborg_survivors_game" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/third_party/emhash" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modules/godot_tracy" vcs="Git" />
   </component>
 </project>
