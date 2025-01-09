@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakePythonSetting">
+    <option name="pythonIntegrationState" value="YES" />
+  </component>
   <component name="CidrRootsConfiguration">
     <sourceRoots>
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/audio_play_server" />
@@ -10,10 +13,14 @@
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/third_party" />
       <file path="$PROJECT_DIR$" />
     </sourceRoots>
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/modules/godot_tracy/tracy" />
+    </excludeRoots>
   </component>
   <component name="CompDBSettings">
     <option name="linkedExternalProjectsSettings">

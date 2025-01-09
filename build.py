@@ -104,6 +104,9 @@ def main():
     print("Building binary..")
     command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} { tracy_build_add if args.tracy else ''} compiledb=yes custom_modules={custom_modules_path} "
     try:
+        if os.path.isfile("./compile_commands.json"):
+            print("Deleting compile_commands.json for clion inspector updating.")
+            os.remove("./compile_commands.json")
         run_command_in_new_terminal(command)
     except subprocess.CalledProcessError as e:
         print("Error while building:")
