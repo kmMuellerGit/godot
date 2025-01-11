@@ -941,7 +941,9 @@ int Main::test_entrypoint(int argc, char *argv[], bool &tests_need_run) {
 			return EXIT_SUCCESS;
 		}
 		if (((strncmp(argv[x], "--test", 6) == 0) && (strlen(argv[x]) == 6) )||
-		   ((strncmp(argv[x], "-tc=",   4) == 0) && (strlen(argv[x]) >  4))) {
+		   ((strncmp(argv[x], "-tc=",   4) == 0) && (strlen(argv[x]) >  4)) ||
+		   ((strncmp(argv[x], "-ts=",   4) == 0) && (strlen(argv[x]) >  4))) {
+			OS::get_singleton()->_verbose_stdout = true;
 			tests_need_run = true;
 #ifdef TESTS_ENABLED
 			// TODO: need to come up with different test contexts.
