@@ -38,8 +38,8 @@ public:
 };
 
 /// \brief Object in main loop which calls parent objects.
-class UpdateLoopServer : public Node {
-	GDCLASS(UpdateLoopServer, Node);
+class UpdateLoopServer : public Object {
+	GDCLASS(UpdateLoopServer, Object);
 
 public:
 	/// \brief Adds server to list of servers to call 'OnUpdate' on.

@@ -5065,7 +5065,7 @@ void Main::cleanup(bool p_force) {
 	if (physics_server_3d_manager) {
 		memdelete(physics_server_3d_manager);
 	}
-#endif // PHYSICS_3D_DISABLED
+#endif // _3D_DISABLED
 #ifndef PHYSICS_2D_DISABLED
 	if (physics_server_2d_manager) {
 		memdelete(physics_server_2d_manager);
@@ -5079,7 +5079,10 @@ void Main::cleanup(bool p_force) {
 	if (globals) {
 		memdelete(globals);
 	}
-
+	if (updateLoopServer) {
+		memdelete(updateLoopServer);
+		updateLoopServer = nullptr;
+	}
 	if (OS::get_singleton()->is_restart_on_exit_set()) {
 		//attempt to restart with arguments
 		List<String> args = OS::get_singleton()->get_restart_on_exit_arguments();

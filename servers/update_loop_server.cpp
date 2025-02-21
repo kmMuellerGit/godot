@@ -4,10 +4,10 @@
 
 
 UpdateServer::UpdateServer() {
+
+	ERR_FAIL_COND_MSG(UpdateLoopServer::get_singleton() == nullptr, "Update loop server could not be created!");
 	auto loopServer = UpdateLoopServer::get_singleton();
-	if (loopServer ) {
-		loopServer->AddToUpdate(this);
-	}
+	loopServer->AddToUpdate(this);
 }
 
 UpdateServer::~UpdateServer() {
@@ -27,8 +27,7 @@ void UpdateLoopServer::AddToUpdate(UpdateServer* server) {
 		if (server->get_name() == "") {
 			server->set_name("TempName" + itos( OS::get_singleton()->get_ticks_usec()));
 		}
-		print_line("UpdateLoopServer [", this->get_name(), "]  ADDING new child [", server->get_name(), "]  with type [", server->get_class(), "]");
-		this->add_child(server);
+
 	}
 
 }
@@ -38,10 +37,8 @@ void UpdateLoopServer::RemoveFromUpdate(UpdateServer* server) {
 	auto foundIndex = std::find(updateList.begin(), updateList.end(),server);
 	if (foundIndex != updateList.end()) {
 		updateList.erase(foundIndex);
-		print_line("UpdateLoopServer [", this->get_name(), "]  REMOVING new child [", server->get_name(), "]  with type [", server->get_class(), "]");
-		if (server->get_parent() == this) {
-			this->remove_child(server);
-		}
+		print_line("UpdateLoopServer removing from updates the server [", server->get_name(), "]");
+
 	}
 
 }
@@ -180,10 +177,12 @@ void UpdateLoopServer::PostUpdate(double realTime, double gameTime) {
 }
 
 UpdateLoopServer::UpdateLoopServer() {
+	ERR_FAIL_COND_MSG(singleton != nullptr, "UpdateLoopServer already existed - failing out");
 	singleton = this;
-	this->set_name("UpdateLoopServer_set_from_constructor");
 };
 
 UpdateLoopServer::~UpdateLoopServer() {
-	singleton = nullptr;
+	if (singleton == this) {
+		singleton = nullptr;
+	}
 };
