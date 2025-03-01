@@ -22,16 +22,17 @@ dynamic_link_libs="builtin_embree=no builtin_enet=no builtin_freetype=no builtin
 
 custom_modules_path=os.path.abspath("../cyborg_survivors_game/engine_custom_modules" )
 custom_game_path= os.path.abspath("../cyborg_survivors_game/game" )
-tracy_build_add='tracy_enable=yes CCFLAGS=\"-fno-omit-frame-pointer -fno-inline -ggdb3\"'
+tracy_build_add='tracy_enable=yes tracy_on_demand=yes CCFLAGS=\"-fno-omit-frame-pointer -fno-inline -ggdb3\"'
 build_options={
-    'debug':f"dev_build=yes compiledb=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold {dynamic_link_libs}",
-    'production':f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes compiledb=yes {dynamic_link_libs}",
-    'release_production':f"production=yes lto=full use_llvm=yes linker=mold debug_symbols=no compiledb=no "
+    'debug'             :f"dev_build=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold {dynamic_link_libs}",
+    'production'        :f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes  {dynamic_link_libs}",
+    'release_production':f"production=yes lto=full use_llvm=yes linker=mold debug_symbols=no  "
 }
 
 template_options={
-    'debug':"target=template_debug",
-    'production':"target=template_release "
+    'debug':"target=template_debug ",
+    'production':"target=template_release ",
+    'release_production':"target=template_release "
 }
 
 arch="x86_64"
@@ -41,7 +42,7 @@ def run_command_in_new_terminal(command):
     print(" Running Command")
     print(command)
     print("", flush=True)
-    subprocess.run(command, shell=True,check=True)
+    subprocess.run(command, stdout=None, stderr=None, shell=True,check=True)
 
 
 def parser_init():
@@ -73,6 +74,23 @@ def parser_init():
         help="Build with tracy integration."
     )
 
+    parser.add_argument(
+        "--disable_compilation_db",
+        dest="use_compilation_db",
+        action="store_false",
+        help="Disable the use of the compilation database"
+    )
+    parser.set_defaults(use_compilation_db=True)
+
+    parser.add_argument(
+        "--cores",
+        dest="cores",
+        type=int,
+        default=max(multiprocessing.cpu_count() - 2, 1),
+        help="What to build."
+    )
+
+    # compiledb=yes
     parser.add_argument("--release_dir",dest="release_dir", required=False, help="Output release dir.  Required when using 'release'.")
     args = parser.parse_args()
 
@@ -91,35 +109,46 @@ def parser_init():
 
 def main():
     os_type = platform.system()
-    num_threads =  max(multiprocessing.cpu_count() - 2, 1)
-    print(f"Numthreads={num_threads}")
     # Get user input
     args = parser_init()
-    
 
-    # Build binary - always build.
-    extra_debug_options = ""
-    if "debug" in args.mode:
-        if os_type == "Windows": extra_debug_options += "vsproj=yes"
-    print("Building binary..")
-    command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} { tracy_build_add if args.tracy else ''} compiledb=yes custom_modules={custom_modules_path} "
-    try:
-        if os.path.isfile("./compile_commands.json"):
-            print("Deleting compile_commands.json for clion inspector updating.")
-            os.remove("./compile_commands.json")
-        run_command_in_new_terminal(command)
-    except subprocess.CalledProcessError as e:
-        print("Error while building:")
-        raise e
+    if args.build == 'binary':
+        extra_debug_options = ""
+        if "debug" in args.mode:
+            if os_type == "Windows": extra_debug_options += "vsproj=yes"
+        print("Building binary..")
+        command = f"scons platform={args.os} \
+            -j {args.cores} \
+            {extra_debug_options} \
+            {build_options[args.mode]} \
+            {tracy_build_add if args.tracy else ''} \
+            {"compiledb=yes" if args.use_compilation_db else "compiledb=no"} \
+            custom_modules={custom_modules_path} "
+        try:
+            if os.path.isfile("./compile_commands.json") and args.use_compilation_db:
+                print("Deleting compile_commands.json for clion inspector updating.")
+                os.remove("./compile_commands.json")
+            run_command_in_new_terminal(command)
+        except subprocess.CalledProcessError as e:
+            print("Error while building:")
+            raise e
 
 
     # Build templates
-    extra_debug_options = ""
-    if any([mode in args.build for mode in ["templates", "release"] ] ):
+
+    elif args.build == 'templates':
+        extra_debug_options = ""
         if "debug" in args.mode:
             if os_type == "Windows": extra_debug_options += "vsproj=yes"
         print("Building templates..")
-        command = f"scons platform={args.os} -j {num_threads} {extra_debug_options} {build_options[args.mode]} { tracy_build_add if args.tracy else ''} {template_options[args.mode]} custom_modules={custom_modules_path} "
+        command = f"scons platform={args.os} \
+        -j {args.cores} \
+        {extra_debug_options} \
+        {build_options[args.mode]} \
+        {tracy_build_add if args.tracy else ''} \
+        {template_options[args.mode]} \
+        {"compiledb=yes" if args.use_compilation_db else "compiledb=no"} \
+        custom_modules={custom_modules_path} "
         try:
             run_command_in_new_terminal(command)
         except subprocess.CalledProcessError as e:
@@ -127,9 +156,8 @@ def main():
             raise e
 
     # Package game
-    extra_debug_options = ""
-    if any([mode in args.build for mode in ["release"] ] ):
-        
+    elif args.build == 'release':
+        extra_debug_options = ""
         try:
             # Run the command and capture output
             execute_bin = f"./bin/godot.{args.os}.editor{'.dev' if 'debug' in args.mode else ''}.{arch}.llvm{'.exe' if 'windows' in args.os else ''}"
