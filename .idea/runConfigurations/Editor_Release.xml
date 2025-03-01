@@ -1,7 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Editor Release" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--editor --path ../../cyborg_survivors_game/game" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py mode_release" CONFIG_NAME="Build.py mode_release" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.x86_64.llvm">
-    <method v="2">
-      <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-    </method>
-  </configuration>
-</component>

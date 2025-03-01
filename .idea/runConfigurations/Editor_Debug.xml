@@ -1,7 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Editor Debug" type="CLionExternalRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="--editor --path ../../cyborg_survivors_game/game --verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug" CONFIG_NAME="Build.py Debug" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm">
-    <method v="2">
-      <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-    </method>
-  </configuration>
-</component>
