@@ -22,8 +22,15 @@
         </build>
       </configuration>
     </target>
-    <target id="f4fdbe70-3561-4b37-8afe-6d79855cba6c" name="Build.py mode_release TRACY" defaultType="TOOL">
-      <configuration id="0bf18c65-4a82-4bfe-a226-15565fb7f7d3" name="Build.py mode_release TRACY">
+    <target id="f4fdbe70-3561-4b37-8afe-6d79855cba6c" name="Build.py Release PRODUCTION" defaultType="TOOL">
+      <configuration id="0bf18c65-4a82-4bfe-a226-15565fb7f7d3" name="Build.py Release PRODUCTION">
+        <build type="TOOL">
+          <tool actionId="Tool_External Tools_build Release PRODUCTION" />
+        </build>
+      </configuration>
+    </target>
+    <target id="c31a46a0-487c-42b4-8fcd-014d24b984d7" name="Build.py Release TRACY" defaultType="TOOL">
+      <configuration id="da9594ce-773d-497e-a34c-2163fe348c90" name="Build.py Release TRACY">
         <build type="TOOL">
           <tool actionId="Tool_External Tools_build Release TRACY" />
         </build>

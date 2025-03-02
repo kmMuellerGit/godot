@@ -26,7 +26,7 @@ tracy_build_add='tracy_enable=yes tracy_on_demand=yes CCFLAGS=\"-fno-omit-frame-
 build_options={
     'debug'             :f"dev_build=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold {dynamic_link_libs}",
     'production'        :f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes  {dynamic_link_libs}",
-    'release_production':f"production=yes lto=full use_llvm=yes linker=mold debug_symbols=no  "
+    'release_production':f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=no  "
 }
 
 template_options={
@@ -54,7 +54,6 @@ def parser_init():
         "--build",
         dest="build",
         choices=valid_build_options,
-        default=valid_build_options[0],
         help="What to build."
     )
 
@@ -63,7 +62,6 @@ def parser_init():
         "--mode",
         dest="mode",
         choices=valid_mode_options,
-        default=valid_mode_options[0],
         help="What build settings to use."
     )
 
@@ -111,8 +109,9 @@ def main():
     os_type = platform.system()
     # Get user input
     args = parser_init()
-
+    extra_suffix=f"mode_{args.mode}{'.tracy' if args.tracy else ''}"
     if args.build == 'binary':
+
         extra_debug_options = ""
         if "debug" in args.mode:
             if os_type == "Windows": extra_debug_options += "vsproj=yes"
@@ -123,6 +122,7 @@ def main():
             {build_options[args.mode]} \
             {tracy_build_add if args.tracy else ''} \
             {"compiledb=yes" if args.use_compilation_db else "compiledb=no"} \
+            extra_suffix={extra_suffix} \
             custom_modules={custom_modules_path} "
         try:
             if os.path.isfile("./compile_commands.json") and args.use_compilation_db:
@@ -148,6 +148,7 @@ def main():
         {tracy_build_add if args.tracy else ''} \
         {template_options[args.mode]} \
         {"compiledb=yes" if args.use_compilation_db else "compiledb=no"} \
+        extra_suffix={extra_suffix} \
         custom_modules={custom_modules_path} "
         try:
             run_command_in_new_terminal(command)
