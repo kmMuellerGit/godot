@@ -22,6 +22,14 @@
       <file path="$PROJECT_DIR$" />
     </sourceRoots>
     <excludeRoots>
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/.github" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/cmake" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/docs" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/examples" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/include" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/src" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/templates" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/test" />
       <file path="$PROJECT_DIR$/modules/godot_tracy/tracy" />
     </excludeRoots>
   </component>
