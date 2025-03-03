@@ -769,6 +769,11 @@ Variant Object::callv(const StringName &p_method, const Array &p_args) {
 
 Variant Object::callp(const StringName &p_method, const Variant **p_args, int p_argcount, Callable::CallError &r_error) {
 	r_error.error = Callable::CallError::CALL_OK;
+#ifdef TRACY_ENABLE
+	ZoneScoped;
+	CharString zoneString = ("Object::callp  " + String(this->get_class_name()) + "/" + p_method).utf8();
+	ZoneName(zoneString, zoneString.length());
+#endif
 
 	if (p_method == CoreStringName(free_)) {
 //free must be here, before anything, always ready
@@ -1195,7 +1200,14 @@ Error Object::emit_signalp(const StringName &p_name, const Variant **p_args, int
 	uint32_t slot_count = 0;
 
 	{
-		ObjectSignalLock signal_lock(this);
+	ObjectSignalLock signal_lock(this);
+#ifdef TRACY_ENABLE
+		ZoneScoped;
+		CharString zoneString = ("Object::emit_signalp  " + String(this->get_class_name()) + "/" + p_name).utf8();
+		ZoneName(zoneString, zoneString.length());
+#endif
+		OBJ_SIGNAL_LOCK
+
 
 		SignalData *s = signal_map.getptr(p_name);
 		if (!s) {
