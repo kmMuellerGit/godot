@@ -47,6 +47,7 @@
 #include "scene/resources/world_2d.h"
 #include "servers/audio/audio_server.h"
 #include "servers/rendering/rendering_server_globals.h"
+#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
 
 // 2D.
 #include "scene/2d/audio_listener_2d.h"
@@ -1441,6 +1442,7 @@ Ref<InputEvent> Viewport::_make_input_local(const Ref<InputEvent> &ev) {
 }
 
 Vector2 Viewport::get_mouse_position() const {
+	ZoneScoped;
 	ERR_READ_THREAD_GUARD_V(Vector2());
 	if (get_section_root_viewport() != SceneTree::get_singleton()->get_root()) {
 		// Rely on the most recent mouse coordinate from an InputEventMouse in push_input.
