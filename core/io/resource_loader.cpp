@@ -44,6 +44,7 @@
 #include "core/templates/rb_set.h"
 #include "core/variant/variant_parser.h"
 #include "servers/rendering/rendering_server.h"
+#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
 
 #ifdef DEBUG_LOAD_THREADED
 #define print_lt(m_text) print_line(m_text)
@@ -288,6 +289,9 @@ ResourceLoader::LoadToken::~LoadToken() {
 
 Ref<Resource> ResourceLoader::_load(const String &p_path, const String &p_original_path, const String &p_type_hint, ResourceFormatLoader::CacheMode p_cache_mode, Error *r_error, bool p_use_sub_threads, float *r_progress) {
 	const String &original_path = p_original_path.is_empty() ? p_path : p_original_path;
+	ZoneScoped;
+	auto systemName = (String("Loading Resource: ") + p_path).utf8();
+	ZoneName(systemName, systemName.length());
 	load_nesting++;
 	if (load_paths_stack.size()) {
 		MutexLock thread_load_lock(thread_load_mutex);
