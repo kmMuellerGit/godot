@@ -50,7 +50,7 @@ void UpdateLoopServer::Update(double realTime, double gameTime) {
 		return; // Do no work while disabled.
 	}
 	for (auto e : this->updateList) {
-		if (e == nullptr)
+		if (e == nullptr || e->is_queued_for_deletion())
 		{
 			removeList.emplace_back(e);
 		}
@@ -78,7 +78,7 @@ void UpdateLoopServer::PrePhysicsUpdate(double realTime, double gameTime) {
 		return; // Do no work while disabled.
 	}
 	for (auto e : this->updateList) {
-		if (e == nullptr)
+		if (e == nullptr || e->is_queued_for_deletion())
 		{
 			removeList.emplace_back(e);
 		}
@@ -99,7 +99,7 @@ void UpdateLoopServer::PhysicsUpdate(double realTime, double gameTime) {
 		return; // Do no work while disabled.
 	}
 	for (auto e : this->updateList) {
-		if (e == nullptr)
+		if (e == nullptr || e->is_queued_for_deletion())
 		{
 			removeList.emplace_back(e);
 		}
@@ -120,7 +120,7 @@ void UpdateLoopServer::PostPhysicsUpdate(double realTime, double gameTime) {
 		return; // Do no work while disabled.
 	}
 	for (auto e : this->updateList) {
-		if (e == nullptr)
+		if (e == nullptr || e->is_queued_for_deletion())
 		{
 			removeList.emplace_back(e);
 		}
@@ -141,7 +141,7 @@ void UpdateLoopServer::PreRenderUpdate(double realTime, double gameTime) {
 		return; // Do no work while disabled.
 	}
 	for (auto e : this->updateList) {
-		if (e == nullptr)
+		if (e == nullptr || e->is_queued_for_deletion())
 		{
 			removeList.emplace_back(e);
 		}
@@ -162,7 +162,7 @@ void UpdateLoopServer::PostUpdate(double realTime, double gameTime) {
 		return; // Do no work while disabled.
 	}
 	for (auto e : this->updateList) {
-		if (e == nullptr)
+		if (e == nullptr || e->is_queued_for_deletion())
 		{
 			removeList.emplace_back(e);
 		}
