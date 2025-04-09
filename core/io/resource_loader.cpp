@@ -543,6 +543,7 @@ void ResourceLoader::_load_threaded_request_setup_user_token(LoadToken *p_token,
 }
 
 Ref<Resource> ResourceLoader::load(const String &p_path, const String &p_type_hint, ResourceFormatLoader::CacheMode p_cache_mode, Error *r_error) {
+	ZoneScoped; //#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
 	if (r_error) {
 		*r_error = OK;
 	}
