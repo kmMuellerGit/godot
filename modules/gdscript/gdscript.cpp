@@ -2051,7 +2051,7 @@ Variant GDScriptInstance::callp(const StringName &p_method, const Variant **p_ar
 #ifdef TRACY_ENABLE
 	ZoneScoped;
 	CharString zoneString = ("GDScriptInstance::callp  " + String(this->get_script()->get_path()) + "/" + p_method).utf8();
-	ZoneName(zoneString, zoneString.length());
+	ZoneName(zoneString.ptr(), zoneString.length());
 #endif
 
 	GDScript *sptr = script.ptr();

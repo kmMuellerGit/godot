@@ -5040,6 +5040,11 @@ void Main::cleanup(bool p_force) {
 
 	OS::get_singleton()->finalize();
 
+	if (updateLoopServer) {
+		memdelete(updateLoopServer);
+		updateLoopServer = nullptr;
+	}
+
 	finalize_display();
 
 	if (input) {
@@ -5072,17 +5077,11 @@ void Main::cleanup(bool p_force) {
 	}
 #endif // PHYSICS_2D_DISABLED
 
-	if (updateLoopServer) {
-		memdelete(updateLoopServer);
-	}
 
 	if (globals) {
 		memdelete(globals);
 	}
-	if (updateLoopServer) {
-		memdelete(updateLoopServer);
-		updateLoopServer = nullptr;
-	}
+
 	if (OS::get_singleton()->is_restart_on_exit_set()) {
 		//attempt to restart with arguments
 		List<String> args = OS::get_singleton()->get_restart_on_exit_arguments();

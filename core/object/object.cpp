@@ -855,7 +855,7 @@ Variant Object::callp(const StringName &p_method, const Variant **p_args, int p_
 #ifdef TRACY_ENABLE
 	ZoneScoped;
 	CharString zoneString = ("Object::callp  " + String(this->get_class_name()) + "/" + p_method).utf8();
-	ZoneName(zoneString, zoneString.length());
+	ZoneName(zoneString.ptr(), zoneString.length());
 #endif
 
 	if (p_method == CoreStringName(free_)) {
@@ -1279,7 +1279,7 @@ Error Object::emit_signalp(const StringName &p_name, const Variant **p_args, int
 #ifdef TRACY_ENABLE
 		ZoneScoped;
 		CharString zoneString = ("Object::emit_signalp  " + String(this->get_class_name()) + "/" + p_name).utf8();
-		ZoneName(zoneString, zoneString.length());
+		ZoneName(zoneString.ptr(), zoneString.length());
 #endif
 		OBJ_SIGNAL_LOCK
 
