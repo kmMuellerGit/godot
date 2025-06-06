@@ -5354,6 +5354,11 @@ void Main::cleanup(bool p_force) {
 
 	OS::get_singleton()->finalize();
 
+	if (updateLoopServer) {
+		memdelete(updateLoopServer);
+		updateLoopServer = nullptr;
+	}
+
 	finalize_display();
 
 	if (input) {
@@ -5385,6 +5390,11 @@ void Main::cleanup(bool p_force) {
 		memdelete(physics_server_2d_manager);
 	}
 #endif // PHYSICS_2D_DISABLED
+
+	if (updateLoopServer) {
+		memdelete(updateLoopServer);
+	}
+
 	if (globals) {
 		memdelete(globals);
 	}
