@@ -277,7 +277,7 @@ Ref<Resource> ResourceLoader::_load(const String &p_path, const String &p_origin
 	const String &original_path = p_original_path.is_empty() ? p_path : p_original_path;
 	ZoneScoped;
 	auto systemName = (String("Loading Resource: ") + p_path).utf8();
-	ZoneName(systemName, systemName.length());
+	ZoneName(systemName.ptr(), systemName.length());
 	load_nesting++;
 
 	print_verbose(vformat("Loading resource: %s", p_path));
