@@ -18,14 +18,14 @@ from datetime import datetime
 # https://docs.godotengine.org/en/stable/contributing/development/compiling/compiling_for_linuxbsd.html#using-system-libraries-for-faster-development
 # - WARNING : When using system libraries, the resulting library is not portable across Linux distributions anymore.
 #           Do not use this approach for creating binaries you intend to distribute to others, unless you're creating a package for a Linux distribution.
-dynamic_link_libs="builtin_embree=no builtin_enet=no builtin_freetype=no builtin_graphite=no builtin_harfbuzz=no builtin_libogg=no builtin_libpng=no builtin_libtheora=no builtin_libvorbis=no builtin_libwebp=no builtin_mbedtls=no builtin_miniupnpc=no builtin_pcre2=no builtin_zlib=no builtin_zstd=no"
+#dynamic_link_libs="builtin_embree=no builtin_enet=no builtin_freetype=no builtin_graphite=no builtin_harfbuzz=no builtin_libogg=no builtin_libpng=no builtin_libtheora=no builtin_libvorbis=no builtin_libwebp=no builtin_mbedtls=no builtin_miniupnpc=no builtin_pcre2=no builtin_zlib=no builtin_zstd=no"
 
 custom_modules_path=os.path.abspath("../cyborg_survivors_game/engine_custom_modules" )
 custom_game_path= os.path.abspath("../cyborg_survivors_game/game" )
 tracy_build_add='tracy_enable=yes tracy_on_demand=yes CCFLAGS=\"-fno-omit-frame-pointer -fno-inline -ggdb3\"'
 build_options={
-    'debug'             :f"dev_build=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold {dynamic_link_libs}",
-    'production'        :f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes  {dynamic_link_libs}",
+    'debug'             :f"dev_build=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold",
+    'production'        :f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes",
     'release_production':f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=no  "
 }
 
