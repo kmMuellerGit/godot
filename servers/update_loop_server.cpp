@@ -17,7 +17,8 @@ void UpdateLoopServer::_bind_methods() {
 bool UpdateLoopServer::IsEditor() {
 	SceneTree *scene_tree = SceneTree::get_singleton();
 	bool invalid_scene = scene_tree == nullptr || scene_tree->is_suspended();
-	return invalid_scene;
+	bool edited_scene = Engine::get_singleton()->is_editor_hint();
+	return edited_scene || invalid_scene;
 }
 
 UpdateLoopServer *UpdateLoopServer::get_singleton() {
