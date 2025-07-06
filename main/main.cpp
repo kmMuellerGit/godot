@@ -908,6 +908,7 @@ void Main::test_cleanup() {
 
 	if (updateLoopServer) {
 		memdelete(updateLoopServer);
+		updateLoopServer = nullptr;
 	}
 
 #ifndef PHYSICS_2D_DISABLED
@@ -4666,6 +4667,9 @@ bool Main::iteration() {
 
 	Engine::get_singleton()->_process_step = process_step;
 	Engine::get_singleton()->_physics_interpolation_fraction = advance.interpolation_fraction;
+	auto update_server = UpdateLoopServer::get_singleton();
+	ERR_FAIL_COND_V_MSG(update_server == nullptr, true, "Update server was never created.");
+	update_server->Emit_FrameStartUpdate(process_step, scaled_step);
 
 	uint64_t physics_process_ticks = 0;
 	uint64_t process_ticks = 0;
@@ -4690,7 +4694,6 @@ bool Main::iteration() {
 	XRServer::get_singleton()->_process();
 #endif // XR_DISABLED
 
-	UpdateLoopServer::get_singleton()->PrePhysicsUpdate(process_step, process_step * time_scale);
 
 	for (int iters = 0; iters < advance.physics_steps; ++iters) {
 		if (Input::get_singleton()->is_agile_input_event_flushing()) {
@@ -4743,8 +4746,6 @@ bool Main::iteration() {
 		navigation_process_ticks = MAX(navigation_process_ticks, OS::get_singleton()->get_ticks_usec() - navigation_begin); // keep the largest one for reference
 		navigation_process_max = MAX(OS::get_singleton()->get_ticks_usec() - navigation_begin, navigation_process_max);
 
-		UpdateLoopServer::get_singleton()->PhysicsUpdate(physics_step, physics_step * time_scale);
-
 		message_queue->flush();
 #endif // !defined(NAVIGATION_2D_DISABLED) || !defined(NAVIGATION_3D_DISABLED)
 
@@ -4767,7 +4768,6 @@ bool Main::iteration() {
 
 		Engine::get_singleton()->_in_physics = false;
 	}
-	UpdateLoopServer::get_singleton()->PostPhysicsUpdate(process_step, process_step * time_scale);
 
 	if (Input::get_singleton()->is_agile_input_event_flushing()) {
 		Input::get_singleton()->flush_buffered_events();
@@ -4775,16 +4775,13 @@ bool Main::iteration() {
 
 	uint64_t process_begin = OS::get_singleton()->get_ticks_usec();
 
+	update_server->Emit_PreProcessUpdate(process_step, scaled_step);
 	if (OS::get_singleton()->get_main_loop()->process(process_step * time_scale)) {
 		exit = true;
 	}
-	UpdateLoopServer::get_singleton()->Update(process_step, process_step * time_scale);
+	update_server->Emit_PostProcessUpdate(process_step, scaled_step);
 
 	message_queue->flush();
-
-	if (UpdateLoopServer::get_singleton()) {
-		UpdateLoopServer::get_singleton()->PreRenderUpdate(process_step, process_step * time_scale);
-	}
 
 #ifndef NAVIGATION_2D_DISABLED
 	NavigationServer2D::get_singleton()->process(process_step * time_scale);
@@ -4793,6 +4790,7 @@ bool Main::iteration() {
 	NavigationServer3D::get_singleton()->process(process_step * time_scale);
 #endif // NAVIGATION_3D_DISABLED
 
+	update_server->Emit_PreRenderUpdate(process_step, scaled_step);
 	RenderingServer::get_singleton()->sync(); //sync if still drawing from previous frames.
 
 	const bool has_pending_resources_for_processing = RD::get_singleton() && RD::get_singleton()->has_pending_resources_for_processing();
@@ -4814,6 +4812,8 @@ bool Main::iteration() {
 		}
 	}
 
+	update_server->Emit_PostRenderUpdate(process_step, scaled_step);
+
 	process_ticks = OS::get_singleton()->get_ticks_usec() - process_begin;
 	process_max = MAX(process_ticks, process_max);
 	uint64_t frame_time = OS::get_singleton()->get_ticks_usec() - ticks;
@@ -4824,8 +4824,7 @@ bool Main::iteration() {
 
 	AudioServer::get_singleton()->update();
 
-	UpdateLoopServer::get_singleton()->PostUpdate(process_step, process_step * time_scale);
-
+	update_server->Emit_FrameEndUpdate(process_step, scaled_step);
 	if (EngineDebugger::is_active()) {
 		EngineDebugger::get_singleton()->iteration(frame_time, process_ticks, physics_process_ticks, physics_step);
 	}

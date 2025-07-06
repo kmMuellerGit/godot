@@ -1,188 +1,68 @@
 ﻿
 #include "update_loop_server.h"
+#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
+#include "scene/main/scene_tree.h"
 
-
-
-UpdateServer::UpdateServer() {
-
-	ERR_FAIL_COND_MSG(UpdateLoopServer::get_singleton() == nullptr, "Update loop server could not be created!");
-	auto loopServer = UpdateLoopServer::get_singleton();
-	loopServer->AddToUpdate(this);
+void UpdateLoopServer::_bind_methods() {
+	ADD_SIGNAL(MethodInfo("frame_start_update", PropertyInfo(Variant::BOOL, "is_editor"), PropertyInfo(Variant::FLOAT, "real_time"), PropertyInfo(Variant::FLOAT, "game_time")));
+	ADD_SIGNAL(MethodInfo("pre_process_update", PropertyInfo(Variant::BOOL, "is_editor"), PropertyInfo(Variant::FLOAT, "real_time"), PropertyInfo(Variant::FLOAT, "game_time")));
+	ADD_SIGNAL(MethodInfo("post_process_update", PropertyInfo(Variant::BOOL, "is_editor"), PropertyInfo(Variant::FLOAT, "real_time"), PropertyInfo(Variant::FLOAT, "game_time")));
+	ADD_SIGNAL(MethodInfo("pre_render_update", PropertyInfo(Variant::BOOL, "is_editor"), PropertyInfo(Variant::FLOAT, "real_time"), PropertyInfo(Variant::FLOAT, "game_time")));
+	ADD_SIGNAL(MethodInfo("post_render_update", PropertyInfo(Variant::BOOL, "is_editor"), PropertyInfo(Variant::FLOAT, "real_time"), PropertyInfo(Variant::FLOAT, "game_time")));
+	ADD_SIGNAL(MethodInfo("pre_script_update", PropertyInfo(Variant::BOOL, "is_editor"), PropertyInfo(Variant::FLOAT, "real_time"), PropertyInfo(Variant::FLOAT, "game_time")));
+	ADD_SIGNAL(MethodInfo("post_script_update", PropertyInfo(Variant::BOOL, "is_editor"), PropertyInfo(Variant::FLOAT, "real_time"), PropertyInfo(Variant::FLOAT, "game_time")));
+	ADD_SIGNAL(MethodInfo("frame_end_update", PropertyInfo(Variant::BOOL, "is_editor"), PropertyInfo(Variant::FLOAT, "real_time"), PropertyInfo(Variant::FLOAT, "game_time")));
 }
 
-UpdateServer::~UpdateServer() {
-
-	auto loopServer = UpdateLoopServer::get_singleton();
-	if (loopServer ) {
-		loopServer->RemoveFromUpdate(this);
-	}
-}
-
-
-void UpdateLoopServer::AddToUpdate(UpdateServer* server) {
-	//If already added, reset.
-	if (server==nullptr){return;}
-	if (std::find(updateList.begin(), updateList.end(), server)==updateList.end()) {
-		updateList.emplace_back(server);
-		if (server->get_name() == "") {
-			server->set_name("TempName" + itos( OS::get_singleton()->get_ticks_usec()));
-		}
-
-	}
-
-}
-
-void UpdateLoopServer::RemoveFromUpdate(UpdateServer* server) {
-	if (server==nullptr){return;}
-	auto foundIndex = std::find(updateList.begin(), updateList.end(),server);
-	if (foundIndex != updateList.end()) {
-		updateList.erase(foundIndex);
-		print_line("UpdateLoopServer removing from updates the server [", server->get_name(), "]");
-
-	}
-
-}
-
-void UpdateLoopServer::Update(double realTime, double gameTime) {
-	std::vector<UpdateServer*> removeList = {};
+bool UpdateLoopServer::IsEditor() {
 	SceneTree *scene_tree = SceneTree::get_singleton();
-	if (scene_tree == nullptr || scene_tree->is_suspended()) {
-		return; // Do no work while disabled.
-	}
-	for (auto e : this->updateList) {
-		if (e == nullptr || e->is_queued_for_deletion())
-		{
-			removeList.emplace_back(e);
-		}
-		else {
-			e->OnUpdate(realTime, gameTime);
-		}
-	}
-
-	//Remove dead servers.
-	for (auto e : removeList) {
-		RemoveFromUpdate(e);
-	}
+	bool invalid_scene = scene_tree == nullptr || scene_tree->is_suspended();
+	return invalid_scene;
 }
-
-UpdateLoopServer *UpdateLoopServer::singleton = nullptr;
 
 UpdateLoopServer *UpdateLoopServer::get_singleton() {
 	return singleton;
 };
 
-void UpdateLoopServer::PrePhysicsUpdate(double realTime, double gameTime) {
-	std::vector<UpdateServer*> removeList = {};
-	SceneTree *scene_tree = SceneTree::get_singleton();
-	if (scene_tree == nullptr || scene_tree->is_suspended()) {
-		return; // Do no work while disabled.
-	}
-	for (auto e : this->updateList) {
-		if (e == nullptr || e->is_queued_for_deletion())
-		{
-			removeList.emplace_back(e);
-		}
-		else {
-			e->PrePhysicsUpdate(realTime, gameTime);
-		}
-
-	}
-	for (auto e : removeList) {
-		RemoveFromUpdate(e);
-	}
+void UpdateLoopServer::Emit_FrameStartUpdate(double real_time, double game_time) {
+	ZoneScopedN("Update Server - frame_start_update");
+	emit_signal("frame_start_update", IsEditor(), real_time, game_time);
 }
 
-void UpdateLoopServer::PhysicsUpdate(double realTime, double gameTime) {
-	std::vector<UpdateServer*> removeList = {};
-	SceneTree *scene_tree = SceneTree::get_singleton();
-	if (scene_tree == nullptr || scene_tree->is_suspended()) {
-		return; // Do no work while disabled.
-	}
-	for (auto e : this->updateList) {
-		if (e == nullptr || e->is_queued_for_deletion())
-		{
-			removeList.emplace_back(e);
-		}
-		else {
-			e->PhysicsUpdate(realTime, gameTime);
-		}
-
-	}
-	for (auto e : removeList) {
-		RemoveFromUpdate(e);
-	}
+void UpdateLoopServer::Emit_PreProcessUpdate(double real_time, double game_time) {
+	ZoneScopedN("Update Server - pre_process_update");
+	emit_signal("pre_process_update",IsEditor(), real_time, game_time);
 }
 
-void UpdateLoopServer::PostPhysicsUpdate(double realTime, double gameTime) {
-	std::vector<UpdateServer*> removeList = {};
-	SceneTree *scene_tree = SceneTree::get_singleton();
-	if (scene_tree == nullptr || scene_tree->is_suspended()) {
-		return; // Do no work while disabled.
-	}
-	for (auto e : this->updateList) {
-		if (e == nullptr || e->is_queued_for_deletion())
-		{
-			removeList.emplace_back(e);
-		}
-		else {
-			e->PostPhysicsUpdate(realTime, gameTime);
-		}
-
-	}
-	for (auto e : removeList) {
-		RemoveFromUpdate(e);
-	}
+void UpdateLoopServer::Emit_PostProcessUpdate(double real_time, double game_time) {
+	ZoneScopedN("Update Server - post_process_update");
+	emit_signal("post_process_update",IsEditor(), real_time, game_time);
 }
 
-void UpdateLoopServer::PreRenderUpdate(double realTime, double gameTime) {
-	std::vector<UpdateServer*> removeList = {};
-	SceneTree *scene_tree = SceneTree::get_singleton();
-	if (scene_tree == nullptr || scene_tree->is_suspended()) {
-		return; // Do no work while disabled.
-	}
-	for (auto e : this->updateList) {
-		if (e == nullptr || e->is_queued_for_deletion())
-		{
-			removeList.emplace_back(e);
-		}
-		else {
-			e->PreRenderUpdate(realTime, gameTime);
-		}
-
-	}
-	for (auto e : removeList) {
-		RemoveFromUpdate(e);
-	}
+void UpdateLoopServer::Emit_PreRenderUpdate(double real_time, double game_time) {
+	ZoneScopedN("Update Server - pre_render_update");
+	emit_signal("pre_render_update",IsEditor(), real_time, game_time);
 }
 
-void UpdateLoopServer::PostUpdate(double realTime, double gameTime) {
-	std::vector<UpdateServer*> removeList = {};
-	SceneTree *scene_tree = SceneTree::get_singleton();
-	if (scene_tree == nullptr || scene_tree->is_suspended()) {
-		return; // Do no work while disabled.
-	}
-	for (auto e : this->updateList) {
-		if (e == nullptr || e->is_queued_for_deletion())
-		{
-			removeList.emplace_back(e);
-		}
-		else {
-			e->PostUpdate(realTime, gameTime);
-		}
+void UpdateLoopServer::Emit_PostRenderUpdate(double real_time, double game_time) {
+	ZoneScopedN("Update Server - post_render_update");
+	emit_signal("post_render_update",IsEditor(), real_time, game_time);
+}
 
-	}
-	for (auto e : removeList) {
-		RemoveFromUpdate(e);
-	}
+void UpdateLoopServer::Emit_FrameEndUpdate(double real_time, double game_time) {
+	ZoneScopedN("Update Server - frame_end_update");
+	emit_signal("frame_end_update",IsEditor(), real_time, game_time);
 }
 
 UpdateLoopServer::UpdateLoopServer() {
-	ERR_FAIL_COND_MSG(singleton != nullptr, "UpdateLoopServer already existed - failing out");
+	print_line("UpdateLoopServer singleton being set.");
+	ERR_FAIL_COND_MSG(singleton != nullptr, "UpdateLoopServer already exists.  This indicates improper setup.");
 	singleton = this;
 };
 
 UpdateLoopServer::~UpdateLoopServer() {
 	if (singleton == this) {
+		print_line("UpdateLoopServer singleton being removed.");
 		singleton = nullptr;
 	}
 };
