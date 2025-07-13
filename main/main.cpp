@@ -5231,6 +5231,11 @@ void Main::cleanup(bool p_force) {
 	}
 #endif
 
+	if (updateLoopServer) {
+		memdelete(updateLoopServer);
+		updateLoopServer = nullptr;
+	}
+
 	for (int i = 0; i < TextServerManager::get_singleton()->get_interface_count(); i++) {
 		TextServerManager::get_singleton()->get_interface(i)->cleanup();
 	}
@@ -5332,11 +5337,6 @@ void Main::cleanup(bool p_force) {
 	}
 
 	OS::get_singleton()->finalize();
-
-	if (updateLoopServer) {
-		memdelete(updateLoopServer);
-		updateLoopServer = nullptr;
-	}
 
 	finalize_display();
 
