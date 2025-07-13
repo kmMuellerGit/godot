@@ -4647,6 +4647,7 @@ static uint64_t navigation_process_max = 0;
 // will terminate the program. In case of failure, the OS exit code needs
 // to be set explicitly here (defaults to EXIT_SUCCESS).
 bool Main::iteration() {
+	ZoneScopedN("Main Iteration Loop");
 	iterating++;
 
 	const uint64_t ticks = OS::get_singleton()->get_ticks_usec();
@@ -4937,6 +4938,11 @@ void Main::cleanup(bool p_force) {
 	}
 #endif
 
+	if (updateLoopServer) {
+		memdelete(updateLoopServer);
+		updateLoopServer = nullptr;
+	}
+
 	for (int i = 0; i < TextServerManager::get_singleton()->get_interface_count(); i++) {
 		TextServerManager::get_singleton()->get_interface(i)->cleanup();
 	}
@@ -5038,11 +5044,6 @@ void Main::cleanup(bool p_force) {
 	}
 
 	OS::get_singleton()->finalize();
-
-	if (updateLoopServer) {
-		memdelete(updateLoopServer);
-		updateLoopServer = nullptr;
-	}
 
 	finalize_display();
 

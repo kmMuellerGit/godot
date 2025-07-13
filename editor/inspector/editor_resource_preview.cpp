@@ -173,8 +173,12 @@ void EditorResourcePreview::_generate_preview(Ref<ImageTexture> &r_texture, Ref<
 		r_texture = Ref<ImageTexture>();
 		r_small_texture = Ref<ImageTexture>();
 
-		if (is_print_verbose_enabled()) {
-			print_line(vformat("Generated '%s' preview in %d usec", p_item.path, OS::get_singleton()->get_ticks_usec() - started_at));
+		uint64_t diff = OS::get_singleton()->get_ticks_usec() - started_at;
+		if (diff > 0.25 * 1024 * 1024) {
+			WARN_VERBOSE(vformat("Generated empty preview '%s' in %d usec", p_item.path, diff))
+		}
+		else {
+			print_verbose(vformat("Generated  empty preview '%s' in %d usec", p_item.path, diff));
 		}
 		return; //could not guess type
 	}
@@ -260,8 +264,12 @@ void EditorResourcePreview::_generate_preview(Ref<ImageTexture> &r_texture, Ref<
 		}
 	}
 
-	if (is_print_verbose_enabled()) {
-		print_line(vformat("Generated '%s' preview in %d usec", p_item.path, OS::get_singleton()->get_ticks_usec() - started_at));
+	uint64_t diff = OS::get_singleton()->get_ticks_usec() - started_at;
+	if (diff > 0.25 * 1024 * 1024) {
+		WARN_VERBOSE(vformat("Generated preview '%s' in %d usec", p_item.path, diff))
+	}
+	else {
+		print_verbose(vformat("Generated  preview '%s' in %d usec", p_item.path, diff));
 	}
 }
 

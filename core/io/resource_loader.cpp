@@ -288,6 +288,7 @@ ResourceLoader::LoadToken::~LoadToken() {
 }
 
 Ref<Resource> ResourceLoader::_load(const String &p_path, const String &p_original_path, const String &p_type_hint, ResourceFormatLoader::CacheMode p_cache_mode, Error *r_error, bool p_use_sub_threads, float *r_progress) {
+	uint64_t started_at = OS::get_singleton()->get_ticks_usec();
 	const String &original_path = p_original_path.is_empty() ? p_path : p_original_path;
 	ZoneScoped;
 	auto systemName = (String("Loading Resource: ") + p_path).utf8();
@@ -305,7 +306,6 @@ Ref<Resource> ResourceLoader::_load(const String &p_path, const String &p_origin
 	}
 	load_paths_stack.push_back(original_path);
 
-	print_verbose(vformat("Loading resource: %s", p_path));
 
 	// Try all loaders and pick the first match for the type hint
 	bool found = false;
@@ -325,7 +325,14 @@ Ref<Resource> ResourceLoader::_load(const String &p_path, const String &p_origin
 	res_ref_overrides.erase(load_nesting);
 	load_nesting--;
 
-	if (res.is_valid()) {
+	if (res.is_valid()){
+		uint64_t diff = OS::get_singleton()->get_ticks_usec() - started_at;
+		if (diff > 0.1 * 1024 * 1024) {
+			WARN_VERBOSE(vformat("Loaded Resource '%s' in %d usec - a long amount of time", p_path, diff))
+		}
+		else {
+			print_verbose(vformat("Loaded resource: '%s' in %d usec", p_path, diff));
+		}
 		return res;
 	} else {
 		print_verbose(vformat("Failed loading resource: %s", p_path));
