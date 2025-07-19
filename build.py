@@ -109,7 +109,7 @@ def main():
     os_type = platform.system()
     # Get user input
     args = parser_init()
-    extra_suffix=f"mode_{args.mode}{'.tracy' if args.tracy else ''}"
+    extra_suffix=f"mode_{args.mode}.build_{args.build}{'.tracy' if args.tracy else ''}"
     if args.build == 'binary':
 
         extra_debug_options = ""
