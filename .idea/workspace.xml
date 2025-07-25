@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/CodeEditing/CppCodeGeneration/FunctionImplementationKind/@EntryValue" value="NotCompiledCode" type="string" />
+    <option name="/Default/CodeEditing/CppDocumentationComment/AddBriefTag/@EntryValue" value="true" type="bool" />
+    <option name="/Default/CodeEditing/TypingAssist/Cpp/CloseBlockComment/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="4" type="long" />
+    <option name="/Default/Environment/UserInterface/HierarchyView/ViewStyle/@EntryValue" value="SuperTypes" type="string" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppParameterNameHintsOptions" type="string" />
+    <option name="/Default/Housekeeping/RefactoringsMru/RenameRefactoring/DoSearchForTextInStrings/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="Added --game_tests to the engine.  This allows test cases to run in game engine and render to the screen with access to project files.&#10;&#10;THis was very painful and annoying to get to :(">
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameDocTest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameDocTest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainTestHelpers.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainTestHelpers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_game_setup.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/test_testmodule.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/test_testmodule.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_testmodule.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_testmodule.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/CameraZoom.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/CameraZoom.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/universal/Servers/MapCollisionAutoGlobal.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/universal/Servers/MapCollisionAutoGlobal.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Editor_Debug_Tracy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Editor_Debug_Tracy.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
+  </component>
+  <component name="ClangdSettings">
+    <option name="clangTidyViaClangd" value="false" />
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="CompDBLocalSettings">
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="godot" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="godot" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="MyTestClass" />
+        <option value="Copy of C++ Class.h.child.0" />
+        <option value="Copy of C++ Class" />
+        <option value="Godot Unit Test" />
+        <option value="Godot Resource.h.child.0" />
+        <option value="Godot Resource" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kmMuellerGit&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:kmMuellerGit/cyborg_survivors_game.git&quot;,
+    &quot;accountId&quot;: &quot;447fa314-793e-440d-95d7-7a59f3dac1a6&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/custom_engine_components/TextInstance3D.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/custom_engine_components/TextInstance3D.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/EntityAvoidanceForceServer/EntityAvoidanceForceLayer.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/EntityAvoidanceForceServer/EntityAvoidanceForceServer.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/EntityAvoidanceForceServer/EntityAvoidanceForceServer.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collision.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_EntitySpawns.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Lifetime.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_PositionMapSystem.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Rendering.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Rendering.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Transform.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Transform.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Velocity.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Velocity.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecPrefabSpawnerNode.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecPrefabSpawnerNode.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_VertexAnimationMesh.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/register_types.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecPrefab.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecSystems.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecSystems.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecsDataComponent.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecsDataComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsToGodotHelper.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/distr/flecs.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/include/flecs.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/register_types.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/cpp_chunkmap/include/chunkmap.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/gdscript_helpers.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainNode.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainNode.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/EquipmentSlotNode.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/inventory_item_base.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/inventory_item_slot.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/ItemModifier.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/ItemStats.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/PlayerStatsSheet.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system/PlayerAbility_CastIconManager.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_attacks/PlayerAttack_QuickRect.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server/game_map_collision_server.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/io/json.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/object/object.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/object/object.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/os/memory.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/variant/binder_common.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/variant/variant_call.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/main/main.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/main/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/main/main.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/main/main.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/modules/godot_tracy/tracy/getopt/getopt.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/modules/godot_tracy/tracy/getopt/getopt.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/platform/linuxbsd/godot_linuxbsd.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/platform/linuxbsd/os_linuxbsd.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/platform/linuxbsd/os_linuxbsd.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/3d/visual_instance_3d.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/tests/test_macros.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/tests/test_main.cpp" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="3.1.1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2rKxJBjrPaxIYxvCFYN8VyTfLE9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Custom Build Application.Editor Debug Tracy.executor": "Run",
+    "Custom Build Application.Editor Debug.executor": "Run",
+    "Custom Build Application.Editor Release  Tracy.executor": "Run",
+    "Custom Build Application.Editor Release.executor": "Run",
+    "Custom Build Application.Game Debug Tracy.executor": "Debug",
+    "Custom Build Application.Game Debug.executor": "Run",
+    "Custom Build Application.Game Release PRODUCTION.executor": "Run",
+    "Custom Build Application.Game Release Tracy.executor": "Run",
+    "Custom Build Application.Game Release).executor": "Run",
+    "Custom Build Application.Run Tests  Tracy.executor": "Debug",
+    "Custom Build Application.Run Tests.executor": "Run",
+    "Custom Build Application.Test Direct Load.executor": "Debug",
+    "Custom Build Application.Test Headless.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.advertisement.text.has.clang-format": "true",
+    "cf.advertisement.text.overridden": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker": "true",
+    "git-widget-placeholder": "cyborg__game",
+    "last_opened_file_path": "/home/main/godot/dungeon_arpg/godot/tests",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "CLionExternalConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup" />
+      <recent name="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_visualisation" />
+      <recent name="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_generators" />
+      <recent name="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory" />
+      <recent name="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Custom Build Application.Game Release PRODUCTION">
+    <configuration name="Game Debug Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose " REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Game Release PRODUCTION" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Release PRODUCTION" CONFIG_NAME="Build.py Release PRODUCTION" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.x86_64.llvm.mode_release_production">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Game Release Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Release TRACY" CONFIG_NAME="Build.py Release TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.x86_64.llvm.mode_production.tracy">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run Tests  Tracy" type="CLionExternalRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="--test -tc='[AABB] Constructor methods' --verbose -s" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
+      <envs>
+        <env name="TESTS_ENABLED" value="1" />
+      </envs>
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TESTS - Game" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose --game_test -tc=*[DungeonARPG]*" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Custom Build Application.Game Debug Tracy" />
+      <item itemvalue="Custom Build Application.TESTS - Game" />
+      <item itemvalue="Custom Build Application.Game Release PRODUCTION" />
+      <item itemvalue="Custom Build Application.Game Release Tracy" />
+      <item itemvalue="Custom Build Application.Run Tests  Tracy" />
+      <item itemvalue="Custom Build Application.Editor Debug Tracy" />
+      <item itemvalue="Custom Build Application.Editor Release  Tracy" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="" />
+      <created>1736321494818</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736321494818</updated>
+      <workItem from="1736321496491" duration="205000" />
+      <workItem from="1736321712400" duration="2424000" />
+      <workItem from="1736383810171" duration="2436000" />
+      <workItem from="1736386251790" duration="930000" />
+      <workItem from="1736387190271" duration="310000" />
+      <workItem from="1736387507839" duration="920000" />
+      <workItem from="1736388571984" duration="4386000" />
+      <workItem from="1736393289672" duration="1299000" />
+      <workItem from="1736394597442" duration="4334000" />
+      <workItem from="1736400123521" duration="98000" />
+      <workItem from="1736400228882" duration="556000" />
+      <workItem from="1736400792494" duration="571000" />
+      <workItem from="1736401371493" duration="172000" />
+      <workItem from="1736401550468" duration="2161000" />
+      <workItem from="1736472810416" duration="5739000" />
+      <workItem from="1736548895966" duration="6831000" />
+      <workItem from="1736566142915" duration="16328000" />
+      <workItem from="1736613038406" duration="13345000" />
+      <workItem from="1736628825287" duration="21000" />
+      <workItem from="1736628852289" duration="95000" />
+      <workItem from="1736628957819" duration="1758000" />
+      <workItem from="1736642717028" duration="5981000" />
+      <workItem from="1736695675474" duration="1257000" />
+      <workItem from="1736719004223" duration="29489000" />
+      <workItem from="1736789317539" duration="283000" />
+      <workItem from="1736814396598" duration="27236000" />
+      <workItem from="1737084679932" duration="2174000" />
+      <workItem from="1737166543250" duration="3828000" />
+      <workItem from="1737224692790" duration="11682000" />
+      <workItem from="1737302379991" duration="21465000" />
+      <workItem from="1737351929267" duration="33865000" />
+      <workItem from="1737426101286" duration="1666000" />
+      <workItem from="1737509725777" duration="15499000" />
+      <workItem from="1737687652295" duration="9244000" />
+      <workItem from="1737763213734" duration="21013000" />
+      <workItem from="1737821831855" duration="9240000" />
+      <workItem from="1737841278546" duration="10931000" />
+      <workItem from="1737911794014" duration="9512000" />
+      <workItem from="1737922420112" duration="894000" />
+      <workItem from="1737933789093" duration="18015000" />
+      <workItem from="1738028461448" duration="1600000" />
+      <workItem from="1738033023402" duration="8822000" />
+      <workItem from="1738125123954" duration="368000" />
+      <workItem from="1738198730913" duration="666000" />
+      <workItem from="1738284680374" duration="7407000" />
+      <workItem from="1738431532670" duration="7078000" />
+      <workItem from="1738444635731" duration="1300000" />
+      <workItem from="1738468887508" duration="11665000" />
+      <workItem from="1738535704954" duration="21659000" />
+      <workItem from="1738637605281" duration="3821000" />
+      <workItem from="1738720054233" duration="2512000" />
+      <workItem from="1738894696486" duration="1805000" />
+      <workItem from="1738977310047" duration="4347000" />
+      <workItem from="1739036183578" duration="33609000" />
+      <workItem from="1739116183965" duration="1205000" />
+      <workItem from="1739128563175" duration="612000" />
+      <workItem from="1739130080178" duration="11387000" />
+      <workItem from="1739159208873" duration="16172000" />
+      <workItem from="1739325373427" duration="5609000" />
+      <workItem from="1739494138289" duration="304000" />
+      <workItem from="1739587259463" duration="990000" />
+      <workItem from="1739634826984" duration="8226000" />
+      <workItem from="1739722780120" duration="31376000" />
+      <workItem from="1739924557647" duration="9135000" />
+      <workItem from="1740099988113" duration="21791000" />
+      <workItem from="1740246793187" duration="4253000" />
+      <workItem from="1740266429423" duration="607000" />
+      <workItem from="1740272984012" duration="22532000" />
+      <workItem from="1740341124193" duration="5492000" />
+      <workItem from="1740371335446" duration="360000" />
+      <workItem from="1740538523770" duration="7750000" />
+      <workItem from="1740707447748" duration="15274000" />
+      <workItem from="1740846401876" duration="978000" />
+      <workItem from="1740847752206" duration="12548000" />
+      <workItem from="1740863721137" duration="5460000" />
+      <workItem from="1740870551970" duration="46202000" />
+      <workItem from="1740977348406" duration="5085000" />
+      <workItem from="1741048836236" duration="19421000" />
+      <workItem from="1741148053303" duration="1484000" />
+      <workItem from="1741149545494" duration="341000" />
+      <workItem from="1741149892356" duration="21407000" />
+      <workItem from="1741237592382" duration="3380000" />
+      <workItem from="1741274416544" duration="15179000" />
+      <workItem from="1741393611228" duration="28340000" />
+      <workItem from="1741463145926" duration="9649000" />
+      <workItem from="1741488180953" duration="21872000" />
+      <workItem from="1741546869825" duration="4468000" />
+      <workItem from="1741652890895" duration="1584000" />
+      <workItem from="1741660397466" duration="4333000" />
+      <workItem from="1741827490870" duration="3452000" />
+      <workItem from="1741922893290" duration="3035000" />
+      <workItem from="1742051424442" duration="4305000" />
+      <workItem from="1742081386235" duration="1130000" />
+      <workItem from="1742344204713" duration="1266000" />
+      <workItem from="1742350502969" duration="883000" />
+      <workItem from="1742430922573" duration="10540000" />
+      <workItem from="1742653991361" duration="2310000" />
+      <workItem from="1742657882349" duration="1590000" />
+      <workItem from="1742660658495" duration="9057000" />
+      <workItem from="1742691301753" duration="16621000" />
+      <workItem from="1742741995101" duration="12312000" />
+      <workItem from="1742780302172" duration="17454000" />
+      <workItem from="1743034691481" duration="3321000" />
+      <workItem from="1743039514538" duration="11018000" />
+      <workItem from="1743119693947" duration="4828000" />
+      <workItem from="1743212501406" duration="2897000" />
+      <workItem from="1743216329724" duration="855000" />
+      <workItem from="1743217548553" duration="6176000" />
+      <workItem from="1743278229588" duration="11659000" />
+      <workItem from="1743350635405" duration="10772000" />
+      <workItem from="1743365620583" duration="3851000" />
+      <workItem from="1743369881298" duration="26353000" />
+      <workItem from="1743468739641" duration="13561000" />
+      <workItem from="1743556132770" duration="12832000" />
+      <workItem from="1743640531864" duration="25620000" />
+      <workItem from="1743817247371" duration="675000" />
+      <workItem from="1743866487024" duration="22258000" />
+      <workItem from="1743895695355" duration="18642000" />
+      <workItem from="1743962499581" duration="3154000" />
+      <workItem from="1744073354760" duration="1205000" />
+      <workItem from="1744081485516" duration="16779000" />
+      <workItem from="1744246623083" duration="23313000" />
+      <workItem from="1744411155946" duration="17427000" />
+      <workItem from="1744485225253" duration="36747000" />
+      <workItem from="1744583051699" duration="1998000" />
+      <workItem from="1744678262085" duration="9072000" />
+      <workItem from="1744691029850" duration="2651000" />
+      <workItem from="1744693852367" duration="9358000" />
+      <workItem from="1744743026655" duration="12630000" />
+      <workItem from="1744814973339" duration="6241000" />
+      <workItem from="1744842486475" duration="721000" />
+      <workItem from="1744843414540" duration="13431000" />
+      <workItem from="1744901511978" duration="22000" />
+      <workItem from="1744901705727" duration="6000" />
+      <workItem from="1744942829939" duration="599000" />
+      <workItem from="1745029314193" duration="3281000" />
+      <workItem from="1745081496885" duration="1700000" />
+      <workItem from="1745168342676" duration="731000" />
+      <workItem from="1745169101759" duration="76000" />
+      <workItem from="1745169213389" duration="15611000" />
+      <workItem from="1745204941656" duration="15300000" />
+      <workItem from="1745372070314" duration="6455000" />
+      <workItem from="1745458929915" duration="21722000" />
+      <workItem from="1745636685351" duration="7689000" />
+      <workItem from="1745684341075" duration="5505000" />
+      <workItem from="1745699996535" duration="35351000" />
+      <workItem from="1745786426368" duration="749000" />
+      <workItem from="1745802695196" duration="692000" />
+      <workItem from="1746230671039" duration="1077000" />
+      <workItem from="1746393404075" duration="960000" />
+      <workItem from="1746581138928" duration="48000" />
+      <workItem from="1746911587648" duration="13000" />
+      <workItem from="1747201971704" duration="955000" />
+      <workItem from="1747270610059" duration="1226000" />
+      <workItem from="1747372354022" duration="1954000" />
+      <workItem from="1747455688646" duration="5803000" />
+      <workItem from="1747512535480" duration="6226000" />
+      <workItem from="1747700814012" duration="604000" />
+      <workItem from="1747799260206" duration="4061000" />
+      <workItem from="1747889568280" duration="4889000" />
+      <workItem from="1747970747903" duration="3905000" />
+      <workItem from="1748058845780" duration="2498000" />
+      <workItem from="1748103328794" duration="2300000" />
+      <workItem from="1748125699544" duration="1965000" />
+      <workItem from="1748271282988" duration="605000" />
+      <workItem from="1748392273261" duration="13595000" />
+      <workItem from="1748482356869" duration="5000" />
+      <workItem from="1748482620868" duration="6110000" />
+      <workItem from="1748654881300" duration="5256000" />
+      <workItem from="1748699868064" duration="604000" />
+      <workItem from="1748736660963" duration="4563000" />
+      <workItem from="1748797948129" duration="11995000" />
+      <workItem from="1748819203843" duration="37996000" />
+      <workItem from="1749084182188" duration="433000" />
+      <workItem from="1749161538847" duration="1489000" />
+      <workItem from="1749171278955" duration="2191000" />
+      <workItem from="1749173769254" duration="1577000" />
+      <workItem from="1749175360887" duration="13345000" />
+      <workItem from="1749263791895" duration="4541000" />
+      <workItem from="1749306963409" duration="312000" />
+      <workItem from="1749310003500" duration="7730000" />
+      <workItem from="1749348664003" duration="489000" />
+      <workItem from="1749355463271" duration="21668000" />
+      <workItem from="1749416501548" duration="15501000" />
+      <workItem from="1749515845708" duration="13724000" />
+      <workItem from="1749601042904" duration="14551000" />
+      <workItem from="1749688818106" duration="8133000" />
+      <workItem from="1749784961532" duration="7573000" />
+      <workItem from="1749860773034" duration="2697000" />
+      <workItem from="1749873810857" duration="2597000" />
+      <workItem from="1749876429504" duration="8365000" />
+      <workItem from="1749937335377" duration="26580000" />
+      <workItem from="1750117454620" duration="8241000" />
+      <workItem from="1750204689607" duration="13090000" />
+      <workItem from="1750290018351" duration="9569000" />
+      <workItem from="1750301662755" duration="3000" />
+      <workItem from="1750306681538" duration="15917000" />
+      <workItem from="1750520303704" duration="16217000" />
+      <workItem from="1750544200796" duration="32322000" />
+      <workItem from="1750726137203" duration="18026000" />
+      <workItem from="1751119058267" duration="5008000" />
+      <workItem from="1751416029952" duration="7899000" />
+      <workItem from="1751429631151" duration="11081000" />
+      <workItem from="1751602882055" duration="6479000" />
+      <workItem from="1751742361564" duration="5283000" />
+      <workItem from="1751769513193" duration="60061000" />
+      <workItem from="1751898297221" duration="3122000" />
+      <workItem from="1751901679953" duration="24596000" />
+      <workItem from="1752020861458" duration="8752000" />
+      <workItem from="1752113485447" duration="13629000" />
+      <workItem from="1752285750259" duration="17476000" />
+      <workItem from="1752336584946" duration="32634000" />
+      <workItem from="1752414384666" duration="37870000" />
+      <workItem from="1752548181981" duration="361000" />
+      <workItem from="1752548553699" duration="10443000" />
+      <workItem from="1752720166297" duration="11093000" />
+      <workItem from="1752889637925" duration="8603000" />
+      <workItem from="1752933879950" duration="29555000" />
+      <workItem from="1753062135088" duration="1209000" />
+      <workItem from="1753316131003" duration="10516000" />
+      <workItem from="1753329759838" duration="7091000" />
+      <workItem from="1753336933518" duration="9731000" />
+    </task>
+    <task id="LOCAL-00126" summary="Entities no longer move when playing death animation.">
+      <option name="closed" value="true" />
+      <created>1748659068160</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1748659068160</updated>
+    </task>
+    <task id="LOCAL-00127" summary="Added basic class comments.">
+      <option name="closed" value="true" />
+      <created>1748740376446</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1748740376446</updated>
+    </task>
+    <task id="LOCAL-00128" summary="Removed unused debug lines from audio stream player.">
+      <option name="closed" value="true" />
+      <created>1748911865783</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1748911865783</updated>
+    </task>
+    <task id="LOCAL-00129" summary="Renamed FTAG_ECS_Spawning to F_ECS_Spawning with a counter . This allows awakening phase to be forced open.&#10;Fixed bug where phases were not correctly being added.&#10;&#10;Added ability to rotate SpawnPrefab.">
+      <option name="closed" value="true" />
+      <created>1748913651663</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1748913651663</updated>
+    </task>
+    <task id="LOCAL-00130" summary="Renamed FTAG_ECS_Spawning to F_ECS_Spawning with a counter . This allows awakening phase to be forced open.&#10;Fixed bug where phases were not correctly being added.&#10;&#10;Added ability to rotate SpawnPrefab.">
+      <option name="closed" value="true" />
+      <created>1748913915014</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1748913915014</updated>
+    </task>
+    <task id="LOCAL-00131" summary="Added instant damage for entities.  &#10;&#10;Weird bug can now attack with a melee attack that spawns a daamge point.&#10;Added free sound pack.">
+      <option name="closed" value="true" />
+      <created>1748914487111</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1748914487111</updated>
+    </task>
+    <task id="LOCAL-00132" summary="Additional commit post push.">
+      <option name="closed" value="true" />
+      <created>1748914714137</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1748914714137</updated>
+    </task>
+    <task id="LOCAL-00133" summary="Additional commit post push.">
+      <option name="closed" value="true" />
+      <created>1749172661222</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1749172661222</updated>
+    </task>
+    <task id="LOCAL-00134" summary="Additional commit post push.">
+      <option name="closed" value="true" />
+      <created>1749172668849</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1749172668850</updated>
+    </task>
+    <task id="LOCAL-00135" summary="Updated string usage with flecs due to warnings.&#10;&#10;Moved update loop server deletion above rendering server due to pointers keeping rendering server open.">
+      <option name="closed" value="true" />
+      <created>1749183584036</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1749183584037</updated>
+    </task>
+    <task id="LOCAL-00136" summary="Godot version 4.5 update. &#10;PNG .import updated with new meta information.&#10;&#10;Some flecs string usage updated.">
+      <option name="closed" value="true" />
+      <created>1749184116815</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1749184116815</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Added collision system which checks at a regular rate for collisions and pushes entities away. &#10;&#10;A key idea is that it updates positions after velocity. &#10;&#10;Enemies always have distance to player now.">
+      <option name="closed" value="true" />
+      <created>1749608079067</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1749608079068</updated>
+    </task>
+    <task id="LOCAL-00138" summary="Added collision system which checks at a regular rate for collisions and pushes entities away. &#10;&#10;A key idea is that it updates positions after velocity. &#10;&#10;Enemies always have distance to player now.">
+      <option name="closed" value="true" />
+      <created>1749608097201</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1749608097201</updated>
+    </task>
+    <task id="LOCAL-00139" summary="Modified how collision map system modifies positions.  This results in a significantly more stable">
+      <option name="closed" value="true" />
+      <created>1749613798840</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1749613798840</updated>
+    </task>
+    <task id="LOCAL-00140" summary="Fixed normal and overhead not triggering.">
+      <option name="closed" value="true" />
+      <created>1749618903040</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1749618903040</updated>
+    </task>
+    <task id="LOCAL-00141" summary="Added a 'Description' player ability type which is more self contained.&#10;&#10;This is an incomplete implementation.  Currently able to trigger just like before.">
+      <option name="closed" value="true" />
+      <created>1749941248547</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1749941248547</updated>
+    </task>
+    <task id="LOCAL-00142" summary="Added a 'Description' player ability type which is more self contained.&#10;&#10;This is an incomplete implementation.  Currently able to trigger just like before.">
+      <option name="closed" value="true" />
+      <created>1749941256379</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1749941256379</updated>
+    </task>
+    <task id="LOCAL-00143" summary="Simplified how items are connected and what they do.&#10;Abilities are now connected to Description and plays animations which can perform the emitting.">
+      <option name="closed" value="true" />
+      <created>1750124720922</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1750124720922</updated>
+    </task>
+    <task id="LOCAL-00144" summary="Simplified how items are connected and what they do.&#10;Abilities are now connected to Description and plays animations which can perform the emitting.">
+      <option name="closed" value="true" />
+      <created>1750124733873</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1750124733873</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Large refactor on items and abilities. &#10;- UI now controls cooldown. &#10;- World now is told when it activates.  &#10;- Base stat like defines are gone and instead will rely on flecs default values which are then modified.&#10;&#10;This is incomplete.  Next step will be to connect modifiers into flec components so modifiers actually impact them.">
+      <option name="closed" value="true" />
+      <created>1750530019870</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1750530019871</updated>
+    </task>
+    <task id="LOCAL-00146" summary="Godot tracy commit.">
+      <option name="closed" value="true" />
+      <created>1750530468448</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1750530468448</updated>
+    </task>
+    <task id="LOCAL-00147" summary="Added GETSET for all the getter setter pairs that are needed for gdscript.">
+      <option name="closed" value="true" />
+      <created>1750637165089</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1750637165090</updated>
+    </task>
+    <task id="LOCAL-00148" summary="Fixed an unintended not-printed debug message.">
+      <option name="closed" value="true" />
+      <created>1750645712757</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1750645712757</updated>
+    </task>
+    <task id="LOCAL-00149" summary="Fixed an unintended not-printed debug message.">
+      <option name="closed" value="true" />
+      <created>1750645824814</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1750645824814</updated>
+    </task>
+    <task id="LOCAL-00150" summary="Added ability for flec components to modify entities as they are spawned.  This is used for player projectile spawning.">
+      <option name="closed" value="true" />
+      <created>1750645929704</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1750645929704</updated>
+    </task>
+    <task id="LOCAL-00151" summary="Big content update where modifiers have been simplified with enums. &#10;Trying new things with enums for printing and lists.&#10;&#10;Also some cleanup using new macro GETSET. This occasionally renames internal variables.">
+      <option name="closed" value="true" />
+      <created>1750646204197</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1750646204197</updated>
+    </task>
+    <task id="LOCAL-00152" summary="Excluding dynamic linking due to extra warning, honestly didn't save much time.">
+      <option name="closed" value="true" />
+      <created>1750648077399</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1750648077400</updated>
+    </task>
+    <task id="LOCAL-00153" summary="Projectiles now pass through enemies without reducing damage.">
+      <option name="closed" value="true" />
+      <created>1750731077407</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1750731077407</updated>
+    </task>
+    <task id="LOCAL-00154" summary="Added additional spawn options for the ability emitter parent, position, and angle. &#10;Fixed a bug where using the basis for a flecs element copied the scale in.">
+      <option name="closed" value="true" />
+      <created>1751506954045</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1751506954045</updated>
+    </task>
+    <task id="LOCAL-00155" summary="Added additional spawn options for the ability emitter parent, position, and angle. &#10;Fixed a bug where using the basis for a flecs element copied the scale in.">
+      <option name="closed" value="true" />
+      <created>1751506969809</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1751506969809</updated>
+    </task>
+    <task id="LOCAL-00156" summary="Disable texture warning.">
+      <option name="closed" value="true" />
+      <created>1751506982055</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1751506982055</updated>
+    </task>
+    <task id="LOCAL-00157" summary="Mild game changes to make fireball activate less.">
+      <option name="closed" value="true" />
+      <created>1751603587773</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1751603587774</updated>
+    </task>
+    <task id="LOCAL-00158" summary="In progress moving away from update singleton.  &#10;Original UpdateServer pattern completely removed.  UpdateLoopServer is now a hook in for Main's update script and sends out signals.&#10;Simplifying GameMainServer to have less init dependencies.">
+      <option name="closed" value="true" />
+      <created>1751831898308</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1751831898308</updated>
+    </task>
+    <task id="LOCAL-00159" summary="Updated update loop server by completely removing the individual loop object. &#10;Removed Physics loop.&#10;Added pre/post events for each major stage.">
+      <option name="closed" value="true" />
+      <created>1751832112670</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1751832112670</updated>
+    </task>
+    <task id="LOCAL-00160" summary="Updated update loop server by completely removing the individual loop object. &#10;Removed Physics loop.&#10;Added pre/post events for each major stage.">
+      <option name="closed" value="true" />
+      <created>1751832132010</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1751832132010</updated>
+    </task>
+    <task id="LOCAL-00161" summary="Continued cleanup.  &#10;GameMainNode is now mostly settable in editor.  &#10;&#10;Game and editor continues to run.">
+      <option name="closed" value="true" />
+      <created>1751842308475</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1751842308475</updated>
+    </task>
+    <task id="LOCAL-00162" summary="Added additional editor flag check.">
+      <option name="closed" value="true" />
+      <created>1751842353131</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1751842353131</updated>
+    </task>
+    <task id="LOCAL-00163" summary="Continued effort in decoupling singletons everywhere to a single singleton with normal nodes. &#10;&#10;Game is back to a runnable state.  &#10;May have fixed crashing bug due to TextInstance3D overloading mesh properties and causing havoc.&#10;&#10; Split parts from main game node into separate nodes.">
+      <option name="closed" value="true" />
+      <created>1752034240174</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1752034240174</updated>
+    </task>
+    <task id="LOCAL-00164" summary="Flecs systems are no longer a singleton node but are now a static class and normal node.  Moved several functions from FlecsDataKeeperServer to FlecsAccessor. &#10;&#10;No major function changes.">
+      <option name="closed" value="true" />
+      <created>1752125088776</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1752125088776</updated>
+    </task>
+    <task id="LOCAL-00165" summary="Renamed FlecsDataKeeperServer to FlecsSystemSubscriber.  No functional changes.">
+      <option name="closed" value="true" />
+      <created>1752126575850</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1752126575850</updated>
+    </task>
+    <task id="LOCAL-00166" summary="Added new flecs subscription system.  Systems are added to a static list using REGISTER_FLEC_SYSTEM and are sorted.">
+      <option name="closed" value="true" />
+      <created>1752301793816</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1752301793817</updated>
+    </task>
+    <task id="LOCAL-00167" summary="Refactor continues. Moved all flec systems into macro.  Cleaned up some headers to reduce rework being done.">
+      <option name="closed" value="true" />
+      <created>1752363854013</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1752363854014</updated>
+    </task>
+    <task id="LOCAL-00168" summary="Continued cleanup with removing some common flecs.h usage.  Not a big impact to build time as flecs.h is mostly imported elsewhere.">
+      <option name="closed" value="true" />
+      <created>1752381645980</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1752381645980</updated>
+    </task>
+    <task id="LOCAL-00169" summary="Updated flecs pipelines to be significantly simpler due to priority system.">
+      <option name="closed" value="true" />
+      <created>1752382821237</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1752382821238</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Removed unused file which caused leak warnings (world_environment.tscn)&#10;Downsized 2k image which had a long loading time on startup.">
+      <option name="closed" value="true" />
+      <created>1752420904682</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1752420904682</updated>
+    </task>
+    <task id="LOCAL-00171" summary="Added verbose printout for resource loading with warnings on longer load times.&#10;Pushed up where updateLoopServer is removed on shutdown but had no impact.  1x leftover string 'Node'.">
+      <option name="closed" value="true" />
+      <created>1752421036973</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1752421036973</updated>
+    </task>
+    <task id="LOCAL-00172" summary="Moved GameMainNode to a new folder 'game_core_setup'.">
+      <option name="closed" value="true" />
+      <created>1752425269489</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1752425269489</updated>
+    </task>
+    <task id="LOCAL-00173" summary="Added build mode to generated files.">
+      <option name="closed" value="true" />
+      <created>1752889807914</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1752889807915</updated>
+    </task>
+    <task id="LOCAL-00174" summary="Added --game_tests to the engine.  This allows test cases to run in game engine and render to the screen with access to project files.&#10;&#10;THis was very painful and annoying to get to :(">
+      <option name="closed" value="true" />
+      <created>1753412589384</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1753412589384</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="GRAPH_OPTIONS">
+                <list>
+                  <option value="Base" />
+                  <option value="Standard" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added GETSET for all the getter setter pairs that are needed for gdscript." />
+    <MESSAGE value="Fixed an unintended not-printed debug message." />
+    <MESSAGE value="Added ability for flec components to modify entities as they are spawned.  This is used for player projectile spawning." />
+    <MESSAGE value="Big content update where modifiers have been simplified with enums. &#10;Trying new things with enums for printing and lists.&#10;&#10;Also some cleanup using new macro GETSET. This occasionally renames internal variables." />
+    <MESSAGE value="Excluding dynamic linking due to extra warning, honestly didn't save much time." />
+    <MESSAGE value="Projectiles now pass through enemies without reducing damage." />
+    <MESSAGE value="Added additional spawn options for the ability emitter parent, position, and angle. &#10;Fixed a bug where using the basis for a flecs element copied the scale in." />
+    <MESSAGE value="Disable texture warning." />
+    <MESSAGE value="Mild game changes to make fireball activate less." />
+    <MESSAGE value="In progress moving away from update singleton.  &#10;Original UpdateServer pattern completely removed.  UpdateLoopServer is now a hook in for Main's update script and sends out signals.&#10;Simplifying GameMainServer to have less init dependencies." />
+    <MESSAGE value="Updated update loop server by completely removing the individual loop object. &#10;Removed Physics loop.&#10;Added pre/post events for each major stage." />
+    <MESSAGE value="Continued cleanup.  &#10;GameMainNode is now mostly settable in editor.  &#10;&#10;Game and editor continues to run." />
+    <MESSAGE value="Added additional editor flag check." />
+    <MESSAGE value="Continued effort in decoupling singletons everywhere to a single singleton with normal nodes. &#10;&#10;Game is back to a runnable state.  &#10;May have fixed crashing bug due to TextInstance3D overloading mesh properties and causing havoc.&#10;&#10; Split parts from main game node into separate nodes." />
+    <MESSAGE value="Flecs systems are no longer a singleton node but are now a static class and normal node.  Moved several functions from FlecsDataKeeperServer to FlecsAccessor. &#10;&#10;No major function changes." />
+    <MESSAGE value="Renamed FlecsDataKeeperServer to FlecsSystemSubscriber.  No functional changes." />
+    <MESSAGE value="Added new flecs subscription system.  Systems are added to a static list using REGISTER_FLEC_SYSTEM and are sorted." />
+    <MESSAGE value="Refactor continues. Moved all flec systems into macro.  Cleaned up some headers to reduce rework being done." />
+    <MESSAGE value="Continued cleanup with removing some common flecs.h usage.  Not a big impact to build time as flecs.h is mostly imported elsewhere." />
+    <MESSAGE value="Updated flecs pipelines to be significantly simpler due to priority system." />
+    <MESSAGE value="Removed unused file which caused leak warnings (world_environment.tscn)&#10;Downsized 2k image which had a long loading time on startup." />
+    <MESSAGE value="Added verbose printout for resource loading with warnings on longer load times.&#10;Pushed up where updateLoopServer is removed on shutdown but had no impact.  1x leftover string 'Node'." />
+    <MESSAGE value="Moved GameMainNode to a new folder 'game_core_setup'." />
+    <MESSAGE value="Added build mode to generated files." />
+    <MESSAGE value="Added --game_tests to the engine.  This allows test cases to run in game engine and render to the screen with access to project files.&#10;&#10;THis was very painful and annoying to get to :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added --game_tests to the engine.  This allows test cases to run in game engine and render to the screen with access to project files.&#10;&#10;THis was very painful and annoying to get to :(" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main/main.cpp</url>
+          <line>4778</line>
+          <option name="timeStamp" value="818" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/core/input/input.cpp</url>
+          <line>1381</line>
+          <option name="timeStamp" value="823" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/core/input/input.cpp</url>
+          <line>1182</line>
+          <option name="timeStamp" value="826" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/core/input/input.cpp</url>
+          <line>1213</line>
+          <option name="timeStamp" value="827" />
+        </line-breakpoint>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/platform/linuxbsd/x11/display_server_x11.cpp</url>
+          <line>5613</line>
+          <option name="timeStamp" value="829" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/core/input/input.cpp</url>
+          <line>1178</line>
+          <option name="timeStamp" value="831" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/platform/linuxbsd/x11/display_server_x11.cpp</url>
+          <line>5458</line>
+          <option name="timeStamp" value="833" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main/main.cpp</url>
+          <line>4522</line>
+          <option name="timeStamp" value="848" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameDocTest.cpp</url>
+          <line>43</line>
+          <option name="timeStamp" value="855" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/tests/test_main.cpp</url>
+          <line>288</line>
+          <option name="timeStamp" value="856" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameDocTest.cpp</url>
+          <line>35</line>
+          <option name="timeStamp" value="857" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
