@@ -941,9 +941,7 @@ int Main::test_entrypoint(int argc, char *argv[], bool &tests_need_run) {
 			tests_need_run = false;
 			return EXIT_SUCCESS;
 		}
-		if (((strncmp(argv[x], "--test", 6) == 0) && (strlen(argv[x]) == 6) )||
-		   ((strncmp(argv[x], "-tc=",   4) == 0) && (strlen(argv[x]) >  4)) ||
-		   ((strncmp(argv[x], "-ts=",   4) == 0) && (strlen(argv[x]) >  4))) {
+		if ( (strncmp(argv[x], "--test", 6) == 0) && (strlen(argv[x]) == 6) ){
 			OS::get_singleton()->_verbose_stdout = true;
 			tests_need_run = true;
 #ifdef TESTS_ENABLED
@@ -3789,7 +3787,7 @@ static MainTimerSync main_timer_sync;
 // Return value should be EXIT_SUCCESS if we start successfully
 // and should move on to `OS::run`, and EXIT_FAILURE otherwise for
 // an early exit with that error code.
-int Main::start() {
+int Main::start(int argc, char *argv[]) {
 	OS::get_singleton()->benchmark_begin_measure("Startup", "Main::Start");
 
 	ERR_FAIL_COND_V(!_start_success, EXIT_FAILURE);
@@ -4520,45 +4518,55 @@ int Main::start() {
 			Crypto::load_default_certificates(GLOBAL_GET("network/tls/certificate_bundle_override"));
 
 			if (!game_path.is_empty()) {
-				Node *scene = nullptr;
-				Ref<PackedScene> scenedata = ResourceLoader::load(local_game_path);
-				if (scenedata.is_valid()) {
-					scene = scenedata->instantiate();
+				bool game_test = false;
+				for (int i = 0; i < argc; i++) {
+					if ((strncmp(argv[i], "--game_test", 11) == 0) ) {
+						game_test=true;
+						break;
+					}
 				}
+				if (!game_test) {
+					Node *scene = nullptr;
+					Ref<PackedScene> scenedata = ResourceLoader::load(local_game_path);
+					if (scenedata.is_valid()) {
+						scene = scenedata->instantiate();
+					}
 
-				ERR_FAIL_NULL_V_MSG(scene, EXIT_FAILURE, "Failed loading scene: " + local_game_path + ".");
-				sml->add_current_scene(scene);
+					ERR_FAIL_NULL_V_MSG(scene, EXIT_FAILURE, "Failed loading scene: " + local_game_path + ".");
+					sml->add_current_scene(scene);
 
 #ifdef MACOS_ENABLED
 #ifndef TOOLS_ENABLED
-				if ((FileAccess::exists(OS::get_singleton()->get_bundle_resource_dir().path_join("Assets.car")) && !OS::get_singleton()->get_bundle_icon_name().is_empty()) || (!OS::get_singleton()->get_bundle_icon_path().is_empty())) {
-					has_icon = true; // Bundle has embedded icon, do not override with project icon.
-				}
+					if ((FileAccess::exists(OS::get_singleton()->get_bundle_resource_dir().path_join("Assets.car")) && !OS::get_singleton()->get_bundle_icon_name().is_empty()) || (!OS::get_singleton()->get_bundle_icon_path().is_empty())) {
+						has_icon = true; // Bundle has embedded icon, do not override with project icon.
+					}
 #endif
-				String mac_icon_path = GLOBAL_GET("application/config/macos_native_icon");
-				if (DisplayServer::get_singleton()->has_feature(DisplayServer::FEATURE_NATIVE_ICON) && !mac_icon_path.is_empty() && !has_icon) {
-					DisplayServer::get_singleton()->set_native_icon(mac_icon_path);
-					has_icon = true;
-				}
+					String mac_icon_path = GLOBAL_GET("application/config/macos_native_icon");
+					if (DisplayServer::get_singleton()->has_feature(DisplayServer::FEATURE_NATIVE_ICON) && !mac_icon_path.is_empty() && !has_icon) {
+						DisplayServer::get_singleton()->set_native_icon(mac_icon_path);
+						has_icon = true;
+					}
 #endif
 
 #ifdef WINDOWS_ENABLED
-				String win_icon_path = GLOBAL_GET("application/config/windows_native_icon");
-				if (DisplayServer::get_singleton()->has_feature(DisplayServer::FEATURE_NATIVE_ICON) && !win_icon_path.is_empty()) {
-					DisplayServer::get_singleton()->set_native_icon(win_icon_path);
-					has_icon = true;
-				}
-#endif
-
-				String icon_path = GLOBAL_GET("application/config/icon");
-				if (DisplayServer::get_singleton()->has_feature(DisplayServer::FEATURE_ICON) && !icon_path.is_empty() && !has_icon) {
-					Ref<Image> icon;
-					icon.instantiate();
-					if (ImageLoader::load_image(icon_path, icon) == OK) {
-						DisplayServer::get_singleton()->set_icon(icon);
+					String win_icon_path = GLOBAL_GET("application/config/windows_native_icon");
+					if (DisplayServer::get_singleton()->has_feature(DisplayServer::FEATURE_NATIVE_ICON) && !win_icon_path.is_empty()) {
+						DisplayServer::get_singleton()->set_native_icon(win_icon_path);
 						has_icon = true;
 					}
+#endif
+
+					String icon_path = GLOBAL_GET("application/config/icon");
+					if (DisplayServer::get_singleton()->has_feature(DisplayServer::FEATURE_ICON) && !icon_path.is_empty() && !has_icon) {
+						Ref<Image> icon;
+						icon.instantiate();
+						if (ImageLoader::load_image(icon_path, icon) == OK) {
+							DisplayServer::get_singleton()->set_icon(icon);
+							has_icon = true;
+						}
+					}
 				}
+
 			}
 
 			OS::get_singleton()->benchmark_end_measure("Startup", "Load Game");

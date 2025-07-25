@@ -28,6 +28,8 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                 */
 /**************************************************************************/
 
+#include "test_macros.h"
+
 #include "test_main.h"
 
 #include "core/error/error_macros.h"
@@ -287,7 +289,7 @@ int test_main(int argc, char *argv[]) {
 			// Copy this into memory.
 			memcpy(doctest_args[x], str, strlen(str) + 1);
 		}
-
+		test_context.setOption("reporters", "GodotTestCaseListener");
 		test_context.applyCommandLine(test_args.size(), doctest_args);
 
 		for (uint32_t x = 0; x < test_args.size(); x++) {

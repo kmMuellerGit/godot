@@ -516,6 +516,7 @@ if env.dev_build:
     # DEV_ENABLED enables *engine developer* code which should only be compiled for those
     # working on the engine itself.
     env.Append(CPPDEFINES=["DEV_ENABLED"])
+    env.Append(CPPDEFINES=["TESTS_ENABLED"])
 else:
     # Disable assert() for production targets (only used in thirdparty code).
     env.Append(CPPDEFINES=["NDEBUG"])

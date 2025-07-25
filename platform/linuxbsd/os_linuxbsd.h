@@ -131,6 +131,8 @@ public:
 
 	void run();
 
+	int run_game_tests(int argc, char *argv[]);
+
 	virtual void disable_crash_handler() override;
 	virtual bool is_disable_crash_handler() const override;
 

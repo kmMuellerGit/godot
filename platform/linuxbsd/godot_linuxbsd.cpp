@@ -114,8 +114,23 @@ int main(int argc, char *argv[]) {
 		return EXIT_FAILURE;
 	}
 
-	if (Main::start() == EXIT_SUCCESS) {
-		os.run();
+	if (Main::start(argc, argv) == EXIT_SUCCESS) {
+		// Are we running tests?
+		bool arg_game_tests = false;
+		for (int i = 0; i < argc; i++) {
+			if ((strncmp(argv[i], "--game_test", 11) == 0) ) {
+				arg_game_tests = true;
+				break;
+			}
+		}
+
+		if (arg_game_tests) {
+			os.run_game_tests(argc, argv);
+		}
+		else {
+			os.run();
+		}
+
 	} else {
 		os.set_exit_code(EXIT_FAILURE);
 	}

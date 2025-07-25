@@ -31,6 +31,23 @@
 #define DOCTEST_CONFIG_IMPLEMENT
 #include "test_macros.h"
 
+#include "core/string/translation_server.h"
+#include "scene/main/window.h"
+#include "scene/theme/theme_db.h"
+#include "servers/audio_server.h"
+#include "servers/navigation_server_2d.h"
+#include "servers/navigation_server_3d.h"
+#include "servers/physics_server_2d.h"
+#include "servers/physics_server_2d_dummy.h"
+#include "servers/physics_server_3d.h"
+#include "servers/physics_server_3d_dummy.h"
+#include "servers/rendering/rendering_server_default.h"
+
+#ifdef TOOLS_ENABLED
+#include "editor/editor_paths.h"
+#include "editor/editor_settings.h"
+#endif // TOOLS_ENABLED
+
 HashMap<String, TestFunc> *test_commands = nullptr;
 
 int register_test_command(String p_command, TestFunc p_function) {
@@ -40,3 +57,293 @@ int register_test_command(String p_command, TestFunc p_function) {
 	test_commands->insert(p_command, p_function);
 	return 0;
 }
+
+struct GodotPlaytimeTestListener : public doctest::IReporter {
+	GodotPlaytimeTestListener(const doctest::ContextOptions &p_in) {}
+	void test_case_start(const doctest::TestCaseData &p_in) override {
+		print_line("Test case start");
+		reinitialize();
+	}
+
+	void test_case_end(const doctest::CurrentTestCaseStats &) override {
+		print_line("Test case end");
+	}
+
+	void test_run_start() override {
+		print_line("Test run Start");
+	}
+
+	void test_run_end(const doctest::TestRunStats &) override {
+		print_line("Test run end");
+	}
+
+	void test_case_reenter(const doctest::TestCaseData &) override {
+		reinitialize();
+	}
+
+	void subcase_start(const doctest::SubcaseSignature &) override {
+		reinitialize();
+	}
+
+	void report_query(const doctest::QueryData &) override {}
+	void test_case_exception(const doctest::TestCaseException &) override {}
+	void subcase_end() override {}
+
+	void log_assert(const doctest::AssertData &in) override {}
+	void log_message(const doctest::MessageData &) override {}
+	void test_case_skipped(const doctest::TestCaseData &) override {}
+
+private:
+	void reinitialize() {
+		Math::seed(0x60d07);
+	}
+};
+
+struct GodotTestCaseListener : public doctest::IReporter {
+	GodotTestCaseListener(const doctest::ContextOptions &p_in) {}
+
+	SignalWatcher *signal_watcher = nullptr;
+
+#ifndef PHYSICS_2D_DISABLED
+	PhysicsServer2D *physics_server_2d = nullptr;
+#endif // PHYSICS_2D_DISABLED
+#ifndef PHYSICS_3D_DISABLED
+	PhysicsServer3D *physics_server_3d = nullptr;
+#endif // PHYSICS_3D_DISABLED
+
+#ifndef NAVIGATION_2D_DISABLED
+	NavigationServer2D *navigation_server_2d = nullptr;
+#endif // NAVIGATION_2D_DISABLED
+#ifndef NAVIGATION_3D_DISABLED
+	NavigationServer3D *navigation_server_3d = nullptr;
+#endif // NAVIGATION_3D_DISABLED
+
+	void test_case_start(const doctest::TestCaseData &p_in) override {
+		reinitialize();
+
+		String name = String(p_in.m_name);
+		String suite_name = String(p_in.m_test_suite);
+
+		if (name.contains("[SceneTree]") || name.contains("[Editor]")) {
+			memnew(MessageQueue);
+
+			memnew(Input);
+			Input::get_singleton()->set_use_accumulated_input(false);
+
+			Error err = OK;
+			OS::get_singleton()->set_has_server_feature_callback(nullptr);
+			for (int i = 0; i < DisplayServer::get_create_function_count(); i++) {
+				if (String("mock") == DisplayServer::get_create_function_name(i)) {
+					DisplayServer::create(i, "", DisplayServer::WindowMode::WINDOW_MODE_MINIMIZED, DisplayServer::VSyncMode::VSYNC_ENABLED, 0, nullptr, Vector2i(0, 0), DisplayServer::SCREEN_PRIMARY, DisplayServer::CONTEXT_EDITOR, 0, err);
+					break;
+				}
+			}
+			memnew(RenderingServerDefault());
+			RenderingServerDefault::get_singleton()->init();
+			RenderingServerDefault::get_singleton()->set_render_loop_enabled(false);
+
+			// ThemeDB requires RenderingServer to initialize the default theme.
+			// So we have to do this for each test case. Also make sure there is
+			// no residual theme from something else.
+			ThemeDB::get_singleton()->finalize_theme();
+			ThemeDB::get_singleton()->initialize_theme();
+
+#ifndef PHYSICS_3D_DISABLED
+			physics_server_3d = PhysicsServer3DManager::get_singleton()->new_default_server();
+			if (!physics_server_3d) {
+				physics_server_3d = memnew(PhysicsServer3DDummy);
+			}
+			physics_server_3d->init();
+#endif // PHYSICS_3D_DISABLED
+
+#ifndef PHYSICS_2D_DISABLED
+			physics_server_2d = PhysicsServer2DManager::get_singleton()->new_default_server();
+			if (!physics_server_2d) {
+				physics_server_2d = memnew(PhysicsServer2DDummy);
+			}
+			physics_server_2d->init();
+#endif // PHYSICS_2D_DISABLED
+
+			ERR_PRINT_OFF;
+#ifndef NAVIGATION_3D_DISABLED
+			navigation_server_3d = NavigationServer3DManager::new_default_server();
+#endif // NAVIGATION_3D_DISABLED
+#ifndef NAVIGATION_2D_DISABLED
+			navigation_server_2d = NavigationServer2DManager::new_default_server();
+#endif // NAVIGATION_2D_DISABLED
+			ERR_PRINT_ON;
+
+			memnew(InputMap);
+			InputMap::get_singleton()->load_default();
+
+			memnew(SceneTree);
+			SceneTree::get_singleton()->initialize();
+			if (!DisplayServer::get_singleton()->has_feature(DisplayServer::Feature::FEATURE_SUBWINDOWS)) {
+				SceneTree::get_singleton()->get_root()->set_embedding_subwindows(true);
+			}
+
+#ifdef TOOLS_ENABLED
+			if (name.contains("[Editor]")) {
+				Engine::get_singleton()->set_editor_hint(true);
+				EditorPaths::create();
+				EditorSettings::create();
+			}
+#endif // TOOLS_ENABLED
+
+			return;
+		}
+
+		if (name.contains("[Audio]")) {
+			// The last driver index should always be the dummy driver.
+			int dummy_idx = AudioDriverManager::get_driver_count() - 1;
+			AudioDriverManager::initialize(dummy_idx);
+			AudioServer *audio_server = memnew(AudioServer);
+			audio_server->init();
+			return;
+		}
+
+#ifndef NAVIGATION_3D_DISABLED
+		if (suite_name.contains("[Navigation3D]") && navigation_server_3d == nullptr) {
+			ERR_PRINT_OFF;
+			navigation_server_3d = NavigationServer3DManager::new_default_server();
+			ERR_PRINT_ON;
+			return;
+		}
+#endif // NAVIGATION_3D_DISABLED
+
+#ifndef NAVIGATION_2D_DISABLED
+		if (suite_name.contains("[Navigation2D]") && navigation_server_2d == nullptr) {
+			ERR_PRINT_OFF;
+			navigation_server_2d = NavigationServer2DManager::new_default_server();
+			ERR_PRINT_ON;
+			return;
+		}
+#endif // NAVIGATION_2D_DISABLED
+	}
+
+	void test_case_end(const doctest::CurrentTestCaseStats &) override {
+#ifdef TOOLS_ENABLED
+		if (EditorSettings::get_singleton()) {
+			EditorSettings::destroy();
+
+			// Instantiating the EditorSettings singleton sets the locale to the editor's language.
+			TranslationServer::get_singleton()->set_locale("en");
+		}
+		if (EditorPaths::get_singleton()) {
+			EditorPaths::free();
+		}
+#endif // TOOLS_ENABLED
+
+		Engine::get_singleton()->set_editor_hint(false);
+
+		if (SceneTree::get_singleton()) {
+			SceneTree::get_singleton()->finalize();
+		}
+
+		if (MessageQueue::get_singleton()) {
+			MessageQueue::get_singleton()->flush();
+		}
+
+		if (SceneTree::get_singleton()) {
+			memdelete(SceneTree::get_singleton());
+		}
+
+#ifndef NAVIGATION_3D_DISABLED
+		if (navigation_server_3d) {
+			memdelete(navigation_server_3d);
+			navigation_server_3d = nullptr;
+		}
+#endif // NAVIGATION_3D_DISABLED
+
+#ifndef NAVIGATION_2D_DISABLED
+		if (navigation_server_2d) {
+			memdelete(navigation_server_2d);
+			navigation_server_2d = nullptr;
+		}
+#endif // NAVIGATION_2D_DISABLED
+
+#ifndef PHYSICS_3D_DISABLED
+		if (physics_server_3d) {
+			physics_server_3d->finish();
+			memdelete(physics_server_3d);
+			physics_server_3d = nullptr;
+		}
+#endif // PHYSICS_3D_DISABLED
+
+#ifndef PHYSICS_2D_DISABLED
+		if (physics_server_2d) {
+			physics_server_2d->finish();
+			memdelete(physics_server_2d);
+			physics_server_2d = nullptr;
+		}
+#endif // PHYSICS_2D_DISABLED
+
+		if (Input::get_singleton()) {
+			memdelete(Input::get_singleton());
+		}
+
+		if (RenderingServer::get_singleton()) {
+			// ThemeDB requires RenderingServer to finalize the default theme.
+			// So we have to do this for each test case.
+			ThemeDB::get_singleton()->finalize_theme();
+
+			RenderingServer::get_singleton()->sync();
+			RenderingServer::get_singleton()->global_shader_parameters_clear();
+			RenderingServer::get_singleton()->finish();
+			memdelete(RenderingServer::get_singleton());
+		}
+
+		if (DisplayServer::get_singleton()) {
+			memdelete(DisplayServer::get_singleton());
+		}
+
+		if (InputMap::get_singleton()) {
+			memdelete(InputMap::get_singleton());
+		}
+
+		if (MessageQueue::get_singleton()) {
+			MessageQueue::get_singleton()->flush();
+			memdelete(MessageQueue::get_singleton());
+		}
+
+		if (AudioServer::get_singleton()) {
+			AudioServer::get_singleton()->finish();
+			memdelete(AudioServer::get_singleton());
+		}
+	}
+
+	void test_run_start() override {
+		signal_watcher = memnew(SignalWatcher);
+	}
+
+	void test_run_end(const doctest::TestRunStats &) override {
+		memdelete(signal_watcher);
+	}
+
+	void test_case_reenter(const doctest::TestCaseData &) override {
+		reinitialize();
+	}
+
+	void subcase_start(const doctest::SubcaseSignature &) override {
+		reinitialize();
+	}
+
+	void report_query(const doctest::QueryData &) override {}
+	void test_case_exception(const doctest::TestCaseException &) override {}
+	void subcase_end() override {}
+
+	void log_assert(const doctest::AssertData &in) override {}
+	void log_message(const doctest::MessageData &) override {}
+	void test_case_skipped(const doctest::TestCaseData &) override {}
+
+private:
+	void reinitialize() {
+		Math::seed(0x60d07);
+		SignalWatcher::get_singleton()->_clear_signals();
+	}
+};
+
+
+REGISTER_LISTENER("std_out", 1, doctest::ConsoleReporter); // Shows normal stdout.  register_reporters eat it.
+REGISTER_REPORTER("GodotTestCaseListener", 2, GodotTestCaseListener); // Used for normal godot tests.
+REGISTER_REPORTER("GodotPlaytimeTestListener", 3, GodotPlaytimeTestListener); // Used for playtime tests. less setups.

@@ -80,6 +80,7 @@
 #include <cstdio>
 #include <cstdlib>
 
+#include "game_main/game_core_setup/GameDocTest.h"
 #include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
 
 #if __has_include(<mntent.h>)
@@ -998,6 +999,22 @@ void OS_LinuxBSD::run() {
 	}
 
 	main_loop->finalize();
+}
+
+
+int OS_LinuxBSD::run_game_tests(int argc, char *argv[]) {
+	if (!main_loop) {
+		return 1;
+	}
+	main_loop->initialize();
+
+	DisplayServer::get_singleton()->process_events();
+	Main::iteration();
+
+	int test_error = GameDocTest::run_game_tests(argc, argv);
+
+	main_loop->finalize();
+	return 0;
 }
 
 void OS_LinuxBSD::disable_crash_handler() {
