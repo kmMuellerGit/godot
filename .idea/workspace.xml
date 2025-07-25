@@ -32,7 +32,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="Added --game_tests to the engine.  This allows test cases to run in game engine and render to the screen with access to project files.&#10;&#10;THis was very painful and annoying to get to :(">
+    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="Added workspaces to project.">
       <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameDocTest.cpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameDocTest.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainTestHelpers.cpp" afterDir="false" />
@@ -40,12 +40,18 @@
       <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_game_setup.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/test_testmodule.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/test_testmodule.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Health.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Health.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Mana.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Mana.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Movement.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Movement.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Spawning.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Spawning.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Stamina.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Stamina.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerComposition.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerComposition.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_testmodule.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_testmodule.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/CameraZoom.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/CameraZoom.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/project.godot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/universal/Servers/MapCollisionAutoGlobal.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/universal/Servers/MapCollisionAutoGlobal.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Editor_Debug_Tracy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Editor_Debug_Tracy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +113,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../cyborg_survivors_game" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -123,6 +129,102 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
@@ -233,6 +335,7 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_VertexAnimationMesh.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/register_types.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_game/tests/test_testmodule.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecPrefab.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -247,6 +350,7 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/cpp_chunkmap/include/chunkmap.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/gdscript_helpers.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainNode.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/EquipmentSlotNode.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -260,8 +364,10 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system/PlayerAbility_CastIconManager.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_attacks/PlayerAttack_QuickRect.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/register_types.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/tests/test_testmodule.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server/game_map_collision_server.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/io/json.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/object/object.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -269,8 +375,8 @@
     <setting file="file://$PROJECT_DIR$/core/os/memory.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/variant/binder_common.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/variant/variant_call.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/godot/main/main.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/main/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/main/main.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/main/godot/dungeon_arpg/godot/main/main.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/main/godot/dungeon_arpg/godot/main/main.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/main/godot/dungeon_arpg/godot/modules/godot_tracy/tracy/getopt/getopt.c" root0="SKIP_HIGHLIGHTING" />
@@ -315,6 +421,7 @@
     "Custom Build Application.Game Release).executor": "Run",
     "Custom Build Application.Run Tests  Tracy.executor": "Debug",
     "Custom Build Application.Run Tests.executor": "Run",
+    "Custom Build Application.TESTS - Game.executor": "Debug",
     "Custom Build Application.Test Direct Load.executor": "Debug",
     "Custom Build Application.Test Headless.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -328,10 +435,10 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker": "true",
-    "git-widget-placeholder": "cyborg__game",
+    "git-widget-placeholder": "202507__testing__improvements",
     "last_opened_file_path": "/home/main/godot/dungeon_arpg/godot/tests",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "CLionExternalConfigurable"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -343,7 +450,7 @@
       <recent name="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main" />
     </key>
   </component>
-  <component name="RunManager" selected="Custom Build Application.Game Release PRODUCTION">
+  <component name="RunManager" selected="Custom Build Application.TESTS - Game">
     <configuration name="Game Debug Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose " REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -616,15 +723,7 @@
       <workItem from="1753062135088" duration="1209000" />
       <workItem from="1753316131003" duration="10516000" />
       <workItem from="1753329759838" duration="7091000" />
-      <workItem from="1753336933518" duration="9731000" />
-    </task>
-    <task id="LOCAL-00126" summary="Entities no longer move when playing death animation.">
-      <option name="closed" value="true" />
-      <created>1748659068160</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1748659068160</updated>
+      <workItem from="1753336933518" duration="17137000" />
     </task>
     <task id="LOCAL-00127" summary="Added basic class comments.">
       <option name="closed" value="true" />
@@ -1010,7 +1109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753412589384</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="Added workspaces to project.">
+      <option name="closed" value="true" />
+      <created>1753413968950</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1753413968950</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1032,7 +1139,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added GETSET for all the getter setter pairs that are needed for gdscript." />
     <MESSAGE value="Fixed an unintended not-printed debug message." />
     <MESSAGE value="Added ability for flec components to modify entities as they are spawned.  This is used for player projectile spawning." />
     <MESSAGE value="Big content update where modifiers have been simplified with enums. &#10;Trying new things with enums for printing and lists.&#10;&#10;Also some cleanup using new macro GETSET. This occasionally renames internal variables." />
@@ -1057,65 +1163,16 @@
     <MESSAGE value="Moved GameMainNode to a new folder 'game_core_setup'." />
     <MESSAGE value="Added build mode to generated files." />
     <MESSAGE value="Added --game_tests to the engine.  This allows test cases to run in game engine and render to the screen with access to project files.&#10;&#10;THis was very painful and annoying to get to :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added --game_tests to the engine.  This allows test cases to run in game engine and render to the screen with access to project files.&#10;&#10;THis was very painful and annoying to get to :(" />
+    <MESSAGE value="Added workspaces to project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added workspaces to project." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main/main.cpp</url>
-          <line>4778</line>
-          <option name="timeStamp" value="818" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/core/input/input.cpp</url>
-          <line>1381</line>
-          <option name="timeStamp" value="823" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/core/input/input.cpp</url>
-          <line>1182</line>
-          <option name="timeStamp" value="826" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/core/input/input.cpp</url>
-          <line>1213</line>
-          <option name="timeStamp" value="827" />
-        </line-breakpoint>
-        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/platform/linuxbsd/x11/display_server_x11.cpp</url>
-          <line>5613</line>
-          <option name="timeStamp" value="829" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/core/input/input.cpp</url>
-          <line>1178</line>
-          <option name="timeStamp" value="831" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/platform/linuxbsd/x11/display_server_x11.cpp</url>
-          <line>5458</line>
-          <option name="timeStamp" value="833" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main/main.cpp</url>
-          <line>4522</line>
-          <option name="timeStamp" value="848" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameDocTest.cpp</url>
-          <line>43</line>
-          <option name="timeStamp" value="855" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/tests/test_main.cpp</url>
-          <line>288</line>
-          <option name="timeStamp" value="856" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameDocTest.cpp</url>
-          <line>35</line>
-          <option name="timeStamp" value="857" />
+          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp</url>
+          <line>84</line>
+          <option name="timeStamp" value="861" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
