@@ -988,7 +988,7 @@ int Main::test_entrypoint(int argc, char *argv[], bool &tests_need_run) {
 			tests_need_run = false;
 			return EXIT_SUCCESS;
 		}
-		if ((strncmp(argv[x], "--test", 6) == 0) && (strlen(argv[x]) == 6)){
+		if ( (strncmp(argv[x], "--test", 6) == 0) && (strlen(argv[x]) == 6)){
 			OS::get_singleton()->_verbose_stdout = true;
 			tests_need_run = true;
 #ifdef TESTS_ENABLED
@@ -4767,30 +4767,32 @@ int Main::start(int argc, char *argv[]) {
 						has_icon = true; // Bundle has embedded icon, do not override with project icon.
 					}
 #endif
-				String mac_icon_path = GLOBAL_GET("application/config/macos_native_icon");
-				if (DisplayServer::get_singleton()->has_feature(DisplayServerEnums::FEATURE_NATIVE_ICON) && !mac_icon_path.is_empty() && !has_icon) {
-					DisplayServer::get_singleton()->set_native_icon(mac_icon_path);
-					has_icon = true;
-				}
+					String mac_icon_path = GLOBAL_GET("application/config/macos_native_icon");
+					if (DisplayServer::get_singleton()->has_feature(DisplayServerEnums::FEATURE_NATIVE_ICON) && !mac_icon_path.is_empty() && !has_icon) {
+						DisplayServer::get_singleton()->set_native_icon(mac_icon_path);
+						has_icon = true;
+					}
 #endif
 
 #ifdef WINDOWS_ENABLED
-				String win_icon_path = GLOBAL_GET("application/config/windows_native_icon");
-				if (DisplayServer::get_singleton()->has_feature(DisplayServerEnums::FEATURE_NATIVE_ICON) && !win_icon_path.is_empty()) {
-					DisplayServer::get_singleton()->set_native_icon(win_icon_path);
-					has_icon = true;
-				}
-#endif
-
-				String icon_path = GLOBAL_GET("application/config/icon");
-				if (DisplayServer::get_singleton()->has_feature(DisplayServerEnums::FEATURE_ICON) && !icon_path.is_empty() && !has_icon) {
-					Ref<Image> icon;
-					icon.instantiate();
-					if (ImageLoader::load_image(icon_path, icon) == OK) {
-						DisplayServer::get_singleton()->set_icon(icon);
+					String win_icon_path = GLOBAL_GET("application/config/windows_native_icon");
+					if (DisplayServer::get_singleton()->has_feature(DisplayServerEnums::FEATURE_NATIVE_ICON) && !win_icon_path.is_empty()) {
+						DisplayServer::get_singleton()->set_native_icon(win_icon_path);
 						has_icon = true;
 					}
+#endif
+
+					String icon_path = GLOBAL_GET("application/config/icon");
+					if (DisplayServer::get_singleton()->has_feature(DisplayServerEnums::FEATURE_ICON) && !icon_path.is_empty() && !has_icon) {
+						Ref<Image> icon;
+						icon.instantiate();
+						if (ImageLoader::load_image(icon_path, icon) == OK) {
+							DisplayServer::get_singleton()->set_icon(icon);
+							has_icon = true;
+						}
+					}
 				}
+
 			}
 
 			OS::get_singleton()->benchmark_end_measure("Startup", "Load Game");
