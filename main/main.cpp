@@ -988,7 +988,7 @@ int Main::test_entrypoint(int argc, char *argv[], bool &tests_need_run) {
 			tests_need_run = false;
 			return EXIT_SUCCESS;
 		}
-		if ( (strncmp(argv[x], "--test", 6) == 0) && (strlen(argv[x]) == 6) ){
+		if ((strncmp(argv[x], "--test", 6) == 0) && (strlen(argv[x]) == 6)){
 			OS::get_singleton()->_verbose_stdout = true;
 			tests_need_run = true;
 #ifdef TESTS_ENABLED
@@ -5236,6 +5236,7 @@ void Main::cleanup(bool p_force) {
 		input->flush_frame_parsed_events();
 	}
 #endif
+	GDExtensionManager::get_singleton()->shutdown();
 
 	if (updateLoopServer) {
 		memdelete(updateLoopServer);
@@ -5369,14 +5370,12 @@ void Main::cleanup(bool p_force) {
 	if (physics_server_3d_manager) {
 		memdelete(physics_server_3d_manager);
 	}
-#endif // _3D_DISABLED
+#endif // PHYSICS_3D_DISABLED
 #ifndef PHYSICS_2D_DISABLED
 	if (physics_server_2d_manager) {
 		memdelete(physics_server_2d_manager);
 	}
 #endif // PHYSICS_2D_DISABLED
-
-
 	if (globals) {
 		memdelete(globals);
 	}

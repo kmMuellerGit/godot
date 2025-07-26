@@ -31,7 +31,8 @@
 #define DOCTEST_CONFIG_IMPLEMENT
 #include "test_macros.h"
 
-#include "core/string/translation_server.h"
+
+#include "editor/settings/editor_settings.h"
 #include "scene/main/window.h"
 #include "scene/theme/theme_db.h"
 #include "servers/audio_server.h"
@@ -44,8 +45,8 @@
 #include "servers/rendering/rendering_server_default.h"
 
 #ifdef TOOLS_ENABLED
-#include "editor/editor_paths.h"
-#include "editor/editor_settings.h"
+#include "core/string/translation_server.h"
+#include "editor/file_system/editor_paths.h"
 #endif // TOOLS_ENABLED
 
 HashMap<String, TestFunc> *test_commands = nullptr;
