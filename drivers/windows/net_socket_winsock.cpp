@@ -286,7 +286,7 @@ Error NetSocketWinSock::bind(Address p_addr) {
 
 	if (::bind(_sock, (struct sockaddr *)&addr, addr_size) != 0) {
 		NetError err = _get_socket_error();
-		print_verbose("Failed to bind socket. Error: " + itos(err) + ".");
+		//print_verbose("Failed to bind socket. Error: " + itos(err) + ".");
 		close();
 		return ERR_UNAVAILABLE;
 	}

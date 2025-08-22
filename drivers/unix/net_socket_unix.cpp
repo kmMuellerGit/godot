@@ -374,7 +374,7 @@ Error NetSocketUnix::_inet_bind(IPAddress p_addr, uint16_t p_port) {
 
 	if (::bind(_sock, (struct sockaddr *)&addr, addr_size) != 0) {
 		NetError err = _get_socket_error();
-		print_verbose("Failed to bind socket. Error: " + itos(err) + ".");
+		//print_verbose("Failed to bind socket. Error: " + itos(err) + ".");
 		close();
 		return ERR_UNAVAILABLE;
 	}

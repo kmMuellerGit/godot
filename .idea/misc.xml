@@ -30,7 +30,10 @@
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/src" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/templates" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/test" />
+      <file path="$PROJECT_DIR$/bin" />
       <file path="$PROJECT_DIR$/modules/godot_tracy/tracy" />
+      <file path="$PROJECT_DIR$/python_312_venv" />
+      <file path="$PROJECT_DIR$/thirdparty" />
     </excludeRoots>
   </component>
   <component name="CompDBSettings">

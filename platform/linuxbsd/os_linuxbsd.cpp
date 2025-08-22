@@ -1014,7 +1014,7 @@ int OS_LinuxBSD::run_game_tests(int argc, char *argv[]) {
 	int test_error = GameDocTest::run_game_tests(argc, argv);
 
 	main_loop->finalize();
-	return 0;
+	return test_error;
 }
 
 void OS_LinuxBSD::disable_crash_handler() {
