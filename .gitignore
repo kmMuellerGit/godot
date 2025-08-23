@@ -391,5 +391,5 @@ $RECYCLE.BIN/
 /build.transcript
 /.idea/modules.xml
 /python_312_venv/
-
+.scons_cache_*/
 /Tracy-release
