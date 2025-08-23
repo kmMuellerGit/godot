@@ -1199,3 +1199,7 @@ if not env.GetOption("clean") and not env.GetOption("help"):
     methods.show_progress(env)
     methods.prepare_purge(env)
     methods.prepare_timer()
+
+print("Printing SCons env")
+for k,v in env.items():
+    print(f"env[{k}]={v}")
