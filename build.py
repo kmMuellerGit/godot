@@ -24,7 +24,7 @@ custom_modules_path=os.path.abspath("../cyborg_survivors_game/engine_custom_modu
 custom_game_path= os.path.abspath("../cyborg_survivors_game/game" )
 tracy_build_add='tracy_enable=yes tracy_on_demand=yes CCFLAGS=\"-fno-omit-frame-pointer -fno-inline -ggdb3\"'
 build_options={
-    'debug'             :f"dev_build=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold",
+    'debug'             :f"dev_build=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold fast_unsafe=yes",
     'production'        :f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes",
     'release_production':f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=no  "
 }
@@ -116,14 +116,15 @@ def main():
         if "debug" in args.mode:
             if os_type == "Windows": extra_debug_options += "vsproj=yes"
         print("Building binary..")
-        command = f"scons platform={args.os} \
+        command = (f"scons platform={args.os} \
             -j {args.cores} \
             {extra_debug_options} \
             {build_options[args.mode]} \
             {tracy_build_add if args.tracy else ''} \
             {"compiledb=yes" if args.use_compilation_db else "compiledb=no"} \
             extra_suffix={extra_suffix} \
-            custom_modules={custom_modules_path} "
+            custom_modules={custom_modules_path} \
+            --debug=time cache_path='.scons_cache_{extra_suffix}'")
         try:
             if os.path.isfile("./compile_commands.json") and args.use_compilation_db:
                 print("Deleting compile_commands.json for clion inspector updating.")
