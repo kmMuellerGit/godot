@@ -11,7 +11,7 @@
     <option name="/Default/CodeEditing/CppCodeGeneration/FunctionImplementationKind/@EntryValue" value="NotCompiledCode" type="string" />
     <option name="/Default/CodeEditing/CppDocumentationComment/AddBriefTag/@EntryValue" value="true" type="bool" />
     <option name="/Default/CodeEditing/TypingAssist/Cpp/CloseBlockComment/@EntryValue" value="true" type="bool" />
-    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="22" type="long" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="6" type="long" />
     <option name="/Default/Environment/UserInterface/HierarchyView/ViewStyle/@EntryValue" value="SuperTypes" type="string" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
@@ -32,7 +32,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="Added scon cache folders to gitignore. &#10;Updated workspace xml file." />
+    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="Added scon cache folders to gitignore. &#10;Updated workspace xml file.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,8 +123,6 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_PositionMapSystem.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_PositionMapSystem.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Rendering.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Rendering.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Rendering.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Rendering.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Transform.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Transform.h" root0="FORCE_HIGHLIGHTING" />
@@ -134,11 +135,9 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecPrefabSpawnerNode.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecPrefabSpawnerNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRenderServer.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_SpriteAnimation.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_SpriteAnimation.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_VertexAnimationMesh.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_VertexAnimationMesh.h" root0="FORCE_HIGHLIGHTING" />
@@ -200,7 +199,6 @@
     <setting file="file://$PROJECT_DIR$/core/variant/binder_common.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/variant/variant.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/variant/variant_call.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/godot/editor/settings/editor_settings.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/editor/settings/editor_settings.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/main/main.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/scene/3d/visual_instance_3d.h" root0="FORCE_HIGHLIGHTING" />
@@ -259,7 +257,7 @@
     "git-widget-placeholder": "directional__sprite__rendering",
     "last_opened_file_path": "/home/main/godot/dungeon_arpg/godot/tests",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "CLionExternalConfigurable"
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -573,7 +571,9 @@
       <workItem from="1755573682226" duration="7000" />
       <workItem from="1755650044355" duration="6392000" />
       <workItem from="1755825290573" duration="5164000" />
-      <workItem from="1755912066669" duration="17549000" />
+      <workItem from="1755912066669" duration="18118000" />
+      <workItem from="1755986374002" duration="146000" />
+      <workItem from="1755986568526" duration="1703000" />
     </task>
     <task id="LOCAL-00141" summary="Added a 'Description' player ability type which is more self contained.&#10;&#10;This is an incomplete implementation.  Currently able to trigger just like before.">
       <option name="closed" value="true" />
