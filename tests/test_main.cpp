@@ -41,6 +41,8 @@
 #include "editor/settings/editor_settings.h"
 #endif // TOOLS_ENABLED
 
+#include "scene/main/window.h"
+#include "servers/audio/audio_server.h"
 #include "tests/core/config/test_project_settings.h"
 #include "tests/core/input/test_input_event.h"
 #include "tests/core/input/test_input_event_key.h"
@@ -546,5 +548,6 @@ private:
 		SignalWatcher::get_singleton()->_clear_signals();
 	}
 };
-
-REGISTER_LISTENER("GodotTestCaseListener", 1, GodotTestCaseListener);
+// Disabled ; this can initialize after test_macros.cpp and cause this version to run.
+// By disabling we allow test_macros.cpp listener to function.
+//REGISTER_LISTENER("GodotTestCaseListener_old", 1, GodotTestCaseListener);
