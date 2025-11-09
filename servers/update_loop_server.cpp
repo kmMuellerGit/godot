@@ -1,5 +1,7 @@
 ﻿
 #include "update_loop_server.h"
+
+#include "core/config/engine.h"
 #include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
 #include "scene/main/scene_tree.h"
 

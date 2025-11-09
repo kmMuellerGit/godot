@@ -388,5 +388,6 @@ private:
 		SignalWatcher::get_singleton()->_clear_signals();
 	}
 };
-
-REGISTER_LISTENER("GodotTestCaseListener", 1, GodotTestCaseListener);
+// Disabled ; this can initialize after test_macros.cpp and cause this version to run.
+// By disabling we allow test_macros.cpp listener to function.
+//REGISTER_LISTENER("GodotTestCaseListener_old", 1, GodotTestCaseListener);
