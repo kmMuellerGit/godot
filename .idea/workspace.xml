@@ -11,7 +11,7 @@
     <option name="/Default/CodeEditing/CppCodeGeneration/FunctionImplementationKind/@EntryValue" value="NotCompiledCode" type="string" />
     <option name="/Default/CodeEditing/CppDocumentationComment/AddBriefTag/@EntryValue" value="true" type="bool" />
     <option name="/Default/CodeEditing/TypingAssist/Cpp/CloseBlockComment/@EntryValue" value="true" type="bool" />
-    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="6" type="long" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="8" type="long" />
     <option name="/Default/Environment/UserInterface/HierarchyView/ViewStyle/@EntryValue" value="SuperTypes" type="string" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
@@ -32,9 +32,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="Added scon cache folders to gitignore. &#10;Updated workspace xml file.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="Diabling test to build.">
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/build.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,9 +119,17 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/EntityAvoidanceForceServer/EntityAvoidanceForceLayer.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/EntityAvoidanceForceServer/EntityAvoidanceForceServer.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/EntityAvoidanceForceServer/EntityAvoidanceForceServer.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/DynamicDamage/FlecsDynamicDamage.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecComponents_XPOrbs.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Audio.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collision.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collision.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collisionv2.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Enemy.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_EnemyAttack.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_EntitySpawns.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_EntitySpawns.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_ItemDrops.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_PositionMapSystem.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_PositionMapSystem.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Rendering.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -131,19 +141,23 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_VertexAnimation.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_VertexAnimation.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/lifetime/FlecsComponents_Lifetime.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/lifetime/FlecsComponents_Lifetime.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/lifetime/FlecsComponents_LifetimeUtility.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/player/attacks/FlecComponents_PlayerInstantDamage.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/player/attacks/FlecComponents_PlayerPeriodicDamage.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/player/attacks/FlecComponents_PlayerProjectileDamage.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecPrefabSpawnerNode.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecPrefabSpawnerNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRenderServer.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_SpriteAnimation.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_VertexAnimationMesh.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_VertexAnimationMesh.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/register_types.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/register_types.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/tests_player_attacks.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecPrefab.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecPrefab.h" root0="FORCE_HIGHLIGHTING" />
@@ -159,53 +173,93 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/cpp_chunkmap/include/chunkmap.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/gdscript_helpers.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/vector/GVector2.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameDocTest.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainNode.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainTestHelpers.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainTestHelpers.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/PlayerEquipmentSlots.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/inventory_item_game.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/inventory_item_slot.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/inventory_item_slot.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode_World.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode_World.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbility_Description.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbility_Description.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_slots/EquipmentSlotNode.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_slots/EquipmentSlotNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_slots/inventory_item_base.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_slots/inventory_item_base.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/ItemModifier.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/ItemModifier.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/ItemStats.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/ItemStats.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/PlayerStatsSheet.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Attack.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Health.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Movement.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Spawning.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Spawning.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Stamina.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerComposition.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerComposition.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system/PlayerAbility_CastIconManager.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system/PlayerAbility_IconControl.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system/PlayerAbility_IconControlManager.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system/PlayerAbility_IconControlManager.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_attacks/PlayerAttack_ProjectileSpawner.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_attacks/PlayerAttack_QuickRect.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_game_setup.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/tests/test_testmodule.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/tests/test_testmodule.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server/GameMapCollisionPoint.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server/game_map_collision_server.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/io/json.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/io/resource_loader.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/io/resource_loader.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/math/basis.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/math/basis.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/math/math_defs.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/math/math_funcs.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/math/plane.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/math/quaternion.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/math/transform_3d.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/object/class_db.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/object/class_db.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/object/object.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/object/object.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/object/ref_counted.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/object/ref_counted.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/os/memory.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/os/memory.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/variant/binder_common.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/variant/variant.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/core/variant/variant.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/variant/variant_call.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/editor/settings/editor_settings.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/main/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/modules/gdscript/gdscript_analyzer.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/3d/camera_3d.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/3d/camera_3d.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/3d/multimesh_instance_3d.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/3d/node_3d.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/3d/node_3d.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/scene/3d/visual_instance_3d.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/main/node.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/main/node.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/scene/resources/3d/primitive_meshes.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/resources/font.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/resources/particle_process_material.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/scene/resources/particle_process_material.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="groupByToolId" value="true" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -222,6 +276,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
@@ -233,10 +288,10 @@
     "Custom Build Application.Editor Debug.executor": "Run",
     "Custom Build Application.Editor Release  Tracy.executor": "Run",
     "Custom Build Application.Editor Release.executor": "Run",
-    "Custom Build Application.Game Debug Tracy.executor": "Run",
+    "Custom Build Application.Game Debug Tracy.executor": "Debug",
     "Custom Build Application.Game Debug.executor": "Run",
     "Custom Build Application.Game Release PRODUCTION.executor": "Run",
-    "Custom Build Application.Game Release Tracy.executor": "Profiler",
+    "Custom Build Application.Game Release Tracy.executor": "Run",
     "Custom Build Application.Game Release).executor": "Run",
     "Custom Build Application.Run Tests  Tracy.executor": "Debug",
     "Custom Build Application.Run Tests.executor": "Run",
@@ -244,8 +299,11 @@
     "Custom Build Application.Test Direct Load.executor": "Debug",
     "Custom Build Application.Test Headless.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-git.push.result": "",
+    "Notification.DoNotAsk-git.push.result": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -254,10 +312,10 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker": "true",
-    "git-widget-placeholder": "directional__sprite__rendering",
-    "last_opened_file_path": "/home/main/godot/dungeon_arpg/godot/tests",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/main/godot/dungeon_arpg/godot/editor",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.web.browsers"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -269,13 +327,13 @@
       <recent name="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_generators" />
     </key>
   </component>
-  <component name="RunManager" selected="Custom Build Application.Editor Debug Tracy">
+  <component name="RunManager" selected="Custom Build Application.Game Debug Tracy">
     <configuration name="Game Debug Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose " REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Game Release PRODUCTION" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Release PRODUCTION" CONFIG_NAME="Build.py Release PRODUCTION" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.x86_64.llvm.mode_release_production">
+    <configuration name="Game Release PRODUCTION" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Release PRODUCTION" CONFIG_NAME="Build.py Release PRODUCTION" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.x86_64.llvm.mode_release_production.build_binary">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
@@ -298,9 +356,9 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -573,343 +631,70 @@
       <workItem from="1755825290573" duration="5164000" />
       <workItem from="1755912066669" duration="18118000" />
       <workItem from="1755986374002" duration="146000" />
-      <workItem from="1755986568526" duration="1703000" />
-    </task>
-    <task id="LOCAL-00141" summary="Added a 'Description' player ability type which is more self contained.&#10;&#10;This is an incomplete implementation.  Currently able to trigger just like before.">
-      <option name="closed" value="true" />
-      <created>1749941248547</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1749941248547</updated>
-    </task>
-    <task id="LOCAL-00142" summary="Added a 'Description' player ability type which is more self contained.&#10;&#10;This is an incomplete implementation.  Currently able to trigger just like before.">
-      <option name="closed" value="true" />
-      <created>1749941256379</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1749941256379</updated>
-    </task>
-    <task id="LOCAL-00143" summary="Simplified how items are connected and what they do.&#10;Abilities are now connected to Description and plays animations which can perform the emitting.">
-      <option name="closed" value="true" />
-      <created>1750124720922</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1750124720922</updated>
-    </task>
-    <task id="LOCAL-00144" summary="Simplified how items are connected and what they do.&#10;Abilities are now connected to Description and plays animations which can perform the emitting.">
-      <option name="closed" value="true" />
-      <created>1750124733873</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1750124733873</updated>
-    </task>
-    <task id="LOCAL-00145" summary="Large refactor on items and abilities. &#10;- UI now controls cooldown. &#10;- World now is told when it activates.  &#10;- Base stat like defines are gone and instead will rely on flecs default values which are then modified.&#10;&#10;This is incomplete.  Next step will be to connect modifiers into flec components so modifiers actually impact them.">
-      <option name="closed" value="true" />
-      <created>1750530019870</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1750530019871</updated>
-    </task>
-    <task id="LOCAL-00146" summary="Godot tracy commit.">
-      <option name="closed" value="true" />
-      <created>1750530468448</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1750530468448</updated>
-    </task>
-    <task id="LOCAL-00147" summary="Added GETSET for all the getter setter pairs that are needed for gdscript.">
-      <option name="closed" value="true" />
-      <created>1750637165089</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1750637165090</updated>
-    </task>
-    <task id="LOCAL-00148" summary="Fixed an unintended not-printed debug message.">
-      <option name="closed" value="true" />
-      <created>1750645712757</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1750645712757</updated>
-    </task>
-    <task id="LOCAL-00149" summary="Fixed an unintended not-printed debug message.">
-      <option name="closed" value="true" />
-      <created>1750645824814</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1750645824814</updated>
-    </task>
-    <task id="LOCAL-00150" summary="Added ability for flec components to modify entities as they are spawned.  This is used for player projectile spawning.">
-      <option name="closed" value="true" />
-      <created>1750645929704</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1750645929704</updated>
-    </task>
-    <task id="LOCAL-00151" summary="Big content update where modifiers have been simplified with enums. &#10;Trying new things with enums for printing and lists.&#10;&#10;Also some cleanup using new macro GETSET. This occasionally renames internal variables.">
-      <option name="closed" value="true" />
-      <created>1750646204197</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1750646204197</updated>
-    </task>
-    <task id="LOCAL-00152" summary="Excluding dynamic linking due to extra warning, honestly didn't save much time.">
-      <option name="closed" value="true" />
-      <created>1750648077399</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1750648077400</updated>
-    </task>
-    <task id="LOCAL-00153" summary="Projectiles now pass through enemies without reducing damage.">
-      <option name="closed" value="true" />
-      <created>1750731077407</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1750731077407</updated>
-    </task>
-    <task id="LOCAL-00154" summary="Added additional spawn options for the ability emitter parent, position, and angle. &#10;Fixed a bug where using the basis for a flecs element copied the scale in.">
-      <option name="closed" value="true" />
-      <created>1751506954045</created>
-      <option name="number" value="00154" />
-      <option name="presentableId" value="LOCAL-00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1751506954045</updated>
-    </task>
-    <task id="LOCAL-00155" summary="Added additional spawn options for the ability emitter parent, position, and angle. &#10;Fixed a bug where using the basis for a flecs element copied the scale in.">
-      <option name="closed" value="true" />
-      <created>1751506969809</created>
-      <option name="number" value="00155" />
-      <option name="presentableId" value="LOCAL-00155" />
-      <option name="project" value="LOCAL" />
-      <updated>1751506969809</updated>
-    </task>
-    <task id="LOCAL-00156" summary="Disable texture warning.">
-      <option name="closed" value="true" />
-      <created>1751506982055</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1751506982055</updated>
-    </task>
-    <task id="LOCAL-00157" summary="Mild game changes to make fireball activate less.">
-      <option name="closed" value="true" />
-      <created>1751603587773</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1751603587774</updated>
-    </task>
-    <task id="LOCAL-00158" summary="In progress moving away from update singleton.  &#10;Original UpdateServer pattern completely removed.  UpdateLoopServer is now a hook in for Main's update script and sends out signals.&#10;Simplifying GameMainServer to have less init dependencies.">
-      <option name="closed" value="true" />
-      <created>1751831898308</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1751831898308</updated>
-    </task>
-    <task id="LOCAL-00159" summary="Updated update loop server by completely removing the individual loop object. &#10;Removed Physics loop.&#10;Added pre/post events for each major stage.">
-      <option name="closed" value="true" />
-      <created>1751832112670</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1751832112670</updated>
-    </task>
-    <task id="LOCAL-00160" summary="Updated update loop server by completely removing the individual loop object. &#10;Removed Physics loop.&#10;Added pre/post events for each major stage.">
-      <option name="closed" value="true" />
-      <created>1751832132010</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1751832132010</updated>
-    </task>
-    <task id="LOCAL-00161" summary="Continued cleanup.  &#10;GameMainNode is now mostly settable in editor.  &#10;&#10;Game and editor continues to run.">
-      <option name="closed" value="true" />
-      <created>1751842308475</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1751842308475</updated>
-    </task>
-    <task id="LOCAL-00162" summary="Added additional editor flag check.">
-      <option name="closed" value="true" />
-      <created>1751842353131</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1751842353131</updated>
-    </task>
-    <task id="LOCAL-00163" summary="Continued effort in decoupling singletons everywhere to a single singleton with normal nodes. &#10;&#10;Game is back to a runnable state.  &#10;May have fixed crashing bug due to TextInstance3D overloading mesh properties and causing havoc.&#10;&#10; Split parts from main game node into separate nodes.">
-      <option name="closed" value="true" />
-      <created>1752034240174</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1752034240174</updated>
-    </task>
-    <task id="LOCAL-00164" summary="Flecs systems are no longer a singleton node but are now a static class and normal node.  Moved several functions from FlecsDataKeeperServer to FlecsAccessor. &#10;&#10;No major function changes.">
-      <option name="closed" value="true" />
-      <created>1752125088776</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1752125088776</updated>
-    </task>
-    <task id="LOCAL-00165" summary="Renamed FlecsDataKeeperServer to FlecsSystemSubscriber.  No functional changes.">
-      <option name="closed" value="true" />
-      <created>1752126575850</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1752126575850</updated>
-    </task>
-    <task id="LOCAL-00166" summary="Added new flecs subscription system.  Systems are added to a static list using REGISTER_FLEC_SYSTEM and are sorted.">
-      <option name="closed" value="true" />
-      <created>1752301793816</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1752301793817</updated>
-    </task>
-    <task id="LOCAL-00167" summary="Refactor continues. Moved all flec systems into macro.  Cleaned up some headers to reduce rework being done.">
-      <option name="closed" value="true" />
-      <created>1752363854013</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1752363854014</updated>
-    </task>
-    <task id="LOCAL-00168" summary="Continued cleanup with removing some common flecs.h usage.  Not a big impact to build time as flecs.h is mostly imported elsewhere.">
-      <option name="closed" value="true" />
-      <created>1752381645980</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1752381645980</updated>
-    </task>
-    <task id="LOCAL-00169" summary="Updated flecs pipelines to be significantly simpler due to priority system.">
-      <option name="closed" value="true" />
-      <created>1752382821237</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1752382821238</updated>
-    </task>
-    <task id="LOCAL-00170" summary="Removed unused file which caused leak warnings (world_environment.tscn)&#10;Downsized 2k image which had a long loading time on startup.">
-      <option name="closed" value="true" />
-      <created>1752420904682</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1752420904682</updated>
-    </task>
-    <task id="LOCAL-00171" summary="Added verbose printout for resource loading with warnings on longer load times.&#10;Pushed up where updateLoopServer is removed on shutdown but had no impact.  1x leftover string 'Node'.">
-      <option name="closed" value="true" />
-      <created>1752421036973</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1752421036973</updated>
-    </task>
-    <task id="LOCAL-00172" summary="Moved GameMainNode to a new folder 'game_core_setup'.">
-      <option name="closed" value="true" />
-      <created>1752425269489</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1752425269489</updated>
-    </task>
-    <task id="LOCAL-00173" summary="Added build mode to generated files.">
-      <option name="closed" value="true" />
-      <created>1752889807914</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1752889807915</updated>
-    </task>
-    <task id="LOCAL-00174" summary="Added --game_tests to the engine.  This allows test cases to run in game engine and render to the screen with access to project files.&#10;&#10;THis was very painful and annoying to get to :(">
-      <option name="closed" value="true" />
-      <created>1753412589384</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1753412589384</updated>
-    </task>
-    <task id="LOCAL-00175" summary="Added workspaces to project.">
-      <option name="closed" value="true" />
-      <created>1753413968950</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1753413968950</updated>
-    </task>
-    <task id="LOCAL-00176" summary="Added game test sample.  &#10;Player can move around the scene.">
-      <option name="closed" value="true" />
-      <created>1753421582234</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1753421582234</updated>
-    </task>
-    <task id="LOCAL-00177" summary="Exposed GameMain item management node. &#10;&#10;Fixed bug where item cards would stay up.  This was caused by the item slot moving its item to stash and not updating the card with that info.">
-      <option name="closed" value="true" />
-      <created>1753594563920</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1753594563920</updated>
-    </task>
-    <task id="LOCAL-00178" summary="File movement change.  No functional changes.">
-      <option name="closed" value="true" />
-      <created>1753595572768</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1753595572769</updated>
-    </task>
-    <task id="LOCAL-00179" summary="Added hack to allow hovered equipment items properly update when they are updated. &#10;Previously they would be stuck and not update, or would pull the card when we add an item to a slot.">
-      <option name="closed" value="true" />
-      <created>1753596708466</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1753596708466</updated>
-    </task>
-    <task id="LOCAL-00180" summary="Moved some flec components and renamed some to have more consistent F and FDC prefixes. &#10;Added death_after_time. &#10;Fixed bug where spawning attacks directly on top of the entity would be directionless.">
-      <option name="closed" value="true" />
-      <created>1753851018193</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1753851018193</updated>
-    </task>
-    <task id="LOCAL-00181" summary="Added basic unit test for AOE damage.&#10;Fixed major mistake with resources for setting up player.  &#10;Added ability to load a flec godot dummy.">
-      <option name="closed" value="true" />
-      <created>1754024529548</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1754024529548</updated>
-    </task>
-    <task id="LOCAL-00182" summary="Items now print debug information.">
-      <option name="closed" value="true" />
-      <created>1754103790690</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1754103790690</updated>
+      <workItem from="1755986568526" duration="2494000" />
+      <workItem from="1756047354603" duration="472000" />
+      <workItem from="1756081077399" duration="18633000" />
+      <workItem from="1756256983107" duration="16854000" />
+      <workItem from="1756427853802" duration="17826000" />
+      <workItem from="1756523066253" duration="2550000" />
+      <workItem from="1756569211309" duration="15821000" />
+      <workItem from="1756600386061" duration="24011000" />
+      <workItem from="1756674382736" duration="46267000" />
+      <workItem from="1756778319220" duration="18381000" />
+      <workItem from="1756956543649" duration="12885000" />
+      <workItem from="1757182357530" duration="12281000" />
+      <workItem from="1757205898155" duration="17682000" />
+      <workItem from="1757284860929" duration="3761000" />
+      <workItem from="1757376489260" duration="599000" />
+      <workItem from="1757463253430" duration="17786000" />
+      <workItem from="1757632176768" duration="24007000" />
+      <workItem from="1757730030165" duration="31786000" />
+      <workItem from="1757859578010" duration="28179000" />
+      <workItem from="1758069431247" duration="2406000" />
+      <workItem from="1758163284422" duration="2359000" />
+      <workItem from="1758324785657" duration="8863000" />
+      <workItem from="1758403679979" duration="8883000" />
+      <workItem from="1758466791777" duration="11292000" />
+      <workItem from="1758588912635" duration="11603000" />
+      <workItem from="1758764508494" duration="12908000" />
+      <workItem from="1759000073083" duration="6178000" />
+      <workItem from="1759070589278" duration="3741000" />
+      <workItem from="1759106131805" duration="7190000" />
+      <workItem from="1759287739790" duration="10032000" />
+      <workItem from="1759458842529" duration="637000" />
+      <workItem from="1759537249835" duration="58000" />
+      <workItem from="1759537554076" duration="15636000" />
+      <workItem from="1759605138065" duration="31000" />
+      <workItem from="1759605274876" duration="9178000" />
+      <workItem from="1759706047785" duration="10992000" />
+      <workItem from="1759882141056" duration="10856000" />
+      <workItem from="1759901953483" duration="44000" />
+      <workItem from="1759902008335" duration="10108000" />
+      <workItem from="1760054314239" duration="12072000" />
+      <workItem from="1760195388988" duration="37218000" />
+      <workItem from="1760279251827" duration="22935000" />
+      <workItem from="1760401568399" duration="2824000" />
+      <workItem from="1760489504766" duration="14949000" />
+      <workItem from="1760742456065" duration="14888000" />
+      <workItem from="1760819828898" duration="3249000" />
+      <workItem from="1760841725519" duration="12128000" />
+      <workItem from="1761095670605" duration="23730000" />
+      <workItem from="1761266739338" duration="10252000" />
+      <workItem from="1761403438604" duration="34581000" />
+      <workItem from="1761486497951" duration="6045000" />
+      <workItem from="1761516915701" duration="3146000" />
+      <workItem from="1761525156387" duration="23626000" />
+      <workItem from="1761694420909" duration="27328000" />
+      <workItem from="1761867262982" duration="29600000" />
+      <workItem from="1762009133442" duration="5395000" />
+      <workItem from="1762015565693" duration="41000" />
+      <workItem from="1762015855335" duration="873000" />
+      <workItem from="1762016740452" duration="25295000" />
+      <workItem from="1762130151581" duration="16496000" />
+      <workItem from="1762309431194" duration="4999000" />
+      <workItem from="1762560485809" duration="9209000" />
+      <workItem from="1762618548203" duration="11498000" />
+      <workItem from="1762649014185" duration="2942000" />
     </task>
     <task id="LOCAL-00183" summary="Small cleanup with no major changes.">
       <option name="closed" value="true" />
@@ -967,7 +752,343 @@
       <option name="project" value="LOCAL" />
       <updated>1755985780490</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <task id="LOCAL-00190" summary="Ignored a number of files to make clion a bit faster.">
+      <option name="closed" value="true" />
+      <created>1755993246183</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1755993246183</updated>
+    </task>
+    <task id="LOCAL-00191" summary="Fixed bug with death animations, where death counter was not incremented each frame after being reset to 0 at beginning of frame. &#10;&#10;Added flec life change debug component. &#10;&#10;Spawning prefabs now provides more information on components.&#10;Added new folders for directional sprites.">
+      <option name="closed" value="true" />
+      <created>1756185377135</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1756185377136</updated>
+    </task>
+    <task id="LOCAL-00192" summary="Fixed bug with death animations, where death counter was not incremented each frame after being reset to 0 at beginning of frame. &#10;&#10;Added flec life change debug component. &#10;&#10;Spawning prefabs now provides more information on components.&#10;Added new folders for directional sprites.">
+      <option name="closed" value="true" />
+      <created>1756262797311</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1756262797312</updated>
+    </task>
+    <task id="LOCAL-00193" summary="Directional renderers no longer need to set where they find color/normal maps and instead use config or local search.&#10;&#10; Added component for spawning entities based on distance traveled.">
+      <option name="closed" value="true" />
+      <created>1756347530313</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1756347530313</updated>
+    </task>
+    <task id="LOCAL-00194" summary="Added detailed rotation, which rotates the plane slightly to create smooth rotations. &#10;In a good state. &#10;&#10;Preparing to simplify UI for flec.">
+      <option name="closed" value="true" />
+      <created>1756520164394</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1756520164395</updated>
+    </task>
+    <task id="LOCAL-00195" summary="Final changes to entities.&#10;&#10;Preparing to simplify UI for flec.">
+      <option name="closed" value="true" />
+      <created>1756520360837</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1756520360837</updated>
+    </task>
+    <task id="LOCAL-00196" summary="Changed name of groups to Flec Components to make it more clear.">
+      <option name="closed" value="true" />
+      <created>1756523397043</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1756523397044</updated>
+    </task>
+    <task id="LOCAL-00197" summary="Replacing UI components with prefab instanced ones.">
+      <option name="closed" value="true" />
+      <created>1756610785957</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1756610785957</updated>
+    </task>
+    <task id="LOCAL-00198" summary="Added method to add components for flecs.  this allows correct debug printouts.">
+      <option name="closed" value="true" />
+      <created>1756611008117</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1756611008117</updated>
+    </task>
+    <task id="LOCAL-00199" summary="Added some rendering information.">
+      <option name="closed" value="true" />
+      <created>1756614979301</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1756614979301</updated>
+    </task>
+    <task id="LOCAL-00200" summary="Removed directional sprite rendering as a choice.  Now always available in prefabs.">
+      <option name="closed" value="true" />
+      <created>1756619044508</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1756619044508</updated>
+    </task>
+    <task id="LOCAL-00201" summary="Continued refactors.  &#10;Grouping common setups together for prefabs.  Removing now unused data components that are now implemented on prefab.&#10;&#10;replaced old method of setting up flec component list with modern version. yay!&#10;&#10;Added new flec xp orb with sounds.">
+      <option name="closed" value="true" />
+      <created>1756752910501</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1756752910501</updated>
+    </task>
+    <task id="LOCAL-00202" summary="Fixed memory leak where each frame a new query was created but never deleted.">
+      <option name="closed" value="true" />
+      <created>1756870721077</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1756870721078</updated>
+    </task>
+    <task id="LOCAL-00203" summary="Added item contributions, xp orbs to enemy prefab type.">
+      <option name="closed" value="true" />
+      <created>1756871384502</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1756871384502</updated>
+    </task>
+    <task id="LOCAL-00204" summary="Fire projectiles now work.  Added static explosion for fire.">
+      <option name="closed" value="true" />
+      <created>1756957530639</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1756957530640</updated>
+    </task>
+    <task id="LOCAL-00205" summary="Added back red flashing damage.">
+      <option name="closed" value="true" />
+      <created>1756960817246</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1756960817246</updated>
+    </task>
+    <task id="LOCAL-00206" summary="Removed temp files.">
+      <option name="closed" value="true" />
+      <created>1757038133668</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1757038133668</updated>
+    </task>
+    <task id="LOCAL-00207" summary="Removing art assets so they can be added to git ignore.">
+      <option name="closed" value="true" />
+      <created>1757039493919</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1757039493919</updated>
+    </task>
+    <task id="LOCAL-00208" summary="Adding leftover changes.">
+      <option name="closed" value="true" />
+      <created>1757039669634</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1757039669634</updated>
+    </task>
+    <task id="LOCAL-00209" summary="Split position into two different components.">
+      <option name="closed" value="true" />
+      <created>1757208269249</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1757208269250</updated>
+    </task>
+    <task id="LOCAL-00210" summary="Added more advanced rotation update system.&#10;Added `FPositionVelocity` to store last frames position changes.">
+      <option name="closed" value="true" />
+      <created>1757222562653</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1757222562653</updated>
+    </task>
+    <task id="LOCAL-00211" summary="Added enitty on spawn random offset for position and angle after it has spawned.">
+      <option name="closed" value="true" />
+      <created>1757226594820</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1757226594820</updated>
+    </task>
+    <task id="LOCAL-00212" summary="Run renderer in parallel.">
+      <option name="closed" value="true" />
+      <created>1757883427541</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1757883427541</updated>
+    </task>
+    <task id="LOCAL-00213" summary="Added X, Y debug labels to scene view.  This is not rendered.">
+      <option name="closed" value="true" />
+      <created>1757883450641</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1757883450641</updated>
+    </task>
+    <task id="LOCAL-00214" summary="Large refactor with rotations.  We had a mix between different rotations and methods to get angle between them leading to bugs. &#10;&#10;Reversed render directions in renderer.">
+      <option name="closed" value="true" />
+      <created>1757885920019</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1757885920019</updated>
+    </task>
+    <task id="LOCAL-00215" summary="Large refactor with rotations.  We had a mix between different rotations and methods to get angle between them leading to bugs. &#10;&#10;Reversed render directions in renderer.">
+      <option name="closed" value="true" />
+      <created>1757886803109</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1757886803109</updated>
+    </task>
+    <task id="LOCAL-00216" summary="Ignore optional render output folder.">
+      <option name="closed" value="true" />
+      <created>1757886921007</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1757886921007</updated>
+    </task>
+    <task id="LOCAL-00217" summary="Modified the spawn function for a simpler interface. Now checks if spawning on floor as an optioanl argument.">
+      <option name="closed" value="true" />
+      <created>1757902540666</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1757902540666</updated>
+    </task>
+    <task id="LOCAL-00218" summary="Added item modifiers which add an onhit ability activator. &#10;Modified abilities to support on hit activation.">
+      <option name="closed" value="true" />
+      <created>1759986593132</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1759986593132</updated>
+    </task>
+    <task id="LOCAL-00219" summary="Cleaned up unused entity.">
+      <option name="closed" value="true" />
+      <created>1760055851625</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1760055851625</updated>
+    </task>
+    <task id="LOCAL-00220" summary="Replaced AbilityItemNodeDescriptor with AbilityDescriptor which acts more like a generator class to simplify nodes.&#10;Fixed issue where abilities were not connecting to resource pools.&#10;Made invisible abilities not visible in the view.&#10;&#10;NOTE - Abilities do not spawn entities.">
+      <option name="closed" value="true" />
+      <created>1760249199319</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1760249199319</updated>
+    </task>
+    <task id="LOCAL-00221" summary="Fixed issue where onhit spawns would crash due to not suspending defer. &#10;Added warning &#10;Removed emitters - abilities are now spawned as direct flecs.">
+      <option name="closed" value="true" />
+      <created>1760407224108</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1760407224108</updated>
+    </task>
+    <task id="LOCAL-00222" summary="Fixed issue where onhit spawns would crash due to not suspending defer. &#10;Added warning &#10;Removed emitters - abilities are now spawned as direct flecs.">
+      <option name="closed" value="true" />
+      <created>1760407238062</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1760407238062</updated>
+    </task>
+    <task id="LOCAL-00223" summary="Completed refactor of player abilities and how they connect. &#10;New system has less hardcoded details at odd levels. &#10;UI elements are now optional.">
+      <option name="closed" value="true" />
+      <created>1762014920659</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1762014920659</updated>
+    </task>
+    <task id="LOCAL-00224" summary="Fixed issue where ability textures were not updating in UI.">
+      <option name="closed" value="true" />
+      <created>1762019519254</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1762019519255</updated>
+    </task>
+    <task id="LOCAL-00225" summary="Cleaned up resource UI to a single reuseable type for both mana and stamina.">
+      <option name="closed" value="true" />
+      <created>1762019724952</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1762019724952</updated>
+    </task>
+    <task id="LOCAL-00226" summary="Added type to error when godot finds a class which does not exist.  Happens usually when refactoring.">
+      <option name="closed" value="true" />
+      <created>1762019976123</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1762019976123</updated>
+    </task>
+    <task id="LOCAL-00227" summary="Removed spawned projectiles when unequipping an item. This is to avoid projectiles having references to now cleared abilities.">
+      <option name="closed" value="true" />
+      <created>1762038378441</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1762038378441</updated>
+    </task>
+    <task id="LOCAL-00228" summary="Separated on hit and onkill modifiers.&#10;Added more descriptive context for damage.  This is really poorly done and needs ripping out when I replace damage/spawning system with a simpler pattern.">
+      <option name="closed" value="true" />
+      <created>1762584891478</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1762584891478</updated>
+    </task>
+    <task id="LOCAL-00229" summary="Removed unused flecs world.&#10;Added additional logging to flecs.&#10;Enabled flecs explorer support.">
+      <option name="closed" value="true" />
+      <created>1762651828408</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1762651828409</updated>
+    </task>
+    <task id="LOCAL-00230" summary="Diabling test to build.">
+      <option name="closed" value="true" />
+      <created>1762651890567</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1762651890567</updated>
+    </task>
+    <task id="LOCAL-00231" summary="Diabling test to build.">
+      <option name="closed" value="true" />
+      <created>1762653082410</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1762653082410</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -986,11 +1107,16 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="GRAPH_OPTIONS">
-                <list>
-                  <option value="Base" />
-                  <option value="Standard" />
-                </list>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
               </option>
             </State>
           </value>
@@ -999,70 +1125,40 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Flecs systems are no longer a singleton node but are now a static class and normal node.  Moved several functions from FlecsDataKeeperServer to FlecsAccessor. &#10;&#10;No major function changes." />
-    <MESSAGE value="Renamed FlecsDataKeeperServer to FlecsSystemSubscriber.  No functional changes." />
-    <MESSAGE value="Added new flecs subscription system.  Systems are added to a static list using REGISTER_FLEC_SYSTEM and are sorted." />
-    <MESSAGE value="Refactor continues. Moved all flec systems into macro.  Cleaned up some headers to reduce rework being done." />
-    <MESSAGE value="Continued cleanup with removing some common flecs.h usage.  Not a big impact to build time as flecs.h is mostly imported elsewhere." />
-    <MESSAGE value="Updated flecs pipelines to be significantly simpler due to priority system." />
-    <MESSAGE value="Removed unused file which caused leak warnings (world_environment.tscn)&#10;Downsized 2k image which had a long loading time on startup." />
-    <MESSAGE value="Added verbose printout for resource loading with warnings on longer load times.&#10;Pushed up where updateLoopServer is removed on shutdown but had no impact.  1x leftover string 'Node'." />
-    <MESSAGE value="Moved GameMainNode to a new folder 'game_core_setup'." />
-    <MESSAGE value="Added build mode to generated files." />
-    <MESSAGE value="Added --game_tests to the engine.  This allows test cases to run in game engine and render to the screen with access to project files.&#10;&#10;THis was very painful and annoying to get to :(" />
-    <MESSAGE value="Added workspaces to project." />
-    <MESSAGE value="Added game test sample.  &#10;Player can move around the scene." />
-    <MESSAGE value="Exposed GameMain item management node. &#10;&#10;Fixed bug where item cards would stay up.  This was caused by the item slot moving its item to stash and not updating the card with that info." />
-    <MESSAGE value="File movement change.  No functional changes." />
-    <MESSAGE value="Added hack to allow hovered equipment items properly update when they are updated. &#10;Previously they would be stuck and not update, or would pull the card when we add an item to a slot." />
-    <MESSAGE value="Moved some flec components and renamed some to have more consistent F and FDC prefixes. &#10;Added death_after_time. &#10;Fixed bug where spawning attacks directly on top of the entity would be directionless." />
-    <MESSAGE value="Added basic unit test for AOE damage.&#10;Fixed major mistake with resources for setting up player.  &#10;Added ability to load a flec godot dummy." />
-    <MESSAGE value="Items now print debug information." />
-    <MESSAGE value="Small cleanup with no major changes." />
-    <MESSAGE value="Large content push. &#10;&#10;Prototype directional sprites with pipeline for rendering models as spritesheets.  &#10;Currently the snail model is used with actual depth and normal maps.&#10;&#10;Updated the name of some flec components to become more standardized." />
-    <MESSAGE value="Project cleanup.  Removed old testing files and moved many folders around." />
-    <MESSAGE value="More verbose building.  Block build extra if already running.  Added faster building and cache but on empty builds did not help in a meaningful way." />
-    <MESSAGE value="Continued project cleanup.&#10;Added stone textures." />
-    <MESSAGE value="Added scon cache folders to gitignore. &#10;Updated workspace xml file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added scon cache folders to gitignore. &#10;Updated workspace xml file." />
+    <MESSAGE value="Fire projectiles now work.  Added static explosion for fire." />
+    <MESSAGE value="Added back red flashing damage." />
+    <MESSAGE value="Removed temp files." />
+    <MESSAGE value="Removing art assets so they can be added to git ignore." />
+    <MESSAGE value="Adding leftover changes." />
+    <MESSAGE value="Split position into two different components." />
+    <MESSAGE value="Added more advanced rotation update system.&#10;Added `FPositionVelocity` to store last frames position changes." />
+    <MESSAGE value="Added enitty on spawn random offset for position and angle after it has spawned." />
+    <MESSAGE value="Run renderer in parallel." />
+    <MESSAGE value="Added X, Y debug labels to scene view.  This is not rendered." />
+    <MESSAGE value="Large refactor with rotations.  We had a mix between different rotations and methods to get angle between them leading to bugs. &#10;&#10;Reversed render directions in renderer." />
+    <MESSAGE value="Ignore optional render output folder." />
+    <MESSAGE value="Modified the spawn function for a simpler interface. Now checks if spawning on floor as an optioanl argument." />
+    <MESSAGE value="Added item modifiers which add an onhit ability activator. &#10;Modified abilities to support on hit activation." />
+    <MESSAGE value="Cleaned up unused entity." />
+    <MESSAGE value="Replaced AbilityItemNodeDescriptor with AbilityDescriptor which acts more like a generator class to simplify nodes.&#10;Fixed issue where abilities were not connecting to resource pools.&#10;Made invisible abilities not visible in the view.&#10;&#10;NOTE - Abilities do not spawn entities." />
+    <MESSAGE value="Fixed issue where onhit spawns would crash due to not suspending defer. &#10;Added warning &#10;Removed emitters - abilities are now spawned as direct flecs." />
+    <MESSAGE value="Completed refactor of player abilities and how they connect. &#10;New system has less hardcoded details at odd levels. &#10;UI elements are now optional." />
+    <MESSAGE value="Fixed issue where ability textures were not updating in UI." />
+    <MESSAGE value="Cleaned up resource UI to a single reuseable type for both mana and stamina." />
+    <MESSAGE value="Added type to error when godot finds a class which does not exist.  Happens usually when refactoring." />
+    <MESSAGE value="Removed spawned projectiles when unequipping an item. This is to avoid projectiles having references to now cleared abilities." />
+    <MESSAGE value="Separated on hit and onkill modifiers.&#10;Added more descriptive context for damage.  This is really poorly done and needs ripping out when I replace damage/spawning system with a simpler pattern." />
+    <MESSAGE value="Removed unused flecs world.&#10;Added additional logging to flecs.&#10;Enabled flecs explorer support." />
+    <MESSAGE value="Diabling test to build." />
+    <option name="LAST_COMMIT_MESSAGE" value="Diabling test to build." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/tests_player_attacks.h</url>
-          <line>27</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/tests_player_attacks.h</url>
-          <line>57</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/core/string/string_name.cpp</url>
-          <line>115</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Rendering.cpp</url>
-          <line>525</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.cpp</url>
-          <line>189</line>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.cpp</url>
-          <line>188</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.cpp</url>
-          <line>192</line>
-          <option name="timeStamp" value="99" />
+          <url>file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.cpp</url>
+          <line>200</line>
+          <option name="timeStamp" value="168" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
