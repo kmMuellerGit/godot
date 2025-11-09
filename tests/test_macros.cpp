@@ -43,12 +43,19 @@
 #include "servers/navigation_3d/navigation_server_3d.h"
 #include "servers/rendering/rendering_server_default.h"
 #include "editor/settings/editor_settings.h"
+#include "main/main.h"
 #ifdef TOOLS_ENABLED
 #include "core/string/translation_server.h"
 #include "editor/file_system/editor_paths.h"
 #endif // TOOLS_ENABLED
 
 HashMap<String, TestFunc> *test_commands = nullptr;
+
+bool YieldFrame(double frame_delay) {
+	OS::get_singleton()->delay_usec(frame_delay * 1024 * 1024);
+	DisplayServer::get_singleton()->process_events();
+	return Main::iteration();
+}
 
 int register_test_command(String p_command, TestFunc p_function) {
 	if (!test_commands) {
@@ -63,10 +70,12 @@ struct GodotPlaytimeTestListener : public doctest::IReporter {
 	void test_case_start(const doctest::TestCaseData &p_in) override {
 		print_line("Test case start");
 		reinitialize();
+		YieldFrame(0.1); // Ensure world has passed frames and queued events are completed.
 	}
 
 	void test_case_end(const doctest::CurrentTestCaseStats &) override {
 		print_line("Test case end");
+		YieldFrame(0.1); // Ensure world has passed frames and queued events are completed.
 	}
 
 	void test_run_start() override {
