@@ -73,6 +73,7 @@ struct GodotPlaytimeTestListener : public doctest::IReporter {
 		YieldFrame(0.1); // Ensure world has passed frames and queued events are completed.
 	}
 
+	// Ran only after all subcases are completed.
 	void test_case_end(const doctest::CurrentTestCaseStats &) override {
 		print_line("Test case end");
 		YieldFrame(0.1); // Ensure world has passed frames and queued events are completed.
@@ -86,17 +87,23 @@ struct GodotPlaytimeTestListener : public doctest::IReporter {
 		print_line("Test run end");
 	}
 
+	// Re-entering test case.  Used when multiple subcases exist.
 	void test_case_reenter(const doctest::TestCaseData &) override {
 		reinitialize();
+		YieldFrame(0.1); // Ensure world has passed frames and queued events are completed.
 	}
 
+	// Enter subcase
 	void subcase_start(const doctest::SubcaseSignature &) override {
+		reinitialize();
+	}
+	// Leave subcase
+	void subcase_end() override {
 		reinitialize();
 	}
 
 	void report_query(const doctest::QueryData &) override {}
 	void test_case_exception(const doctest::TestCaseException &) override {}
-	void subcase_end() override {}
 
 	void log_assert(const doctest::AssertData &in) override {}
 	void log_message(const doctest::MessageData &) override {}
