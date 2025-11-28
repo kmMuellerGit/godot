@@ -166,6 +166,7 @@ public:
 	virtual void make_visible(bool p_visible) override;
 	void open_editor();
 
+	void make_visible_no_focus();
 	ObjectID get_edited_tileset() const;
 
 	TileSetEditorPlugin();
