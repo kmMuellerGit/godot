@@ -4936,6 +4936,7 @@ bool Main::iteration() {
 	double scaled_step = process_step * time_scale;
 
 	Engine::get_singleton()->_process_step = process_step;
+	Engine::get_singleton()->_scaled_process_step = scaled_step;
 	Engine::get_singleton()->_physics_interpolation_fraction = advance.interpolation_fraction;
 	auto update_server = UpdateLoopServer::get_singleton();
 	ERR_FAIL_COND_V_MSG(update_server == nullptr, true, "Update server was never created.");
@@ -4952,10 +4953,11 @@ bool Main::iteration() {
 	last_ticks = ticks;
 
 	const int max_physics_steps = Engine::get_singleton()->get_user_max_physics_steps_per_frame();
-	if (fixed_fps == -1 && advance.physics_steps > max_physics_steps) {
-		process_step -= (advance.physics_steps - max_physics_steps) * physics_step;
-		advance.physics_steps = max_physics_steps;
-	}
+	WARN_PRINT_ONCE("GAME - Physics time steps disabled - if things get wonky this is to blame");
+	// if (fixed_fps == -1 && advance.physics_steps > max_physics_steps) {
+	// 	process_step -= (advance.physics_steps - max_physics_steps) * physics_step;
+	// 	advance.physics_steps = max_physics_steps;
+	// }
 
 	bool exit = false;
 

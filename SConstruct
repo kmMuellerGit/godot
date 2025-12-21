@@ -934,6 +934,7 @@ if env["disable_exceptions"]:
         env.Append(CPPDEFINES=[("_HAS_EXCEPTIONS", 0)])
     else:
         env.Append(CXXFLAGS=["-fno-exceptions"])
+        env.Append(CXXFLAGS=["-ferror-limit=1"])
 elif env.msvc:
     env.Append(CXXFLAGS=["/EHsc"])
 
