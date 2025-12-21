@@ -16,7 +16,9 @@
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/entity_distance_cache" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/third_party" />
       <file path="$PROJECT_DIR$" />
