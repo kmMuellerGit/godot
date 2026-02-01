@@ -32,7 +32,36 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="Editor settings" />
+    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="Small changes to wall2.  Outside edges are not correct.">
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/animation_node_blend_tree.tres" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/base_skin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/base_skin.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/gdglue_player_body_rig_animations.gd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/gdglue_player_body_rig_animations.gd.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/player_body_rig.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/player_body_rig.gltf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/player_body_rig.gltf.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/player_body_rig_root.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/uv_color_grid Layer 2-uv_color_grid Layer 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/uv_color_grid Layer 2-uv_color_grid Layer 1.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collision.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collision.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityActivatorNode_Base.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityActivatorNode_Base.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityActivatorNode_Base.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityActivatorNode_Base.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode_World.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode_World.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode_World.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode_World.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/3d_testing_scene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/3d_testing_scene.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/player_body.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/player_body.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/abilities/ability_swordswing/AbilityDescriptor_sword_sequence.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/abilities/ability_swordswing/AbilityDescriptor_sword_sequence.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/abilities/ability_swordswing/FLEC_test_sword_swing.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/abilities/ability_swordswing/FLEC_test_sword_swing.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/abilities/ability_swordswing/FLEC_test_sword_swing_big.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/abilities/ability_swordswing/FLEC_test_sword_swing_big.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/level_center.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/level_center.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Editor_Release__Tracy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Editor_Release__Tracy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/gltf/gltf_document.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/modules/gltf/gltf_document.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,6 +149,7 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecComponents_Common.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecComponents_XPOrbs.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Audio.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collision.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collision.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collision.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collisionv2.h" root0="FORCE_HIGHLIGHTING" />
@@ -150,7 +180,6 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecPrefabSpawnerNode.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecPrefabSpawnerNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRenderServer.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_DirectionalSpriteSheetAnimations.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_SpriteAnimation.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecRendererServer/FlecRendererServer_VertexAnimationMesh.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -163,7 +192,6 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/tests/tests_player_attacks.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecPrefab.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecPrefab.h" root0="FORCE_HIGHLIGHTING" />
@@ -178,32 +206,36 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/register_types.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/register_types.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/chunkmap_common_size.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/cpp_chunkmap/include/chunkmap.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/cpp_chunkmap/include/sub/chunk.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/cpp_chunkmap/include/sub/points.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/gdscript_helpers.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/tests/test_testmodule.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_common/vector/GVector2.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameDocTest.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainNode.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainNode.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainTestHelpers.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainTestHelpers.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainTestHelpers.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainTestHelpers.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainTestHelpers.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/ItemManagementNode.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/PlayerEquipmentSlots.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/inventory_item_game.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/inventory_item_slot.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/inventory_item_slot.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityActivatorNode_Base.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityActivatorNode_Base.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityActivatorNode_Base.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityActivatorNode_Base.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityActivatorNode_Base.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityActivatorNode_Base.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode_World.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode_World.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode_World.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityNode_World.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbilityUI.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbility_Description.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_abilities/PlayerAbility_Description.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_generators/ItemGeneratorBase.h" root0="FORCE_HIGHLIGHTING" />
@@ -223,13 +255,8 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Simple.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Spawning.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Stamina.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerComposition.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerComposition.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerComposition.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerComposition.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerComposition.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerResourcePool.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerResourcePool.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerResourcePool.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system/PlayerAbility_CastIconManager.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system/PlayerAbility_IconControl.h" root0="FORCE_HIGHLIGHTING" />
@@ -239,18 +266,13 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_attacks/PlayerAttack_QuickRect.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/register_types.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/tests/test_Ability.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/tests/test_Ability.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_Ability.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/tests/test_Ability.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_collision.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/cyborg_survivors_game/engine_custom_modules/game_main/tests/test_game_setup.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_game_setup.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests/test_pathfind.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server/GameMapCollisionPoint.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server/game_map_collision_server.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server/tests/test_collision_server.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/godot/core/config/engine.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/io/json.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/io/resource.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/core/io/resource_loader.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -285,8 +307,8 @@
     <setting file="file://$PROJECT_DIR$/core/variant/variant_call.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/editor/settings/editor_settings.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/main/main.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///home/main/godot/dungeon_arpg/godot/main/main.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/modules/gdscript/gdscript_analyzer.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/main/godot/dungeon_arpg/godot/modules/gltf/gltf_document.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/scene/3d/camera_3d.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/scene/3d/camera_3d.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/scene/3d/multimesh_instance_3d.h" root0="FORCE_HIGHLIGHTING" />
@@ -329,45 +351,45 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Custom Build Application.Editor Debug Tracy.executor": "Run",
-    "Custom Build Application.Editor Debug.executor": "Run",
-    "Custom Build Application.Editor Release  Tracy.executor": "Run",
-    "Custom Build Application.Editor Release.executor": "Run",
-    "Custom Build Application.Game Debug Tracy.executor": "Debug",
-    "Custom Build Application.Game Debug.executor": "Run",
-    "Custom Build Application.Game Release PRODUCTION.executor": "Run",
-    "Custom Build Application.Game Release Tracy.executor": "Run",
-    "Custom Build Application.Game Release).executor": "Run",
-    "Custom Build Application.Run Tests  Tracy.executor": "Debug",
-    "Custom Build Application.Run Tests.executor": "Run",
-    "Custom Build Application.TESTS - Game.executor": "Run",
-    "Custom Build Application.Test Direct Load.executor": "Debug",
-    "Custom Build Application.Test Headless.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Notification.DisplayName-DoNotAsk-git.push.result": "",
-    "Notification.DoNotAsk-git.push.result": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SHELLCHECK.PATH": "I do mind",
-    "cf.advertisement.text.has.clang-format": "true",
-    "cf.advertisement.text.overridden": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker": "true",
-    "git-widget-placeholder": "202512__melee__attack",
-    "last_opened_file_path": "/home/main/godot/dungeon_arpg/godot",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C++"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Custom Build Application.Editor Debug Tracy.executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.Editor Debug.executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.Editor Release  Tracy.executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.Editor Release.executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.Game Debug Tracy.executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.Game Debug.executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.Game Release PRODUCTION.executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.Game Release Tracy.executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.Game Release).executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.Run Tests  Tracy.executor&quot;: &quot;Debug&quot;,
+    &quot;Custom Build Application.Run Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.TESTS - Game.executor&quot;: &quot;Run&quot;,
+    &quot;Custom Build Application.Test Direct Load.executor&quot;: &quot;Debug&quot;,
+    &quot;Custom Build Application.Test Headless.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-git.push.result&quot;: &quot;&quot;,
+    &quot;Notification.DoNotAsk-git.push.result&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;I do mind&quot;,
+    &quot;cf.advertisement.text.has.clang-format&quot;: &quot;true&quot;,
+    &quot;cf.advertisement.text.overridden&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;202512__melee__attack&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/main/godot/dungeon_arpg/godot&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C++&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/lifetime" />
@@ -377,7 +399,7 @@
       <recent name="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_generators" />
     </key>
   </component>
-  <component name="RunManager" selected="Custom Build Application.Editor Debug Tracy">
+  <component name="RunManager" selected="Custom Build Application.Editor Release  Tracy">
     <configuration name="Game Debug Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose  --screen 1 --position 2500,0 --log-file godot_game.log" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -402,11 +424,6 @@
       </method>
     </configuration>
     <configuration name="TESTS - Game" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose --game_test -tc=*[DungeonARPG]* --screen 1 --position 2500,0 --log-file godot_game.log" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
@@ -775,70 +792,6 @@
       <workItem from="1765501077461" duration="16528000" />
       <workItem from="1765855160975" duration="3447000" />
     </task>
-    <task id="LOCAL-00212" summary="Run renderer in parallel.">
-      <option name="closed" value="true" />
-      <created>1757883427541</created>
-      <option name="number" value="00212" />
-      <option name="presentableId" value="LOCAL-00212" />
-      <option name="project" value="LOCAL" />
-      <updated>1757883427541</updated>
-    </task>
-    <task id="LOCAL-00213" summary="Added X, Y debug labels to scene view.  This is not rendered.">
-      <option name="closed" value="true" />
-      <created>1757883450641</created>
-      <option name="number" value="00213" />
-      <option name="presentableId" value="LOCAL-00213" />
-      <option name="project" value="LOCAL" />
-      <updated>1757883450641</updated>
-    </task>
-    <task id="LOCAL-00214" summary="Large refactor with rotations.  We had a mix between different rotations and methods to get angle between them leading to bugs. &#10;&#10;Reversed render directions in renderer.">
-      <option name="closed" value="true" />
-      <created>1757885920019</created>
-      <option name="number" value="00214" />
-      <option name="presentableId" value="LOCAL-00214" />
-      <option name="project" value="LOCAL" />
-      <updated>1757885920019</updated>
-    </task>
-    <task id="LOCAL-00215" summary="Large refactor with rotations.  We had a mix between different rotations and methods to get angle between them leading to bugs. &#10;&#10;Reversed render directions in renderer.">
-      <option name="closed" value="true" />
-      <created>1757886803109</created>
-      <option name="number" value="00215" />
-      <option name="presentableId" value="LOCAL-00215" />
-      <option name="project" value="LOCAL" />
-      <updated>1757886803109</updated>
-    </task>
-    <task id="LOCAL-00216" summary="Ignore optional render output folder.">
-      <option name="closed" value="true" />
-      <created>1757886921007</created>
-      <option name="number" value="00216" />
-      <option name="presentableId" value="LOCAL-00216" />
-      <option name="project" value="LOCAL" />
-      <updated>1757886921007</updated>
-    </task>
-    <task id="LOCAL-00217" summary="Modified the spawn function for a simpler interface. Now checks if spawning on floor as an optioanl argument.">
-      <option name="closed" value="true" />
-      <created>1757902540666</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1757902540666</updated>
-    </task>
-    <task id="LOCAL-00218" summary="Added item modifiers which add an onhit ability activator. &#10;Modified abilities to support on hit activation.">
-      <option name="closed" value="true" />
-      <created>1759986593132</created>
-      <option name="number" value="00218" />
-      <option name="presentableId" value="LOCAL-00218" />
-      <option name="project" value="LOCAL" />
-      <updated>1759986593132</updated>
-    </task>
-    <task id="LOCAL-00219" summary="Cleaned up unused entity.">
-      <option name="closed" value="true" />
-      <created>1760055851625</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1760055851625</updated>
-    </task>
     <task id="LOCAL-00220" summary="Replaced AbilityItemNodeDescriptor with AbilityDescriptor which acts more like a generator class to simplify nodes.&#10;Fixed issue where abilities were not connecting to resource pools.&#10;Made invisible abilities not visible in the view.&#10;&#10;NOTE - Abilities do not spawn entities.">
       <option name="closed" value="true" />
       <created>1760249199319</created>
@@ -1167,7 +1120,71 @@
       <option name="project" value="LOCAL" />
       <updated>1766359585873</updated>
     </task>
-    <option name="localTasksCounter" value="261" />
+    <task id="LOCAL-00261" summary="Editor settings">
+      <option name="closed" value="true" />
+      <created>1766360475763</created>
+      <option name="number" value="00261" />
+      <option name="presentableId" value="LOCAL-00261" />
+      <option name="project" value="LOCAL" />
+      <updated>1766360475763</updated>
+    </task>
+    <task id="LOCAL-00262" summary="Removed unused enum from switch.">
+      <option name="closed" value="true" />
+      <created>1766423914786</created>
+      <option name="number" value="00262" />
+      <option name="presentableId" value="LOCAL-00262" />
+      <option name="project" value="LOCAL" />
+      <updated>1766423914786</updated>
+    </task>
+    <task id="LOCAL-00263" summary="ref use is_null change">
+      <option name="closed" value="true" />
+      <created>1766442792232</created>
+      <option name="number" value="00263" />
+      <option name="presentableId" value="LOCAL-00263" />
+      <option name="project" value="LOCAL" />
+      <updated>1766442792232</updated>
+    </task>
+    <task id="LOCAL-00264" summary="Reduced wall pushaway effect on entities.  This stops them from being shoved from walls so strongly.">
+      <option name="closed" value="true" />
+      <created>1767474674983</created>
+      <option name="number" value="00264" />
+      <option name="presentableId" value="LOCAL-00264" />
+      <option name="project" value="LOCAL" />
+      <updated>1767474674984</updated>
+    </task>
+    <task id="LOCAL-00265" summary="Animation player sword swings for melee.">
+      <option name="closed" value="true" />
+      <created>1767588693238</created>
+      <option name="number" value="00265" />
+      <option name="presentableId" value="LOCAL-00265" />
+      <option name="project" value="LOCAL" />
+      <updated>1767588693238</updated>
+    </task>
+    <task id="LOCAL-00266" summary="Fixed a bug where units would zip across non-floors.  This was due to player pathfinding having a backup condition that pulls things in if there is no valid path finding, such as off map. Now if units are not on floors they ignore this force. &#10;Added a way to disable player floor collision.">
+      <option name="closed" value="true" />
+      <created>1767590172697</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1767590172697</updated>
+    </task>
+    <task id="LOCAL-00267" summary="Added big slam for melee weapons.&#10;Added new walls for prototyping. &#10;Added GridMap support for floors and quickly generating a scene.">
+      <option name="closed" value="true" />
+      <created>1767590718410</created>
+      <option name="number" value="00267" />
+      <option name="presentableId" value="LOCAL-00267" />
+      <option name="project" value="LOCAL" />
+      <updated>1767590718410</updated>
+    </task>
+    <task id="LOCAL-00268" summary="Small changes to wall2.  Outside edges are not correct.">
+      <option name="closed" value="true" />
+      <created>1767676918958</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1767676918958</updated>
+    </task>
+    <option name="localTasksCounter" value="269" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1194,7 +1211,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="202512_melee_attack" />
                       </list>
                     </value>
                   </entry>
@@ -1207,13 +1224,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Moved flecs world to node creation." />
-    <MESSAGE value="Added yields to subcases ending.  This fixes an issue where last frame objects that left tree still exist." />
-    <MESSAGE value="Added unit tests which create equipped items and verify if enemies are killed by spawned abilities.&#10;&#10;Added variety of constructors.  Did not realize this was a valid pattern for godot.  These are used for runtime generated resources. &#10;&#10;Added collision raycasting for testing scene helper.&#10;&#10;Added player resource regeneration for stamina and mana." />
-    <MESSAGE value="Added prefab spawn counts.  Useful for test debugging." />
-    <MESSAGE value="Added ability to query for entities near a point for tests." />
-    <MESSAGE value="Added collision and pathfinding tests. Removed old test case file.&#10;Removed debug logging from gdscript." />
-    <MESSAGE value="Added max delta time option." />
     <MESSAGE value="Added on hit ability test." />
     <MESSAGE value="More unit tests.  This should be final group." />
     <MESSAGE value="Animation maker mild changes for play changes. Now use reset animation but may revert this." />
@@ -1232,7 +1242,14 @@
     <MESSAGE value="Sequence must wait for cooldown to end." />
     <MESSAGE value="Added scaled time to main.&#10;Stop compiling after 1 error." />
     <MESSAGE value="Editor settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Editor settings" />
+    <MESSAGE value="Removed unused enum from switch." />
+    <MESSAGE value="ref use is_null change" />
+    <MESSAGE value="Reduced wall pushaway effect on entities.  This stops them from being shoved from walls so strongly." />
+    <MESSAGE value="Animation player sword swings for melee." />
+    <MESSAGE value="Fixed a bug where units would zip across non-floors.  This was due to player pathfinding having a backup condition that pulls things in if there is no valid path finding, such as off map. Now if units are not on floors they ignore this force. &#10;Added a way to disable player floor collision." />
+    <MESSAGE value="Added big slam for melee weapons.&#10;Added new walls for prototyping. &#10;Added GridMap support for floors and quickly generating a scene." />
+    <MESSAGE value="Small changes to wall2.  Outside edges are not correct." />
+    <option name="LAST_COMMIT_MESSAGE" value="Small changes to wall2.  Outside edges are not correct." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

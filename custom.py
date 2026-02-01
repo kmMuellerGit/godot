@@ -2,7 +2,7 @@
 
 module_dds_enabled = "no"
 module_enet_enabled = "no"
-module_gridmap_enabled = "no"
+# module_gridmap_enabled = "no"
 module_mbedtls_enabled = "no"
 module_mobile_vr_enabled = "no"
 module_multiplayer_enabled = "no"
