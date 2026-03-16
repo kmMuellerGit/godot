@@ -65,9 +65,29 @@ int register_test_command(String p_command, TestFunc p_function) {
 	return 0;
 }
 
+
+
 struct GodotPlaytimeTestListener : public doctest::IReporter {
+	struct FailureInfo {
+		String test_name;
+		String suite_name;
+		String file;
+		int line = 0;
+		String expression;
+		String message;
+		String type;
+	};
+
+	String current_test_name;
+	String current_suite_name;
+	Vector<FailureInfo> failures;
+
 	GodotPlaytimeTestListener(const doctest::ContextOptions &p_in) {}
+
 	void test_case_start(const doctest::TestCaseData &p_in) override {
+		current_test_name = String(p_in.m_name);
+		current_suite_name = String(p_in.m_test_suite);
+
 		print_line("Test case start");
 		reinitialize();
 		YieldFrame(0.1); // Ensure world has passed frames and queued events are completed.
@@ -80,11 +100,48 @@ struct GodotPlaytimeTestListener : public doctest::IReporter {
 	}
 
 	void test_run_start() override {
+		failures.clear();
+		current_test_name = "";
+		current_suite_name = "";
 		print_line("Test run Start");
 	}
 
 	void test_run_end(const doctest::TestRunStats &) override {
 		print_line("Test run end");
+
+		if (failures.is_empty()) {
+			print_line("=== Playtime Test Summary ===");
+			print_line("All playtime tests passed.");
+			return;
+		}
+
+		print_line("=== Playtime Test Failure Summary ===");
+		print_line(vformat("Recorded failures: %d", failures.size()));
+
+		for (int i = 0; i < failures.size(); i++) {
+			const FailureInfo &failure = failures[i];
+
+			String header;
+			if (failure.suite_name.is_empty()) {
+				header = vformat("%d) %s", i + 1, failure.test_name);
+			} else {
+				header = vformat("%d) [%s] %s", i + 1, failure.suite_name, failure.test_name);
+			}
+			print_line(header);
+
+			if (!failure.file.is_empty()) {
+				print_line(vformat("   at: %s:%d", failure.file, failure.line));
+			}
+			if (!failure.type.is_empty()) {
+				print_line(vformat("   type: %s", failure.type));
+			}
+			if (!failure.expression.is_empty()) {
+				print_line(vformat("   expr: %s", failure.expression));
+			}
+			if (!failure.message.is_empty()) {
+				print_line(vformat("   cause: %s", failure.message));
+			}
+		}
 	}
 
 	// Re-entering test case.  Used when multiple subcases exist.
@@ -103,9 +160,52 @@ struct GodotPlaytimeTestListener : public doctest::IReporter {
 	}
 
 	void report_query(const doctest::QueryData &) override {}
-	void test_case_exception(const doctest::TestCaseException &) override {}
 
-	void log_assert(const doctest::AssertData &in) override {}
+	void test_case_exception(const doctest::TestCaseException &p_in) override {
+		FailureInfo failure;
+		failure.test_name = current_test_name;
+		failure.suite_name = current_suite_name;
+		failure.file = "";
+		failure.line = 0;
+		failure.expression = "";
+		failure.type = "exception";
+		failure.message = String(p_in.error_string.c_str());
+
+		failures.push_back(failure);
+	}
+
+	void log_assert(const doctest::AssertData &p_in) override {
+		if (p_in.m_failed == false) {
+			return;
+		}
+
+		FailureInfo failure;
+		failure.test_name = current_test_name;
+		failure.suite_name = current_suite_name;
+		failure.file = String(p_in.m_file);
+		failure.line = p_in.m_line;
+		failure.expression = String(p_in.m_expr);
+		failure.type = doctest::assertString(p_in.m_at);
+
+		String message;
+		if (p_in.m_exception_type && p_in.m_exception_type[0] != '\0') {
+			message += vformat("exception type: %s", String(p_in.m_exception_type));
+		}
+
+		if (!message.is_empty()) {
+			message += ", ";
+		}
+		message += vformat("exception: %s", String(p_in.m_exception_string.c_str()));
+		if (!message.is_empty()) {
+			message += ", ";
+		}
+		message += vformat("decomp: %s", String(p_in.m_decomp.c_str()));
+
+
+		failure.message = message;
+		failures.push_back(failure);
+	}
+
 	void log_message(const doctest::MessageData &) override {}
 	void test_case_skipped(const doctest::TestCaseData &) override {}
 
@@ -362,4 +462,4 @@ private:
 // Use of listener and reporter allows us to select which test runner to use.
 REGISTER_LISTENER("std_out", 1, doctest::ConsoleReporter); // Shows normal stdout.  register_reporters eat it.
 REGISTER_REPORTER("GodotTestCaseListener", 2, GodotTestCaseListener); // Used for normal godot tests.
-REGISTER_REPORTER("GodotPlaytimeTestListener", 3, GodotPlaytimeTestListener); // Used for playtime tests. less setups.
+REGISTER_LISTENER("GodotPlaytimeTestListener", 3, GodotPlaytimeTestListener); // Used for playtime tests. less setups.
