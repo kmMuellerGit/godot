@@ -90,12 +90,32 @@ struct GodotPlaytimeTestListener : public doctest::IReporter {
 
 		print_line("Test case start");
 		reinitialize();
+		if (SceneTree::get_singleton() && SceneTree::get_singleton()->get_root()) {
+			Window *root = SceneTree::get_singleton()->get_root();
+			for (int i = 0; i < root->get_child_count(); i++) {
+				Node *child = root->get_child(i);
+				if (child->get_name() == "AutoloadServers") {
+					continue;
+				}
+				child->queue_free();
+			}
+		}
 		YieldFrame(0.1); // Ensure world has passed frames and queued events are completed.
 	}
 
 	// Ran only after all subcases are completed.
 	void test_case_end(const doctest::CurrentTestCaseStats &) override {
 		print_line("Test case end");
+		if (SceneTree::get_singleton() && SceneTree::get_singleton()->get_root()) {
+			Window *root = SceneTree::get_singleton()->get_root();
+			for (int i = 0; i < root->get_child_count(); i++) {
+				Node *child = root->get_child(i);
+				if (child->get_name() == "AutoloadServers") {
+					continue;
+				}
+				child->queue_free();
+			}
+		}
 		YieldFrame(0.1); // Ensure world has passed frames and queued events are completed.
 	}
 
@@ -147,6 +167,17 @@ struct GodotPlaytimeTestListener : public doctest::IReporter {
 	// Re-entering test case.  Used when multiple subcases exist.
 	void test_case_reenter(const doctest::TestCaseData &) override {
 		reinitialize();
+
+		if (SceneTree::get_singleton() && SceneTree::get_singleton()->get_root()) {
+			Window *root = SceneTree::get_singleton()->get_root();
+			for (int i = 0; i < root->get_child_count(); i++) {
+				Node *child = root->get_child(i);
+				if (child->get_name() == "AutoloadServers") {
+					continue;
+				}
+				child->queue_free();
+			}
+		}
 		YieldFrame(0.1); // Ensure world has passed frames and queued events are completed.
 	}
 
