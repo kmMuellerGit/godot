@@ -797,6 +797,9 @@ Resource::~Resource() {
 	// (Other resources can have the same value in `path_cache` if loaded with `CACHE_IGNORE`.)
 	HashMap<String, Resource *>::Iterator E = ResourceCache::resources.find(path_cache);
 	if (likely(E && E->value == this)) {
+#ifdef DEBUG_ENABLED
+		print_line(vformat("DEBUG unreferenced resource: %s (name: %s)", path_cache, name));
+#endif
 		ResourceCache::resources.remove(E);
 	}
 }
