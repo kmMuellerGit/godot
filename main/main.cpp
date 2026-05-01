@@ -5061,6 +5061,7 @@ bool Main::iteration() {
 
 	uint64_t process_begin = OS::get_singleton()->get_ticks_usec();
 
+	GodotProfileZoneGrouped(_profile_zone, "process");
 	update_server->Emit_PreProcessUpdate(process_step, scaled_step);
 	GodotProfileZoneGrouped(_profile_zone, "process");
 	if (OS::get_singleton()->get_main_loop()->process(process_step * time_scale)) {
@@ -5079,6 +5080,7 @@ bool Main::iteration() {
 	NavigationServer3D::get_singleton()->process(process_step * time_scale);
 #endif // NAVIGATION_3D_DISABLED
 
+	GodotProfileZoneGrouped(_profile_zone, "RenderingServer::sync");
 	update_server->Emit_PreRenderUpdate(process_step, scaled_step);
 	GodotProfileZoneGrouped(_profile_zone, "RenderingServer::sync");
 	RenderingServer::get_singleton()->sync(); //sync if still drawing from previous frames.
