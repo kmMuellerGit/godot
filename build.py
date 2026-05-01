@@ -9,11 +9,13 @@ TODO
 """
 
 import argparse
-import platform
-import subprocess
 import multiprocessing
 import os
+import shutil
+import subprocess
 from datetime import datetime
+
+import platform
 
 # https://docs.godotengine.org/en/stable/contributing/development/compiling/compiling_for_linuxbsd.html#using-system-libraries-for-faster-development
 # - WARNING : When using system libraries, the resulting library is not portable across Linux distributions anymore.
@@ -129,6 +131,8 @@ def main():
                 print("Deleting compile_commands.json for clion inspector updating.")
                 os.remove("./compile_commands.json")
             run_command_in_new_terminal(command)
+            if os.path.isfile("./compile_commands.json") and args.use_compilation_db:
+                shutil.copy("./compile_commands.json", "../compile_commands.json")
         except subprocess.CalledProcessError as e:
             print("Error while building:")
             raise e

@@ -21,8 +21,18 @@
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player_ability_system" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/tests" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_map_collision_server" />
+      <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_serializer" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/third_party" />
       <file path="$PROJECT_DIR$" />
+      <file path="$PROJECT_DIR$/core" />
+      <file path="$PROJECT_DIR$/drivers" />
+      <file path="$PROJECT_DIR$/editor" />
+      <file path="$PROJECT_DIR$/main" />
+      <file path="$PROJECT_DIR$/misc" />
+      <file path="$PROJECT_DIR$/modules" />
+      <file path="$PROJECT_DIR$/platform" />
+      <file path="$PROJECT_DIR$/scene" />
+      <file path="$PROJECT_DIR$/servers" />
     </sourceRoots>
     <excludeRoots>
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/.github" />
@@ -58,6 +68,8 @@
       </CompDBProjectSettings>
     </option>
   </component>
-  <component name="CompDBWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CompDBWorkspace" PROJECT_DIR="$PROJECT_DIR$">
+    <contentRoot DIR="$PROJECT_DIR$/.." />
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
 </project>
