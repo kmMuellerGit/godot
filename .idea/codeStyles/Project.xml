@@ -1,5 +1,6 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
+    <option name="LINE_SEPARATOR" value="&#10;" />
     <option name="RIGHT_MARGIN" value="200" />
     <option name="SOFT_MARGINS" value="60,120,200" />
     <CssCodeStyleSettings>
