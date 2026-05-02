@@ -57,7 +57,7 @@ STATIC_ASSERT_INCOMPLETE_TYPE(class, RenderingServer);
 #include "servers/rendering/rendering_server.h"
 #include "servers/rendering/rendering_server_enums.h"
 #include "servers/rendering/rendering_server_globals.h"
-#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
+
 
 // 2D.
 #include "scene/2d/audio_listener_2d.h"

@@ -24,11 +24,11 @@ import platform
 
 custom_modules_path=os.path.abspath("../cyborg_survivors_game/engine_custom_modules" )
 custom_game_path= os.path.abspath("../cyborg_survivors_game/game" )
-tracy_build_add='tracy_enable=yes tracy_on_demand=yes CCFLAGS=\"-fno-omit-frame-pointer -fno-inline -ggdb3\"'
+tracy_build_add='profiler=tracy profiler_path=/home/main/godot/dungeon_arpg/tracy'
 build_options={
-    'debug'             :f"scu_build=yes dev_build=yes verbose=yes warnings=all tests=yes  lto=none  use_llvm=yes linker=mold",
-    'production'        :f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=yes",
-    'release_production':f"production=yes lto=none use_llvm=yes linker=mold debug_symbols=no  "
+    'debug'             :f"scu_build=yes dev_build=yes verbose=yes warnings=all tests=yes accesskit=no lto=none  use_llvm=yes linker=mold ",
+    'production'        :f"production=yes accesskit=no lto=none use_llvm=yes linker=mold debug_symbols=yes",
+    'release_production':f"production=yes accesskit=no lto=none use_llvm=yes linker=mold debug_symbols=no  "
 }
 
 template_options={

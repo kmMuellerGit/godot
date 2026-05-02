@@ -85,7 +85,7 @@
 #include <cstdlib>
 
 #include "game_main/game_core_setup/GameDocTest.h"
-#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
+
 
 #if __has_include(<mntent.h>)
 #include <mntent.h>

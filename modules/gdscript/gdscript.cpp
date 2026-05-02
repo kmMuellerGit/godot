@@ -1907,11 +1907,11 @@ void GDScriptInstance::_call_implicit_ready_recursively(GDScript *p_script) {
 }
 
 Variant GDScriptInstance::callp(const StringName &p_method, const Variant **p_args, int p_argcount, Callable::CallError &r_error) {
-#ifdef TRACY_ENABLE
-	ZoneScoped;
-	CharString zoneString = ("GDScriptInstance::callp  " + String(this->get_script()->get_path()) + "/" + p_method).utf8();
-	ZoneName(zoneString.ptr(), zoneString.length());
-#endif
+// #ifdef TRACY_ENABLE
+// 	ZoneScoped;
+// 	CharString zoneString = ("GDScriptInstance::callp  " + String(this->get_script()->get_path()) + "/" + p_method).utf8();
+// 	ZoneName(zoneString.ptr(), zoneString.length());
+// #endif
 
 	GDScript *sptr = script.ptr();
 	if (unlikely(p_method == SceneStringName(_ready))) {

@@ -31,6 +31,8 @@
 #include "object.h"
 #include "object.compat.inc"
 
+#include "client/TracyProfiler.hpp"
+
 #include "core/config/engine.h"
 #include "core/extension/gdextension_manager.h"
 #include "core/io/resource.h"
@@ -41,8 +43,9 @@
 #include "core/string/print_string.h"
 #include "core/string/translation_server.h"
 #include "core/variant/typed_array.h"
-#include "modules/godot_tracy/profiler.h"
-#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
+
+#include "tracy/Tracy.hpp"
+
 
 #ifdef DEBUG_ENABLED
 
@@ -827,9 +830,9 @@ Variant Object::callp(const StringName &p_method, const Variant **p_args, int p_
 	MethodBind *method = ClassDB::get_method(get_class_name(), p_method);
 
 	if (method) {
-		ZoneScoped;
-		CharString c = Profiler::stringify_method(p_method, p_args, p_argcount);
-		ZoneName(c.ptr(), c.size());
+		// ZoneScoped;
+		// CharString c = tracy::Profiler::stringify_method(p_method, p_args, p_argcount);
+		// ZoneName(c.ptr(), c.size());
 		ret = method->call(this, p_args, p_argcount, r_error);
 	} else {
 		r_error.error = Callable::CallError::CALL_ERROR_INVALID_METHOD;
@@ -1201,12 +1204,12 @@ Error Object::emit_signalp(const StringName &p_name, const Variant **p_args, int
 
 	{
 	ObjectSignalLock signal_lock(this);
-#ifdef TRACY_ENABLE
-		ZoneScoped;
-		CharString zoneString = ("Object::emit_signalp  " + String(this->get_class_name()) + "/" + p_name).utf8();
-		ZoneName(zoneString.ptr(), zoneString.length());
-#endif
-		OBJ_SIGNAL_LOCK
+// #ifdef TRACY_ENABLE
+// 		ZoneScoped;
+// 		CharString zoneString = ("Object::emit_signalp  " + String(this->get_class_name()) + "/" + p_name).utf8();
+// 		ZoneName(zoneString.ptr(), zoneString.length());
+// #endif
+// 		OBJ_SIGNAL_LOCK
 
 
 		SignalData *s = signal_map.getptr(p_name);

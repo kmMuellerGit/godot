@@ -48,7 +48,9 @@
 #include "core/templates/rb_set.h"
 #include "core/variant/variant_parser.h"
 #include "servers/rendering/rendering_server.h"
-#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
+
+#include "tracy/Tracy.hpp"
+
 
 #ifdef DEBUG_LOAD_THREADED
 #define print_lt(m_text) print_line(m_text)
@@ -522,7 +524,7 @@ void ResourceLoader::_load_threaded_request_setup_user_token(LoadToken *p_token,
 }
 
 Ref<Resource> ResourceLoader::load(const String &p_path, const String &p_type_hint, CacheMode p_cache_mode, Error *r_error) {
-	ZoneScoped; //#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
+	ZoneScoped; //
 	if (r_error) {
 		*r_error = OK;
 	}

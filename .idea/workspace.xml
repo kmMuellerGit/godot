@@ -33,7 +33,7 @@
     <option name="/Default/CodeEditing/CppCodeGeneration/FunctionImplementationKind/@EntryValue" value="NotCompiledCode" type="string" />
     <option name="/Default/CodeEditing/CppDocumentationComment/AddBriefTag/@EntryValue" value="true" type="bool" />
     <option name="/Default/CodeEditing/TypingAssist/Cpp/CloseBlockComment/@EntryValue" value="true" type="bool" />
-    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="59" type="long" />
     <option name="/Default/Environment/UserInterface/HierarchyView/ViewStyle/@EntryValue" value="SuperTypes" type="string" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
@@ -53,18 +53,39 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="Added faded area for permanent health orb drops.">
-      <change afterPath="$PROJECT_DIR$/.idea/file.template.settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/junie.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/DirectionalSprites/particles/static_frost_charge/FLEC_static_frost_charge.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/DirectionalSprites/particles/static_frost_charge/FLEC_static_frost_charge.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/levels/level_dungeon_static_0.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/levels/level_dungeon_static_0.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.clang-tidy" beforeDir="false" afterPath="$PROJECT_DIR$/.clang-tidy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="eef7c059-99b3-4f31-aefe-6922aac5418c" name="Changes" comment="godot 4.7 changes.">
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecComponents_XPOrbs.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecComponents_XPOrbs.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collision.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Collision.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_DynamicTransform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_DynamicTransform.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Enemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Enemy.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_EnemyPlayerInteraction.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_EnemyPlayerInteraction.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_PositionMapSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_PositionMapSystem.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Rendering.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Rendering.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Transform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Transform.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Velocity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_Velocity.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_VertexAnimation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/FlecsComponents_VertexAnimation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/player/FlecComponents_ItemLink.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_game/FlecComponents/player/FlecComponents_ItemLink.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsAccessor/FlecsAccessor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecPrefab.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsDataKeeper/FlecPrefab.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsToGodotHelper.h" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/FlecsToGodotHelper.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/PlayerController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/game_core_setup/GameMainNode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/ItemManagementNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/ItemManagementNode.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_dropping_systems/ItemDropList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_dropping_systems/ItemDropList.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_generators/ItemGeneratorBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_generators/ItemGeneratorBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerResourcePool.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/player/PlayerResourcePool.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/io/resource_loader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/io/resource_loader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/object/object.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/object/object.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/variant/variant_call.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/core/variant/variant_call.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/gdscript/gdscript.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/modules/gdscript/gdscript.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/godot_tracy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/linuxbsd/os_linuxbsd.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/platform/linuxbsd/os_linuxbsd.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scene/main/viewport.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scene/main/viewport.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servers/update_loop_server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/servers/update_loop_server.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +129,7 @@
     </option>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="53264" />
+    <option name="cachedIndexableFilesCount" value="53667" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -134,7 +155,7 @@
   &quot;automaticallyGenerateSummary&quot;: false
 }</component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../cyborg_survivors_game" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../tracy" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -167,6 +188,7 @@
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/ItemModifier.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_stats/item_modifiers/ItemModifiers_Spawning.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../cyborg_survivors_game/game/game_space/PlayerController/animated_player_body/gdglue_player_body_rig_animations.gd" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../tracy/public/client/TracyProfiler.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/include/c++/13/bits/atomic_base.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file:///usr/include/c++/13/bits/stl_tree.h" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -218,7 +240,7 @@
     "Custom Build Application.Game Release).executor": "Run",
     "Custom Build Application.Run Tests  Tracy.executor": "Debug",
     "Custom Build Application.Run Tests.executor": "Run",
-    "Custom Build Application.TESTS - Game.executor": "Debug",
+    "Custom Build Application.TESTS - Game.executor": "Run",
     "Custom Build Application.Test Direct Load.executor": "Debug",
     "Custom Build Application.Test Headless.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -240,7 +262,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "com.jetbrains.cidr.cpp.cmake.workspace.CMakeCacheInvalidator.marker": "true",
-    "git-widget-placeholder": "202602__item__updates",
+    "git-widget-placeholder": "v0.13.0",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/home/main/godot/dungeon_arpg",
     "node.js.detected.package.eslint": "true",
@@ -268,7 +290,12 @@
       <recent name="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/game_main/inventory/item_generators" />
     </key>
   </component>
-  <component name="RunManager" selected="Custom Build Application.TESTS - Game">
+  <component name="RunManager" selected="Custom Build Application.Game Debug Tracy">
+    <configuration name="Game Debug Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose  --screen 1 --position 2500,0 --log-file godot_game.log" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Game Debug Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose  --screen 1 --position 2500,0 --log-file godot_game.log" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -339,7 +366,7 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Game Release Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Release TRACY" CONFIG_NAME="Build.py Release TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.x86_64.llvm.mode_production.build_binary.tracy">
+    <configuration name="Game Release PRODUCTION" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Release PRODUCTION" CONFIG_NAME="Build.py Release PRODUCTION" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.x86_64.llvm.mode_release_production.build_binary">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
@@ -370,6 +397,24 @@
       </method>
     </configuration>
     <configuration name="Game Release Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Release TRACY" CONFIG_NAME="Build.py Release TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.x86_64.llvm.mode_production.build_binary.tracy">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Game Release Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Release TRACY" CONFIG_NAME="Build.py Release TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.x86_64.llvm.mode_production.build_binary.tracy">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Game Release Tracy" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Release TRACY" CONFIG_NAME="Build.py Release TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.x86_64.llvm.mode_production.build_binary.tracy">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run Tests  Tracy" type="CLionExternalRunConfiguration" factoryName="Application" singleton="false" PROGRAM_PARAMS="--test -tc='*[SceneTree][DungeonARPG]*' --verbose -s" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
+      <envs>
+        <env name="TESTS_ENABLED" value="1" />
+      </envs>
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
@@ -455,6 +500,11 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TESTS - Game" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose --game_test -tc=&quot;*[DungeonARPG]*&quot; --screen 1 --position 2500,0 --log-file godot_game.log 2&gt;&amp;1 | tee ~/test_log.transcript" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TESTS - Game" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose --game_test -tc=*[DungeonARPG]* --screen 1 --position 2500,0 --log-file godot_game.log" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
@@ -463,6 +513,11 @@
     <configuration name="TESTS - Game" type="CLionExternalRunConfiguration" factoryName="Application" PROGRAM_PARAMS="--path ../../cyborg_survivors_game/game/ --verbose --game_test -tc=*[DungeonARPG]* --screen 1 --position 2500,0 --log-file godot_game.log" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="godot" TARGET_NAME="Build.py Debug TRACY" CONFIG_NAME="Build.py Debug TRACY" RUN_PATH="$PROJECT_DIR$/bin/godot.linuxbsd.editor.dev.x86_64.llvm.mode_debug.build_binary.tracy">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -889,22 +944,7 @@
       <workItem from="1777432843848" duration="599000" />
       <workItem from="1777516231445" duration="2216000" />
       <workItem from="1777597715409" duration="450000" />
-    </task>
-    <task id="LOCAL-00268" summary="Small changes to wall2.  Outside edges are not correct.">
-      <option name="closed" value="true" />
-      <created>1767676918958</created>
-      <option name="number" value="00268" />
-      <option name="presentableId" value="LOCAL-00268" />
-      <option name="project" value="LOCAL" />
-      <updated>1767676918958</updated>
-    </task>
-    <task id="LOCAL-00269" summary="Added prototype player animated body.&#10;ActivatorNodes now signal player controller to melee attack animation.&#10;AbilityNode_World returns new activation context type.  &#10;Player body now rotates based on animation or movement direction.">
-      <option name="closed" value="true" />
-      <created>1769970759507</created>
-      <option name="number" value="00269" />
-      <option name="presentableId" value="LOCAL-00269" />
-      <option name="project" value="LOCAL" />
-      <updated>1769970759508</updated>
+      <workItem from="1777684110562" duration="8480000" />
     </task>
     <task id="LOCAL-00270" summary="Moved Ortho plane to a new static class which can be accessed from gdscript.">
       <option name="closed" value="true" />
@@ -1282,7 +1322,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777344713317</updated>
     </task>
-    <option name="localTasksCounter" value="317" />
+    <task id="LOCAL-00317" summary="godot 4.7 changes.">
+      <option name="closed" value="true" />
+      <created>1777691378689</created>
+      <option name="number" value="00317" />
+      <option name="presentableId" value="LOCAL-00317" />
+      <option name="project" value="LOCAL" />
+      <updated>1777691378689</updated>
+    </task>
+    <task id="LOCAL-00318" summary="godot 4.7 changes.">
+      <option name="closed" value="true" />
+      <created>1777691392661</created>
+      <option name="number" value="00318" />
+      <option name="presentableId" value="LOCAL-00318" />
+      <option name="project" value="LOCAL" />
+      <updated>1777691392661</updated>
+    </task>
+    <option name="localTasksCounter" value="319" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1323,7 +1379,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CODE_SMELLS_PROFILE" value="Project Default" />
-    <MESSAGE value="Fixed issues with game tests. &#10;- Bug with accessing normal componet without checking.&#10;- doctest now prints a simpler format when things fail." />
     <MESSAGE value="Added" />
     <MESSAGE value="Fixed issues with game tests.&#10;- Bug with accessing normal componet without checking.&#10;- doctest now prints a simpler format when things fail." />
     <MESSAGE value="Large update to level loading.  Moved some game_main_node aspects to a new node which can be swapped. &#10;Reduced headers used in common nodes." />
@@ -1348,7 +1403,8 @@
     <MESSAGE value="Split movement blockers into separate groups with new counter.  This is to allow push-away affects to always work even when the enemy is attacking." />
     <MESSAGE value="Reverted player body to pixel render." />
     <MESSAGE value="Added faded area for permanent health orb drops." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added faded area for permanent health orb drops." />
+    <MESSAGE value="godot 4.7 changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="godot 4.7 changes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

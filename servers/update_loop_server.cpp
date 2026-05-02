@@ -2,8 +2,10 @@
 #include "update_loop_server.h"
 
 #include "core/config/engine.h"
-#include "modules/godot_tracy/tracy/public/tracy/Tracy.hpp"
+
 #include "scene/main/scene_tree.h"
+
+#include "tracy/Tracy.hpp"
 
 void UpdateLoopServer::_bind_methods() {
 	ADD_SIGNAL(MethodInfo("frame_start_update", PropertyInfo(Variant::BOOL, "is_editor"), PropertyInfo(Variant::FLOAT, "real_time"), PropertyInfo(Variant::FLOAT, "game_time")));

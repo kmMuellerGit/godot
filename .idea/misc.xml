@@ -34,7 +34,11 @@
       <file path="$PROJECT_DIR$/scene" />
       <file path="$PROJECT_DIR$/servers" />
     </sourceRoots>
+    <libraryRoots>
+      <file path="$PROJECT_DIR$/../tracy" />
+    </libraryRoots>
     <excludeRoots>
+      <file path="$PROJECT_DIR$/../assets" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/.github" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/cmake" />
       <file path="$PROJECT_DIR$/../cyborg_survivors_game/engine_custom_modules/flec_godot/flecs/docs" />
@@ -54,6 +58,8 @@
       <file path="$PROJECT_DIR$/doc" />
       <file path="$PROJECT_DIR$/python_312_venv" />
       <file path="$PROJECT_DIR$/thirdparty" />
+      <file path="$PROJECT_DIR$/../profiler_dump" />
+      <file path="$PROJECT_DIR$/../testing_pictures" />
     </excludeRoots>
   </component>
   <component name="CompDBSettings">
