@@ -38,12 +38,23 @@
 #include <servers/physics_2d/physics_server_2d_dummy.h>
 #include <servers/physics_3d/physics_server_3d.h>
 #include <servers/physics_3d/physics_server_3d_dummy.h>
+
+#include "signal_watcher.h"
+
+#include "core/input/input.h"
+#include "core/input/input_map.h"
+#include "core/os/os.h"
+
 #include "servers/audio/audio_server.h"
 #include "servers/navigation_2d/navigation_server_2d.h"
 #include "servers/navigation_3d/navigation_server_3d.h"
 #include "servers/rendering/rendering_server_default.h"
 #include "editor/settings/editor_settings.h"
 #include "main/main.h"
+
+#include "scene/main/scene_tree.h"
+
+#include "servers/display/display_server.h"
 #ifdef TOOLS_ENABLED
 #include "core/string/translation_server.h"
 #include "editor/file_system/editor_paths.h"
@@ -281,7 +292,7 @@ struct GodotTestCaseListener : public doctest::IReporter {
 			OS::get_singleton()->set_has_server_feature_callback(nullptr);
 			for (int i = 0; i < DisplayServer::get_create_function_count(); i++) {
 				if (String("mock") == DisplayServer::get_create_function_name(i)) {
-					DisplayServer::create(i, "", DisplayServer::WindowMode::WINDOW_MODE_MINIMIZED, DisplayServer::VSyncMode::VSYNC_ENABLED, 0, nullptr, Vector2i(0, 0), DisplayServer::SCREEN_PRIMARY, DisplayServer::CONTEXT_EDITOR, 0, err);
+					DisplayServer::create(i, "", DisplayServerEnums::WindowMode::WINDOW_MODE_MINIMIZED, DisplayServerEnums::VSyncMode::VSYNC_ENABLED, 0, nullptr, Vector2i(0, 0), DisplayServerEnums::SCREEN_PRIMARY, DisplayServerEnums::CONTEXT_EDITOR, 0, err);
 					break;
 				}
 			}
@@ -325,7 +336,7 @@ struct GodotTestCaseListener : public doctest::IReporter {
 
 			memnew(SceneTree);
 			SceneTree::get_singleton()->initialize();
-			if (!DisplayServer::get_singleton()->has_feature(DisplayServer::Feature::FEATURE_SUBWINDOWS)) {
+			if (!DisplayServer::get_singleton()->has_feature(DisplayServerEnums::Feature::FEATURE_SUBWINDOWS)) {
 				SceneTree::get_singleton()->get_root()->set_embedding_subwindows(true);
 			}
 

@@ -75,7 +75,7 @@ public:
 	static void setup_boot_logo();
 	static Error test_setup();
 	static void test_cleanup();
-#endif
+
 	static int start(int argc, char *argv[]);
 
 	static bool iteration();

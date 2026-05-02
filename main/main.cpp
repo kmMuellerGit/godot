@@ -3030,6 +3030,7 @@ Error Main::setup2(bool p_show_boot_logo) {
 	print_header(false);
 
 #ifdef TOOLS_ENABLED
+	int accessibility_mode_editor = 0;
 	int tablet_driver_editor = -1;
 	if (editor || project_manager || cmdline_tool) {
 		OS::get_singleton()->benchmark_begin_measure("Startup", "Initialize Early Settings");
@@ -3066,6 +3067,8 @@ Error Main::setup2(bool p_show_boot_logo) {
 					bool prefer_wayland = false;
 
 					bool tablet_found = false;
+
+					bool ac_found = false;
 
 					if (editor) {
 						screen_property = "interface/editor/appearance/editor_screen";
@@ -4968,7 +4971,7 @@ bool Main::iteration() {
 #endif // XR_DISABLED
 
 	GodotProfileZoneGrouped(_profile_zone, "physics");
-	UpdateLoopServer::get_singleton()->PrePhysicsUpdate(process_step, process_step * time_scale);
+
 
 	for (int iters = 0; iters < advance.physics_steps; ++iters) {
 		GodotProfileZone("Physics Step");

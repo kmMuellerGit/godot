@@ -1029,22 +1029,6 @@ int OS_LinuxBSD::run_game_tests(int argc, char *argv[]) {
 	int test_error = GameDocTest::run_game_tests(argc, argv);
 
 	main_loop->finalize();
-	return 0;
-}
-
-
-int OS_LinuxBSD::run_game_tests(int argc, char *argv[]) {
-	if (!main_loop) {
-		return 1;
-	}
-	main_loop->initialize();
-
-	DisplayServer::get_singleton()->process_events();
-	Main::iteration();
-
-	int test_error = GameDocTest::run_game_tests(argc, argv);
-
-	main_loop->finalize();
 	return test_error;
 }
 
